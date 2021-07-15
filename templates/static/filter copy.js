@@ -6,57 +6,175 @@
 // WORDTYPE // WORDTYPE // WORDTYPE // WORDTYPE // WORDTYPE // WORDTYPE // WORDTYPE // WORDTYPE // WORDTYPE // WORDTYPE // WORDTYPE 
 // WORDTYPE // WORDTYPE // WORDTYPE // WORDTYPE // WORDTYPE // WORDTYPE // WORDTYPE // WORDTYPE // WORDTYPE // WORDTYPE // WORDTYPE 
 
-setTimeout(function filter() {
+setTimeout(function filter_words() {
 
-    var filbuts = document.querySelectorAll(".filterButton");
-    var words = document.querySelectorAll(".word")
-
-    for (const key in filbuts) {
-        listener = filbuts[key]
-        listener.addEventListener("click",function f(e) {
-            var seen = []
-            let clicked = e.target.innerText.toLowerCase()
-            seen.push(clicked)
-
-            for (const key in filbuts) {
-                let item = filbuts[key]
-                try {
-                    if (item.classList.contains("active") && seen.includes(item.innerText.toLowerCase())==false )  {
-                        seen.push(item.innerText.toLowerCase())
-                    }
-                } catch (error) {
-                    null
-                }
-
-                for (const key in words) {
-                    let wording = words[key]
-                    
-                    if (seen.length===2) {
-                        if ( wording.classList.contains(seen[0]) && wording.classList.contains(seen[1]) ) {
-                            wording.style.display = "initial"
-                        }
-                        else{
-                            wording.style.display = "none"
-                        }
-                    }
-
-                }
+    document.querySelector(".allfilter").addEventListener("click", function(){
+        elms = document.querySelectorAll(".word");
+        for (const i in elms) {
+            elms[i].style.display = "initial";
+        }; 
+    }); 
     
+    document.querySelector(".nounfilter").addEventListener("click", function(){
+        elms = document.querySelectorAll(".word");
+        for (const i in elms) {
+            if (elms[i].classList[1] != "noun") {
+                elms[i].style.display = "none";
             }
+            else{
+                elms[i].style.display = "initial";
+            }
+        }; 
+    }); 
 
-        })
-    }
+    document.querySelector(".adjfilter").addEventListener("click", function(){
+        elms = document.querySelectorAll(".word");
+        for (const i in elms) {
+            if (elms[i].classList[1] != "adj") {
+                elms[i].style.display = "none";
+            }
+            else{
+                elms[i].style.display = "initial";
+            }
+        }; 
+    }); 
+
+    document.querySelector(".verbfilter").addEventListener("click", function(){
+        elms = document.querySelectorAll(".word");
+        for (const i in elms) {
+            if (elms[i].classList[1] != "verb") {
+                elms[i].style.display = "none";
+            }
+            else{
+                elms[i].style.display = "initial";
+            }
+        }; 
+    }); 
+    
+    document.querySelector(".phrverbfilter").addEventListener("click", function(){
+        elms = document.querySelectorAll(".word");
+        for (const i in elms) {
+            if (elms[i].classList[1] != "phrverb") {
+                elms[i].style.display = "none";
+            }
+            else{
+                elms[i].style.display = "initial";
+            }
+        }; 
+    });     
+    
+    document.querySelector(".undeffilter").addEventListener("click", function(){
+        elms = document.querySelectorAll(".word");
+        for (const i in elms) {
+            if (elms[i].classList[1] != "undef") {
+                elms[i].style.display = "none";
+            }
+            else{
+                elms[i].style.display = "initial";
+            }
+        }; 
+    });     
+
+},25);
+
+
+
+// OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD 
+// OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD 
+// OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD 
+// OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD 
+// OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD 
+// OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD // OXFORD 
+
+setTimeout(function filter_oxford() {
+
+    document.querySelector(".a1filter").addEventListener("click", function(){
+        elms = document.querySelectorAll(".word");
+        for (const i in elms) {
+            if (elms[i].classList[2] != "a1") {
+                elms[i].style.display = "none";
+            }
+            else{
+                elms[i].style.display = "initial";
+            }
+        }; 
+    }); 
+
+    document.querySelector(".a2filter").addEventListener("click", function(){
+        elms = document.querySelectorAll(".word");
+        for (const i in elms) {
+            if (elms[i].classList[2] != "a2") {
+                elms[i].style.display = "none";
+            }
+            else{
+                elms[i].style.display = "initial";
+            }
+        }; 
+    }); 
+
+    document.querySelector(".b1filter").addEventListener("click", function(){
+        elms = document.querySelectorAll(".word");
+        for (const i in elms) {
+            if (elms[i].classList[2] != "b1") {
+                elms[i].style.display = "none";
+            }
+            else{
+                elms[i].style.display = "initial";
+            }
+        }; 
+    }); 
+    
+    document.querySelector(".b2filter").addEventListener("click", function(){
+        elms = document.querySelectorAll(".word");
+        for (const i in elms) {
+            if (elms[i].classList[2] != "b2") {
+                elms[i].style.display = "none";
+            }
+            else{
+                elms[i].style.display = "initial";
+            }
+        }; 
+    });     
+
+    document.querySelector(".c1filter").addEventListener("click", function(){
+        elms = document.querySelectorAll(".word");
+        for (const i in elms) {
+            if (elms[i].classList[2] != "c1") {
+                elms[i].style.display = "none";
+            }
+            else{
+                elms[i].style.display = "initial";
+            }
+        }; 
+    });     
+
+    document.querySelector(".otherfilter").addEventListener("click", function(){
+        elms = document.querySelectorAll(".word");
+        for (const i in elms) {
+            if (elms[i].classList[2] != "other") {
+                elms[i].style.display = "none";
+            }
+            else{
+                elms[i].style.display = "initial";
+            }
+        }; 
+    });  
+   
+    document.querySelector(".alllevelfilter").addEventListener("click", function(){
+        elms = document.querySelectorAll("p");
+        for (const i in elms) {
+            elms[i].style.display = "initial";
+        }; 
+    }); 
+
+
+
+},25);
 
 
 
 
 
-}, 1000);
-
-
-
-
-
 // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js 
 // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js 
 // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js 
@@ -79,8 +197,6 @@ setTimeout(function filter() {
 // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js 
 // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js 
 // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js // tabs.js 
-
-
 
 
 $(function() {

@@ -19,7 +19,7 @@ textarea{
 }
 
 .wordsec{
-    width: 80%;
+    width: 80% !important;
     margin: 0 auto;
     display: block;	
     grid-template-rows: none;
@@ -65,4 +65,9 @@ div.filters{
 
 .analiz b{
     color: #256b9c;
+}
+
+div {
+    width: 100% !important;
+    text-align: center !important;
 }

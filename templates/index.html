@@ -59,41 +59,56 @@
 
     {% if wordlist %}
     <div class="changelog filters">
-        <div class="analiz mb-3 d-grid">
+
+      <div class="row">
+        <div class="col twoface analiz mb-3 d-grid">
             <p class="filename">Filename: </p>
             <p class="total">Total: </p>
             <p class="totaltypical">Typical: </p>
-            <p class="totaloxford">Oxford: </p>
-            <p class="totala">Oxford A: </p>
-            <p class="totalb">Oxford B: </p>
-            <p class="totalc">Oxford C: </p>
         </div>
 
-        <div class="filterArea">
-            <button class="btn btn-secondary allfilter active">All</button>
-            <button class="btn btn-secondary nounfilter">Noun</button>
-            <button class="btn btn-secondary adjfilter">Adj</button>
-            <button class="btn btn-secondary verbfilter">Verb</button>
-            <button class="btn btn-secondary phrverbfilter">PhrVerb</button>
-            <button class="btn btn-secondary undeffilter">Undefined</button>
+        <div class="col twoface analiz mb-3 d-grid">
+          <p class="totaloxford">Oxford: </p>
+          <p class="totala">Oxford A: </p>
+          <p class="totalb">Oxford B: </p>
+          <p class="totalc">Oxford C: </p>
+        </div>
+
+        <div class="col twoface analiz mb-3 d-grid">
+          <p class="noun_count">Noun: </p>
+          <p class="verb_count">Verb: </p>
+          <p class="adj_count">Adjective: </p>
+          <p class="phrverb_count">PhrVerb: </p>
+          <p class="undef_count">Undefined: </p>
+        </div>
+      </div>
+
+        <div class="filterType filterArea">
+            <button class="btn filterButton btn-secondary allfilter">AllType</button>
+            <button class="btn filterButton btn-secondary nounfilter">Noun</button>
+            <button class="btn filterButton btn-secondary adjfilter">Adj</button>
+            <button class="btn filterButton btn-secondary verbfilter">Verb</button>
+            <button class="btn filterButton btn-secondary phrverbfilter">PhrVerb</button>
+            <button class="btn filterButton btn-secondary undeffilter">Undef</button>
         </div>
         <br>
-        <div class="filterArea">
-            <button class="btn btn-info alllevelfilter">All</button>
-            <button class="btn btn-info a1filter">A1</button>
-            <button class="btn btn-info a2filter">A2</button>
-            <button class="btn btn-info b1filter">B1</button>
-            <button class="btn btn-info b2filter">B2</button>
-            <button class="btn btn-info c1filter">C1</button>
-            <button class="btn btn-info otherfilter">Other</button>
+        <div class="filterOxford filterArea">
+            <button class="btn filterButton btn-info alllevelfilter">AllLevel</button>
+            <button class="btn filterButton btn-info a1filter">A1</button>
+            <button class="btn filterButton btn-info a2filter">A2</button>
+            <button class="btn filterButton btn-info b1filter">B1</button>
+            <button class="btn filterButton btn-info b2filter">B2</button>
+            <button class="btn filterButton btn-info c1filter">C1</button>
+            <button class="btn filterButton btn-info otherfilter">Other</button>
         </div>     
     </div>
 
     <div class="callout wordsec" id="lesen">
         {% for element in wordlist %}
-        <p class="word {{element[1][1]}} {{element[1][2]}}"> {{ element[0] }}  <b class="countNumber"> {{ element[1][0] }} </b> </p>
+        <p class="word {{element[1][1]}} {{element[1][2]}} filtoken"> {{ element[0] }}  <b class="countNumber"> {{ element[1][0] }} </b> </p>
         {% endfor %}
     </div>
+
     {% endif %}
 
 
@@ -107,20 +122,33 @@
         
         {% if wordlist %}
             setTimeout(() => {
-                var to_all = document.querySelectorAll(".word").length;
-                var to_def = document.querySelectorAll(".noun").length+document.querySelectorAll(".adj").length+document.querySelectorAll(".verb").length+document.querySelectorAll(".phrverb").length;
-                var to_ox = document.querySelectorAll(".a1").length+document.querySelectorAll(".a2").length+document.querySelectorAll(".b1").length+document.querySelectorAll(".b2").length+document.querySelectorAll(".c1").length
-                var to_a = document.querySelectorAll(".a1").length+document.querySelectorAll(".a2").length;
-                var to_b = document.querySelectorAll(".b1").length+document.querySelectorAll(".b2").length;
-                var to_c = document.querySelectorAll(".c1").length;
-                document.querySelector(".filename").innerHTML="Filename: "+ "<b>"+localStorage.getItem("UploadedFileName")+"</b>";
-                document.querySelector(".total").innerHTML="Total: "+  "<b>"+to_all+"</b>";
-                document.querySelector(".totaltypical").innerHTML="Typical: "+  "<b>"+to_def+" (%"+Math.round(to_def/to_all*100)+")</b>";
-                document.querySelector(".totaloxford").innerHTML="Oxford: "+ "<b>"+to_ox + " (%"+Math.round(to_ox/to_def*100)+")</b>";
-                document.querySelector(".totala").innerHTML="Ox A: "+ "<b>"+to_a + " (%"+Math.round(to_a/to_def*100)+")</b>";
-                document.querySelector(".totalb").innerHTML="Ox B: "+ "<b>"+to_b + " (%"+Math.round(to_b/to_def*100)+")</b>";
-                document.querySelector(".totalc").innerHTML="Ox C: "+ "<b>"+to_c + " (%"+Math.round(to_c/to_def*100)+")</b>";
-            }, 1000);
+              // col-1
+              var to_all = document.querySelectorAll(".word").length;
+              var to_def = document.querySelectorAll(".noun").length+document.querySelectorAll(".adj").length+document.querySelectorAll(".verb").length+document.querySelectorAll(".phrverb").length;
+              var to_ox = document.querySelectorAll(".a1").length+document.querySelectorAll(".a2").length+document.querySelectorAll(".b1").length+document.querySelectorAll(".b2").length+document.querySelectorAll(".c1").length
+              var to_a = document.querySelectorAll(".a1").length+document.querySelectorAll(".a2").length;
+              var to_b = document.querySelectorAll(".b1").length+document.querySelectorAll(".b2").length;
+              var to_c = document.querySelectorAll(".c1").length;
+              document.querySelector(".filename").innerHTML="Filename: "+ "<b>"+localStorage.getItem("UploadedFileName")+"</b>";
+              document.querySelector(".total").innerHTML="Total: "+  "<b>"+to_all+"</b>";
+              document.querySelector(".totaltypical").innerHTML="Typical: "+  "<b>"+to_def+" (%"+Math.round(to_def/to_all*100)+")</b>";
+              document.querySelector(".totaloxford").innerHTML="Oxford: "+ "<b>"+to_ox + " (%"+Math.round(to_ox/to_def*100)+")</b>";
+              document.querySelector(".totala").innerHTML="Ox A: "+ "<b>"+to_a + " (%"+Math.round(to_a/to_def*100)+")</b>";
+              document.querySelector(".totalb").innerHTML="Ox B: "+ "<b>"+to_b + " (%"+Math.round(to_b/to_def*100)+")</b>";
+              document.querySelector(".totalc").innerHTML="Ox C: "+ "<b>"+to_c + " (%"+Math.round(to_c/to_def*100)+")</b>";
+
+              // col-2
+              var noun_count = document.querySelectorAll(".noun").length;
+              var verb_count = document.querySelectorAll(".verb").length;
+              var adj_count = document.querySelectorAll(".adj").length;
+              var phrverb_count = document.querySelectorAll(".phrverb").length;
+              var undef_count = document.querySelectorAll(".undef").length;
+              document.querySelector(".noun_count").innerHTML+="<b>"+noun_count+"</b>";
+              document.querySelector(".verb_count").innerHTML+="<b>"+verb_count+"</b>";
+              document.querySelector(".adj_count").innerHTML+="<b>"+adj_count+"</b>";
+              document.querySelector(".phrverb_count").innerHTML+="<b>"+phrverb_count+"</b>";
+              document.querySelector(".undef_count").innerHTML+="<b>"+undef_count+"</b>";
+            }, 0);
         {% endif %}
 
     </script>

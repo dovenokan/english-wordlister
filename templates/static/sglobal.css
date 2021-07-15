@@ -294,7 +294,7 @@ table td:first-child {
 /* layout */
 .wrapper {
   margin: 0 auto;
-  width: 70%;
+  width: 70% !important;
 }
 
 .footer {
@@ -347,7 +347,7 @@ nav {
 }
 
 .hero__terminal {
-  width: 60%;
+  width: 60% !important;
   margin: -11rem auto 3rem auto;
   text-align: left;
   color: white;
