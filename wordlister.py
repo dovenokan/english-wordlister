@@ -281,7 +281,20 @@ def wordlister(coType="-",co="-"):
         "noun":len(nouncount),
         "adj":len(adjcount),
         "phrverb":len(phrverbcount),
-        "undef":len(undefcount)
+        "undef":len(undefcount),
+        "total":len(wordlist),
+        "typical":len(wordlist)-len(undefcount),
+        "oxford":len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count),
+        "oxA":len(a1count)+len(a2count),
+        "oxB":len(b1count)+len(b2count),
+        "oxC":len(c1count),
+        "percentage": {
+            "Typical%": (len(wordlist)-len(undefcount)) / len(wordlist) * 100,
+            "oxford%": (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) / (len(wordlist)-len(undefcount)) * 100,
+            "oxA%": (len(a1count)+len(a2count)) / (len(wordlist)-len(undefcount)) * 100,
+            "oxB%": (len(b1count)+len(b2count)) / (len(wordlist)-len(undefcount)) * 100,
+            "oxC%": (len(c1count)) / (len(wordlist)-len(undefcount)) * 100
+        }
     }
     
     with open("uploads/generated.txt", "a", encoding="utf-8") as f:
