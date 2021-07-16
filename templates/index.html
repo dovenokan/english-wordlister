@@ -35,6 +35,7 @@
     </div>
     <div class="hero__terminal">
         <form method="POST" class="text-center">
+            {{ render_field(form.mongo_title,class="mongo_title") }}
             {{ render_field(form.text,class="") }}
             <button style="display: none;" type="submit" class="btn btn-success textformbutton">List it!</button>
         </form>
@@ -66,7 +67,7 @@
             <p class="total">Total: </p>
             <p class="totaltypical">Typical: </p>
         </div>
-
+        
         <div class="col twoface analiz mb-3 d-grid">
           <p class="totaloxford">Oxford: </p>
           <p class="totala">Oxford A: </p>

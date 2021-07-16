@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import functools
+import pymongo
 from flask import Flask,send_from_directory,render_template,flash,redirect,url_for,session,logging,request
 from wtforms import Form,StringField,TextAreaField,PasswordField,validators
 from functools import wraps
@@ -10,7 +12,6 @@ from passlib.hash import sha256_crypt
 import sqlite3 as sql
 
 app = Flask(__name__,static_folder="templates/static")
-
 
 app.secret_key = "secret key" 
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024 
@@ -37,39 +38,73 @@ def login_required(f):
 
 class ArticleForm(Form):
     text = TextAreaField("")
+    mongo_title = TextAreaField("")
     username = StringField("Kullanıcı Adı")
     email = StringField("Mail Adresi")
     password = PasswordField("Şifre")
 
+################################################################################################
+def MongoSave(cargo):
+    client = pymongo.MongoClient("mongodb+srv://eUCEE8DPZYKR6zcY:eUCEE8DPZYKR6zcY@cluster0.ttarq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+    db = client["oxfdb"]
+    col = db["data"]
+    col.insert_one(cargo)
+################################################################################################
 
 @app.route("/",methods = ["GET","POST"])
-# @login_required
+# @login_required   
 def wordlisterarea():
     session["username"] = "Count"
     form = ArticleForm(request.form)
     if request.method=="POST":
-        start = time.time()
         file = 0
         try:
             file = request.files['file']
         except:
             pass
-
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            import os
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], "srt.txt"))
-            wordlist = wordlister(coType="file")#[:30]
-            end = time.time() - start
-            import os, psutil; usedmemory = int(psutil.Process(os.getpid()).memory_info().rss / 1024 ** 2)
-            return render_template("index.html",end=str(end)[:6],lenned=len(wordlist),wordlist=wordlist,form=form,usedmemory=usedmemory,seans=session["username"])
+            job = wordlister(coType="file")
+            wordlist = job[0]
+            stats = job[1]
+
+            mongo_title = form.mongo_title.data
+            MongoSave(
+                {mongo_title:stats}
+            )  
+            return render_template("index.html",lenned=len(wordlist),wordlist=wordlist,form=form,seans=session["username"])
         else:
             text = form.text.data
-            wordlist = wordlister(co=text)#[:30]
-            end = time.time() - start
-            import os, psutil; usedmemory = int(psutil.Process(os.getpid()).memory_info().rss / 1024 ** 2)
-            return render_template("index.html",end=str(end)[:6],lenned=len(wordlist),wordlist=wordlist,form=form,usedmemory=usedmemory,seans=session["username"])
+            mongo_title = form.mongo_title.data
+            job = wordlister(co=text)
+            wordlist = job[0]
+            stats = job[1]
+
+            MongoSave(
+                {mongo_title:stats}
+            )  
+            return render_template("index.html",lenned=len(wordlist),wordlist=wordlist,form=form,seans=session["username"])
     return render_template("index.html",form=form,seans=session["username"])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @app.route("/home")
@@ -180,6 +215,8 @@ def download(filename):
     return send_from_directory(directory=uploads, filename=filename)
 
 
+
+
 #main()
 if __name__ == '__main__':
-    app.run(host='127.0.0.1',debug=True,port=2323)
+    app.run(host='127.0.0.1',debug=True,port=4646)

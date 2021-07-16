@@ -3,6 +3,8 @@
 
 # Notlar
 flask run --port=3053
+wordlist element: ('word: database', [count: 5, 'type: noun', 'level: b2'])
+
 
 
 # KELİME HATALARI

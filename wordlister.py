@@ -140,29 +140,54 @@ def isCapitalized(word):
     else:
         return False
 
+
+a1count = []
+a2count = []
+b1count = []
+b2count = []
+c1count = []
+undefcount = []
+
+verbcount = []
+adjcount = []
+nouncount = []
+phrverbcount = []
+othercount = []
+
 def wordType(word):
     if word in verbs:
+        verbcount.append(word)
         return "verb"
     elif word in adjectives:
+        adjcount.append(word)
         return "adj"
     elif word in nouns:
+        nouncount.append(word)
         return "noun"
     elif word in phrasalverbs:
+        phrverbcount.append(word)
         return "phrverb"
+    undefcount.append(word)
     return "undef"
 
 def oxford(word):
     if word in a1:
+        a1count.append(word)
         return "a1"
     elif word in a2:
+        a2count.append(word)
         return "a2"
     elif word in b1:
+        b1count.append(word)
         return "b1"
     elif word in b2:
+        b2count.append(word)
         return "b2"
     elif word in c1:
+        c1count.append(word)
         return "c1"
     else:
+        othercount.append(word)
         return "other"   
 
 def regStrip(word):
@@ -245,6 +270,19 @@ def wordlister(coType="-",co="-"):
         dc[w] = [words.count(w), wordType(w), oxford(w)] 
 
     wordlist = sorted(dc.items(), key=lambda kv: kv[1], reverse=True)
+    stats = {
+        "a1":len(a1count),
+        "a2":len(a2count),
+        "b1":len(b1count),
+        "b2":len(b2count),
+        "c1":len(c1count),
+        "other":len(othercount),
+        "verb":len(verbcount),
+        "noun":len(nouncount),
+        "adj":len(adjcount),
+        "phrverb":len(phrverbcount),
+        "undef":len(undefcount)
+    }
     
     with open("uploads/generated.txt", "a", encoding="utf-8") as f:
         f.truncate(0)
@@ -253,5 +291,5 @@ def wordlister(coType="-",co="-"):
             f.write("\n")
     shutil.copyfile('uploads/generated.txt', 'uploads/generated.csv')        
             
-    return wordlist
+    return wordlist , stats
 
