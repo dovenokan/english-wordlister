@@ -78,4 +78,11 @@ div {
 .mongo_title{
     min-height: 30px;
     margin-bottom: -25px;
+    text-transform: capitalize;
+}
+
+.mongo_title_file{
+    min-height: 30px;
+    margin: 0;
+    text-transform: capitalize;
 }

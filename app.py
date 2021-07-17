@@ -68,12 +68,13 @@ def wordlisterarea():
             job = wordlister(coType="file")
             wordlist = job[0]
             stats = job[1]
-
             mongo_title = form.mongo_title.data
-            MongoSave(
-                {mongo_title:stats}
-            )  
-            return render_template("index.html",lenned=len(wordlist),wordlist=wordlist,form=form,seans=session["username"])
+            
+            if len(mongo_title) > 3:
+                MongoSave(
+                    {mongo_title:stats}
+                ) 
+            return render_template("index.html",lenned=len(wordlist),wordlist=wordlist,stats=stats,form=form,seans=session["username"])
         else:
             text = form.text.data
             mongo_title = form.mongo_title.data
@@ -81,10 +82,11 @@ def wordlisterarea():
             wordlist = job[0]
             stats = job[1]
 
-            MongoSave(
-                {mongo_title:stats}
-            )  
-            return render_template("index.html",lenned=len(wordlist),wordlist=wordlist,form=form,seans=session["username"])
+            if len(mongo_title) > 3:
+                MongoSave(
+                    {mongo_title:stats}
+                )  
+            return render_template("index.html",lenned=len(wordlist),wordlist=wordlist,stats=stats,form=form,seans=session["username"])
     return render_template("index.html",form=form,seans=session["username"])
 
 
@@ -219,4 +221,4 @@ def download(filename):
 
 #main()
 if __name__ == '__main__':
-    app.run(host='127.0.0.1',debug=True,port=4646)
+    app.run(host='127.0.0.1',debug=True,port=7373)

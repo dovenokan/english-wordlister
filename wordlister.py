@@ -141,53 +141,54 @@ def isCapitalized(word):
         return False
 
 
-a1count = []
-a2count = []
-b1count = []
-b2count = []
-c1count = []
-undefcount = []
+a1countq = []
+a2countq = []
+b1countq = []
+b2countq = []
+c1countq = []
+undefcountq = []
 
-verbcount = []
-adjcount = []
-nouncount = []
-phrverbcount = []
-othercount = []
+verbcountq = []
+adjcountq = []
+nouncountq = []
+phrverbcountq = []
+othercountq = []
 
 def wordType(word):
     if word in verbs:
-        verbcount.append(word)
+        verbcountq.append(word)
         return "verb"
     elif word in adjectives:
-        adjcount.append(word)
+        adjcountq.append(word)
         return "adj"
     elif word in nouns:
-        nouncount.append(word)
+        nouncountq.append(word)
         return "noun"
     elif word in phrasalverbs:
-        phrverbcount.append(word)
+        phrverbcountq.append(word)
         return "phrverb"
-    undefcount.append(word)
-    return "undef"
+    else:
+        undefcountq.append(word)
+        return "undef"
 
 def oxford(word):
     if word in a1:
-        a1count.append(word)
+        a1countq.append(word)
         return "a1"
     elif word in a2:
-        a2count.append(word)
+        a2countq.append(word)
         return "a2"
     elif word in b1:
-        b1count.append(word)
+        b1countq.append(word)
         return "b1"
     elif word in b2:
-        b2count.append(word)
+        b2countq.append(word)
         return "b2"
     elif word in c1:
-        c1count.append(word)
+        c1countq.append(word)
         return "c1"
     else:
-        othercount.append(word)
+        othercountq.append(word)
         return "other"   
 
 def regStrip(word):
@@ -270,6 +271,21 @@ def wordlister(coType="-",co="-"):
         dc[w] = [words.count(w), wordType(w), oxford(w)] 
 
     wordlist = sorted(dc.items(), key=lambda kv: kv[1], reverse=True)
+
+
+    a1count = list(set(a1countq))
+    a2count = list(set(a2countq))
+    b1count = list(set(b1countq))
+    b2count = list(set(b2countq))
+    c1count = list(set(c1countq))
+    undefcount = list(set(undefcountq))
+
+    verbcount = list(set(verbcountq))
+    adjcount = list(set(adjcountq))
+    nouncount = list(set(nouncountq))
+    phrverbcount = list(set(phrverbcountq))
+    othercount = list(set(othercountq))
+
     stats = {
         "a1":len(a1count),
         "a2":len(a2count),
@@ -291,9 +307,9 @@ def wordlister(coType="-",co="-"):
         "percentage": {
             "Typical%": (len(wordlist)-len(undefcount)) / len(wordlist) * 100,
             "oxford%": (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) / (len(wordlist)-len(undefcount)) * 100,
-            "oxA%": (len(a1count)+len(a2count)) / (len(wordlist)-len(undefcount)) * 100,
-            "oxB%": (len(b1count)+len(b2count)) / (len(wordlist)-len(undefcount)) * 100,
-            "oxC%": (len(c1count)) / (len(wordlist)-len(undefcount)) * 100
+            "oxA%": (len(a1count)+len(a2count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,
+            "oxB%": (len(b1count)+len(b2count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,
+            "oxC%": (len(c1count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100
         }
     }
     
