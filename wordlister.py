@@ -6,69 +6,18 @@ import time
 import re
 import shutil
 
-def clearTensesMAIN(word):
-    
-    # Irregular Verbs Kısmı 
-    for ir in irregularverbs:
-        if ir["v3"] == word or ir["v2"] == word:
-            return ir["v1"]
+a1countq = []
+a2countq = []
+b1countq = []
+b2countq = []
+c1countq = []
+undefcountq = []
 
-    for end in suffix:
-        if word.endswith(end):
-            ends = [word.rstrip(end) for n in [0] if word.endswith(end)]
-            wstr = ends[0]
-
-            if end == "ies" and (wstr+"y" in nouns or wstr+"y" in verbs):
-                word = wstr+"y"
-                return word
-
-            elif end == "es" and (wstr in nouns or wstr in verbs):
-                word = wstr
-                return word
-
-            elif end == "es" and (wstr+"e" in nouns or wstr+"e" in verbs):
-                word = wstr+"e"
-                return word
-
-            elif end == "s" and (wstr in nouns or wstr in verbs):
-                word = wstr
-                return word
-
-            elif end == "ied" and wstr+"y" in verbs:
-                word = wstr+"y"
-                return word
-
-            elif end == "ed" and wstr in verbs:
-                word = wstr
-                return word
-
-            elif end == "ed" and word[:word.index("ed")-1] in verbs:
-                word = word[:word.index("ed")-1]
-                return word
-
-            elif end == "d" and wstr in verbs:
-                word = wstr
-                return word
-
-            elif end == "ing" and wstr in verbs:
-                word = wstr
-                return word
-
-            elif end == "ing" and wstr+"e" in verbs:
-                word = wstr+"e"
-                return word
-
-            elif end == "ing" and word[:word.index("ing")-1] in verbs:
-                word = word[:word.index("ing")-1]
-                return word
-            
-            else:
-                for end in ["d","s"]:
-                    if word.rstrip(end) in verbs or word.rstrip(end) in nouns:
-                        word = word.rstrip(end)
-                        return word
-                return word
-    return word
+verbcountq = []
+adjcountq = []
+nouncountq = []
+phrverbcountq = []
+othercountq = []
 
 def clearTenses(word):
     
@@ -139,20 +88,6 @@ def isCapitalized(word):
         return True
     else:
         return False
-
-
-a1countq = []
-a2countq = []
-b1countq = []
-b2countq = []
-c1countq = []
-undefcountq = []
-
-verbcountq = []
-adjcountq = []
-nouncountq = []
-phrverbcountq = []
-othercountq = []
 
 def wordType(word):
     if word in verbs:
@@ -265,12 +200,12 @@ def wordlister(coType="-",co="-"):
             words[words.index(w)] = word
 
     phrasalVerb(words)
-    settedwords = list({ st for st in words if not len(st) == 0 and len(st) > 2 and st.replace(" ","").isalpha() and st not in stopwords})
+    settedwords = list({ st for st in words if not len(st) == 0 and len(st) > 2 and st.replace(" ","").isalpha() and st not in stopwords and st not in whatiknow})
 
     for w in settedwords:
         dc[w] = [words.count(w), wordType(w), oxford(w)] 
 
-    wordlist = sorted(dc.items(), key=lambda kv: kv[1], reverse=True)
+    wordlist = sorted(dc.items(), key=lambda kv: kv[0], reverse=False) # 0 False letter 1 True count
 
 
     a1count = list(set(a1countq))
@@ -305,11 +240,11 @@ def wordlister(coType="-",co="-"):
         "oxB":len(b1count)+len(b2count),
         "oxC":len(c1count),
         "percentage": {
-            "Typical%": (len(wordlist)-len(undefcount)) / len(wordlist) * 100,
-            "oxford%": (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) / (len(wordlist)-len(undefcount)) * 100,
-            "oxA%": (len(a1count)+len(a2count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,
-            "oxB%": (len(b1count)+len(b2count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,
-            "oxC%": (len(c1count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100
+            "Typical%": round((len(wordlist)-len(undefcount)) / len(wordlist) * 100,2),
+            "oxford%": round((len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) / (len(wordlist)-len(undefcount)) * 100,2),
+            "oxA%": round((len(a1count)+len(a2count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,2),
+            "oxB%": round((len(b1count)+len(b2count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,2),
+            "oxC%": round((len(c1count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,2)
         }
     }
     
