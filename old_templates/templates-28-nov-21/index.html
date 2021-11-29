@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+      <link rel="stylesheet" href="{{ url_for('static', filename='sglobal.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='extra.css') }}">
+      <script defer src="{{ url_for('static', filename='scribbler.js') }}"></script>
+      {% from "includes/formhelpers.html" import render_field %}
+      {% if wordlist %}
+      <script  defer src="{{ url_for('static', filename='filter.js') }}"></script>
+      <script defer src="{{ url_for('static', filename='tabs.js') }}"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      {% endif %}
+  </head>
+  <body>
+    <nav>
+      <div class="logo"></div>
+      <ul class="menu">
+        <div class="menu__item toggle"><span></span></div>
+        <li class="menu__item"><a target="_blank" href="{{ url_for('download', filename='generated.txt')}}" class="link link--dark"><i class="fa fa-book"></i> TXT</a></li>
+        <li class="menu__item"><a target="_blank" href="{{ url_for('download', filename='generated.csv')}}" class="link link--dark"><i class="fa fa-book"></i> CSV</a></li>
+        <li class="menu__item"><a target="_blank" href="https://www.filesmerge.com/tr/merge-text-files" class="link link--dark"><i class="fa fa-adn"></i> Merge</a></li>
+        <li class="menu__item"><a target="_blank" href="https://subtitletools.com/convert-text-files-to-utf8-online" class="link link--dark"><i class="fa fa-pencil"></i> UTF8</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1 class="hero__title">Wordlister - vCount</h1>
+      <br>
+    </div>
+    <div class="hero__terminal">
+        <form method="POST" class="text-center">
+            {{ render_field(form.mongo_title,class="mongo_title") }}
+            {{ render_field(form.text,class="") }}
+            <button style="display: none;" type="submit" class="btn btn-success textformbutton">List it!</button>
+        </form>
+    </div>
+    <div class="wrapper">
+      <div class="installation">
+        <h3 class="section__title">Upload File</h3>
+        <div class="tab__container">
+          <pre class="nohighlight code">
+            <form method="post" action="/" enctype="multipart/form-data" >
+                {{ render_field(form.mongo_title,class="mongo_title_file") }}
+                <code class="tab__pane active mac"><input onchange="setLocal()" class="fileupload" type="file" name="file"></code>
+                <button style="display: none;" type="submit" class="btn btn-success fileformbutton">List it!</button>
+            </form>
+          </pre>
+        </div>
+      </div>
+      <div class="callout">
+        <button class="button--primary fakeformbutton">List it</button>
+      </div>
+    </div>
+    
+
+    {% if wordlist %}
+    <div class="changelog filters">
+
+      <div style="background-color: #2e45451c;">
+        {{stats.percentage}}
+      </div>
+      <br><br>
+
+      <div class="row">
+        <div class="col twoface analiz mb-3 d-grid">
+            <p class="filename">Filename: </p>
+            <p class="total">Total: </p>
+            <p class="totaltypical">Typical: </p>
+        </div>
+        
+        <div class="col twoface analiz mb-3 d-grid">
+          <p class="totaloxford">Oxford: </p>
+          <p class="totala">Oxford A: </p>
+          <p class="totalb">Oxford B: </p>
+          <p class="totalc">Oxford C: </p>
+        </div>
+
+        <div class="col twoface analiz mb-3 d-grid">
+          <p class="noun_count">Noun: </p>
+          <p class="verb_count">Verb: </p>
+          <p class="adj_count">Adjective: </p>
+          <p class="phrverb_count">PhrVerb: </p>
+          <p class="undef_count">Undefined: </p>
+        </div>
+      </div>
+
+        <div class="filterType filterArea">
+            <button class="btn filterButton btn-secondary allfilter">AllType</button>
+            <button class="btn filterButton btn-secondary nounfilter">Noun</button>
+            <button class="btn filterButton btn-secondary adjfilter">Adj</button>
+            <button class="btn filterButton btn-secondary verbfilter">Verb</button>
+            <button class="btn filterButton btn-secondary phrverbfilter">PhrVerb</button>
+            <button class="btn filterButton btn-secondary undeffilter">Undef</button>
+        </div>
+        <br>
+        <div class="filterOxford filterArea">
+            <button class="btn filterButton btn-info alllevelfilter">AllLevel</button>
+            <button class="btn filterButton btn-info a1filter">A1</button>
+            <button class="btn filterButton btn-info a2filter">A2</button>
+            <button class="btn filterButton btn-info b1filter">B1</button>
+            <button class="btn filterButton btn-info b2filter">B2</button>
+            <button class="btn filterButton btn-info c1filter">C1</button>
+            <button class="btn filterButton btn-info otherfilter">Other</button>
+        </div>     
+    </div>
+
+    <div class="callout wordsec" id="lesen">
+        {% for element in wordlist %}
+        <p class="word {{element[1][1]}} {{element[1][2]}} filtoken"> {{ element[0] }}  <b class="countNumber"> {{ element[1][0] }} </b> </p>
+        {% endfor %}
+    </div>
+
+    {% endif %}
+
+
+    <footer class="footer">Wordlister 2021 ♻</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+
+        function setLocal() {
+            localStorage.setItem("UploadedFileName",document.querySelector(".fileupload").files[0].name)
+        }
+        
+        {% if wordlist %}
+            setTimeout(() => {
+              // col-1
+              var to_all = document.querySelectorAll(".word").length;
+              var to_def = document.querySelectorAll(".noun").length+document.querySelectorAll(".adj").length+document.querySelectorAll(".verb").length+document.querySelectorAll(".phrverb").length;
+              var to_ox = document.querySelectorAll(".a1").length+document.querySelectorAll(".a2").length+document.querySelectorAll(".b1").length+document.querySelectorAll(".b2").length+document.querySelectorAll(".c1").length
+              var to_a = document.querySelectorAll(".a1").length+document.querySelectorAll(".a2").length;
+              var to_b = document.querySelectorAll(".b1").length+document.querySelectorAll(".b2").length;
+              var to_c = document.querySelectorAll(".c1").length;
+              document.querySelector(".filename").innerHTML="Filename: "+ "<b>"+localStorage.getItem("UploadedFileName")+"</b>";
+              document.querySelector(".total").innerHTML="Total: "+  "<b>"+to_all+"</b>";
+              document.querySelector(".totaltypical").innerHTML="Typical: "+  "<b>"+to_def+" (%"+Math.round(to_def/to_all*100)+")</b>";
+              document.querySelector(".totaloxford").innerHTML="Oxford: "+ "<b>"+to_ox + " (%"+Math.round(to_ox/to_def*100)+")</b>";
+              document.querySelector(".totala").innerHTML="Ox A: "+ "<b>"+to_a + " (%"+Math.round(to_a/to_def*100)+")</b>";
+              document.querySelector(".totalb").innerHTML="Ox B: "+ "<b>"+to_b + " (%"+Math.round(to_b/to_def*100)+")</b>";
+              document.querySelector(".totalc").innerHTML="Ox C: "+ "<b>"+to_c + " (%"+Math.round(to_c/to_def*100)+")</b>";
+
+              // col-2
+              var noun_count = document.querySelectorAll(".noun").length;
+              var verb_count = document.querySelectorAll(".verb").length;
+              var adj_count = document.querySelectorAll(".adj").length;
+              var phrverb_count = document.querySelectorAll(".phrverb").length;
+              var undef_count = document.querySelectorAll(".undef").length;
+              document.querySelector(".noun_count").innerHTML+="<b>"+noun_count+"</b>";
+              document.querySelector(".verb_count").innerHTML+="<b>"+verb_count+"</b>";
+              document.querySelector(".adj_count").innerHTML+="<b>"+adj_count+"</b>";
+              document.querySelector(".phrverb_count").innerHTML+="<b>"+phrverb_count+"</b>";
+              document.querySelector(".undef_count").innerHTML+="<b>"+undef_count+"</b>";
+            }, 0);
+        {% endif %}
+
+    </script>
+    <script src="scribbler.js"></script>
+  </body>
+</html>

@@ -1,140 +1,115 @@
-abadi;1;other
-adam;1;other
-aha;1;other
-aloud;1;other
-alright;2;other
-amy;2;other
-antiquity;1;other
-anymore;1;other
-anyways;1;other
-applause;1;other
-auctioneer;1;other
-avaaz;1;other
-awesome;1;other
-back up;1;other
-backup;1;c1
-barley;1;other
-bid;3;b2
-boyle;4;other
-bra;1;other
-break up;1;other
-bring;1;a1
-buck;1;c1
-buddy;1;c1
-bunch;1;b2
-butt;1;other
-cadence;1;other
-canaveral;1;other
-cape;1;other
-charles;6;other
-charlie;1;other
-chucklebunny;1;other
-coat;2;a1
+alongside;2;b2
+alonso;2;other
+alpine;1;other
+antonio;1;other
+axle;2;other
+back into;1;other
+back out;1;other
+blow;1;a2
+bottas;14;other
+bounce back;1;other
+brake;1;other
+bull;3;other
+carlos;3;other
+charles;7;other
+cheeky;1;other
+chicane;13;other
+come back;2;other
+come from;2;other
+come into;2;other
 come out;1;other
-commissioner;1;c1
-complaint;1;b1
-congratulations;1;other
-cop;3;c1
-cuz;2;other
-dehydrator;1;other
-depict;1;c1
-digit;1;other
-disturb;1;b2
-dollhouse;1;other
-donnie;3;other
-donny;1;other
-dress up;1;other
-engagement;1;c1
-except;1;a2
-exceptional;1;c1
-excuse;5;b2
-fable;1;other
-fairy;1;other
+crash out;1;other
+cropper;1;other
+curva;4;other
+daniel;3;other
+della;6;other
+desperation;1;other
+drs;1;other
+earlier;1;other
+esteban;1;other
+ferrari;5;other
+gain;1;b2
+gap;1;a2
 gently;1;other
-get it;2;other
-get to;2;other
-get up;1;other
-gina;1;other
-go away;1;other
-go it;1;other
-go through;1;other
-go to;2;other
-goat;1;other
-gonna;9;other
-gray;1;other
-greek;2;other
-harder;1;other
-hawk;1;other
-heroism;2;other
-highest;1;other
-holt;1;other
-honeymoon;1;other
-honor;3;other
-hyperspeed;1;other
-jam;2;a2
-joe;4;other
-joey;1;other
-josh;1;other
-kevin;1;other
-liar;1;other
-listen up;1;other
-live on;1;other
-look for;1;other
-marco;1;other
-matrix;1;other
-mendell;1;other
-mom;2;other
-moron;1;other
-nicely;1;other
-nudge;1;other
-nypd;2;other
-okay;3;other
-outranks;1;other
-pawn;1;other
-pay for;1;other
-peanut;2;other
-peralta;1;other
-pit;1;c1
-plausible;1;other
-podolski;1;other
-pointy;1;other
-polo;1;other
-pooping;2;other
-porno;1;other
-put together;1;other
-reiterate;1;other
-restrain;1;other
-rhymin;1;other
-roger;1;other
-romano;1;other
-russian;1;other
-safer;1;other
-sandler;1;other
-santiago;3;other
-screw;2;c1
-seem;1;other
-sergeant;2;other
-set up;1;other
-shut up;1;other
-sock in;3;other
-socket;1;other
-stage;2;a2
-stick out;1;other
-stressful;1;other
-superior;1;c1
-sustenance;1;other
-take it;2;other
-texted;1;other
-theismann;4;other
-toddler;2;other
-trance;1;other
-trevor;1;other
-trotsky;1;other
-unwise;1;other
-valor;2;other
-vandalism;1;other
-vase;1;other
-videoed;1;other
-vivian;2;other
-wedding;1;other
-york;1;other
+get ahead;1;other
+get away;2;other
+get through;1;other
+giovinazzi;3;other
+go around;1;other
+go for;1;other
+go into;3;other
+go off;1;other
+go over;1;other
+go to;8;other
+grande;4;other
+grid;1;c1
+hamilton;19;other
+hold;1;a2
+hold on;2;other
+hoop;1;other
+italian;2;other
+lando;10;other
+lap;2;c1
+latifi;1;other
+leclerc;10;other
+lesmos;1;other
+lewis;3;other
+light out;1;other
+lock up;1;other
+look back;1;other
+make it;2;other
+make up;1;other
+max;5;other
+mazepin;1;other
+mclaren;5;other
+mclarens;1;other
+men;1;other
+mercedes;2;other
+mick;1;other
+misdemeanor;1;other
+monza;2;other
+move on;3;other
+nikita;1;other
+norris;17;other
+ocon;3;other
+parabolica;1;other
+perez;10;other
+pit;3;c1
+podium;2;other
+presumably;1;c1
+prix;2;other
+protagonists;1;other
+racetrack;2;other
+rear;1;c1
+rejoin;1;other
+renault;1;other
+ricciardo;11;other
+roggia;6;other
+rollover;1;other
+rumble;2;other
+russel;1;other
+russell;1;other
+sainz;4;other
+sausage;1;other
+schumacher;1;other
+sebastian;1;other
+sergio;6;other
+sparkly;1;other
+spin;1;c1
+spin around;1;other
+spray;1;other
+squeeze;1;c1
+strip;2;c1
+stroll;2;other
+sub;2;other
+subtly;1;other
+sunshine;1;other
+swing;1;c1
+teammate;1;other
+underbraking;2;other
+unsafe;1;other
+valtteri;8;other
+verstappen;12;other
+vettel;2;other
+weave;1;c1
+woking;1;other

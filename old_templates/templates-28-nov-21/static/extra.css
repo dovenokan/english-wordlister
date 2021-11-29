@@ -1,0 +1,88 @@
+
+textarea{
+    width: 99%;
+    margin-bottom: 20px;
+    text-align: left;
+    color: white;
+    padding: 0 1rem;
+    border-radius: 4px;
+    background-color: #232323;
+    min-height: 285px;
+    animation: fadeUp 2s;
+    box-shadow: 0px 12px 36.8px 9.2px rgb(0 0 0 / 10%);
+    border: transparent;
+    overflow: hidden;
+}
+
+.btn-success{
+    margin: auto 45%;
+}
+
+.wordsec{
+    width: 80% !important;
+    margin: 0 auto;
+    display: block;	
+    grid-template-rows: none;
+    grid-template-columns: none;
+}
+
+.wordsec p{
+    display: initial  ;
+    white-space: nowrap !important;
+    margin-top: 0 !important;
+    margin-bottom: 2px !important;
+}
+
+.verb{
+    color:#0066ff;
+}    
+.adj{
+    color: #00b59a;
+}
+.noun{
+    color: rgb(252, 2, 90);
+}
+.undef{
+    color: #373c45;
+}
+.phrverb{
+    color: #d907ff;
+}
+
+b.countNumber{
+    background: #e5fff83b;
+    border: 1px solid #4fff6133;
+}
+
+div.filters{
+    text-align: center;
+}
+
+.analiz{
+    color: #101361;
+    display: grid;
+}
+
+.analiz b{
+    color: #256b9c;
+}
+
+div {
+    width: 100% !important;
+    text-align: center !important;
+}
+
+
+
+
+.mongo_title{
+    min-height: 30px;
+    margin-bottom: -25px;
+    text-transform: capitalize;
+}
+
+.mongo_title_file{
+    min-height: 30px;
+    margin: 0;
+    text-transform: capitalize;
+}
