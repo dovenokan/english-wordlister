@@ -1,115 +1,932 @@
-alongside;2;b2
-alonso;2;other
-alpine;1;other
-antonio;1;other
-axle;2;other
-back into;1;other
-back out;1;other
-blow;1;a2
-bottas;14;other
-bounce back;1;other
-brake;1;other
-bull;3;other
-carlos;3;other
-charles;7;other
-cheeky;1;other
-chicane;13;other
+abend;2;other
+abridge;1;other
+abroad;1;a2
+abundant;1;other
+accelerate;1;c1
+accessory;1;other
+accommodate;1;b2
+accord;4;other
+account for;1;other
+acquaint;1;other
+acquit;1;other
+actively;1;other
+adjourn;2;other
+administer;1;c1
+admire;3;b1
+admissible;2;other
+admission;1;c1
+admit;8;b1
+admonish;1;other
+adolf;5;other
+advent;1;other
+advocate;2;c1
+affair;1;b2
+affidavit;2;other
+affiliations;2;other
+aid;1;b2
+aide;1;c1
+albrecht;1;other
+alexander;1;other
+alle;1;other
+allegation;1;c1
+allegiance;1;other
+alles;1;other
+alleviate;1;other
+ally;2;c1
+almighty;4;other
+america;6;other
+american;12;other
+americans;6;other
+anni;2;other
+antique;1;other
+apertures;1;other
+apiece;1;other
+appeal;4;b2
+apt;1;other
+arise;1;b2
+armament;1;other
+arraign;1;other
+arrive;2;a1
+arthur;1;other
+aryan;1;other
+ashtray;1;other
+ask for;2;other
+asocial;1;other
+aspect;3;b2
+aspirations;1;other
+assert;2;c1
+assign;1;b2
+atrocious;1;other
+atrocities;3;other
+attach;1;b1
+attain;1;c1
+attend;3;a2
+attendance;1;c1
+auf;2;other
+aufs;1;other
+austria;1;other
+authenticity;1;other
+authoritative;1;other
+autobahn;1;other
+avow;1;other
+aware;23;b1
+awe;1;other
+awfully;1;other
+backward;1;other
+backwoods;1;other
+baker;4;other
+barrier;1;b2
+basement;1;b2
+bauen;1;other
+be in;8;other
+bear on;2;other
+bear with;1;other
+beat up;1;other
+bechstein;1;other
+beget;1;other
+beggar;1;other
+belong to;1;other
+belongings;1;other
+belsen;2;other
+bench;2;c1
+berlin;6;other
+bertholt;24;other
+betake;1;other
+bible;1;other
+bigot;1;other
+bild;1;other
+bist;1;other
+bitte;1;other
+bleibt;1;other
+bless;2;c1
+blockade;1;other
+bloodshed;1;other
+blow;2;a2
+board;1;other
+bolsheviks;1;other
+bolshevism;1;other
+booth;1;other
+bourgeois;1;other
+boxcars;1;other
+braver;1;other
+break into;2;other
+breakdown;1;c1
+brief;1;b2
+bring;2;a1
+bring about;1;other
+bring forward;1;other
+bring out;1;other
+bring up;1;other
+british;2;other
+broadcast;1;b2
+broader;1;other
+brutalities;2;other
+brutality;1;other
+buchenwald;4;other
+building;1;other
+bulldozer;1;other
+bulwark;2;other
+burkette;1;other
+burst;1;c1
+bury;3;b1
+businessmen;1;other
+byers;5;other
+call for;2;other
+candy;1;other
+cantor;1;other
+carry off;1;other
+carry out;3;other
+catastrophe;1;other
+categorised;1;other
+cattle;1;c1
+cellophane;1;other
+cemetery;1;c1
+chamber;3;c1
+chancellor;1;other
+char;2;other
+charge;10;b1
+children;10;other
+churchill;3;other
+circumstance;1;b2
+cite;1;b2
+citron;1;other
+civilisation;1;other
+civilised;3;other
+clarification;1;other
+clarify;1;b2
+clash;1;c1
+clean up;1;other
+cleaner;1;other
+clerk;1;b2
+coal;1;b1
+colonel;15;other
 come back;2;other
-come from;2;other
-come into;2;other
-come out;1;other
-crash out;1;other
-cropper;1;other
-curva;4;other
-daniel;3;other
-della;6;other
-desperation;1;other
-drs;1;other
-earlier;1;other
-esteban;1;other
-ferrari;5;other
+come from;1;other
+come in;9;other
+come into;1;other
+come over;1;other
+come to;15;other
+come up;3;other
+comfortable;3;a2
+commissary;1;other
+commit;6;b1
+common;5;a1
+communist;5;c1
+companionship;1;other
+compassion;1;c1
+complain;1;a2
+concern;3;b2
+conclude;2;b1
+concordat;1;other
+concur;1;other
+condemn;1;c1
+conduct;2;b2
+confine;2;c1
+congregation;1;c1
+connell;1;other
+conscientiously;1;other
+conscious;1;b2
+consider;2;a2
+conspire;1;other
+constitute;2;c1
+constitution;3;c1
+constitutional;1;c1
+construct;1;b2
+contrary;1;c1
+convict;1;c1
+corporal;1;other
+corrupt;1;c1
+counsel;16;c1
+counsellor;1;c1
+courage;1;b2
+courtroom;18;other
+crate;1;other
+cringe;1;other
+criticised;1;other
+crowd;1;a2
+crucial;1;b2
+cruelty;1;other
+crux;1;other
+cry out;1;other
+cupid;1;other
+cure;1;b2
+curious;2;b2
+curtailment;1;other
+curtiss;4;other
+cut out;1;other
+czechoslovakia;1;other
+dachau;6;other
+damn;4;other
+damning;1;other
+dan;14;other
+dann;1;other
+dare;2;b2
+darfst;1;other
+davor;1;other
+deaf;1;other
+deal with;1;other
+dealing;1;other
+decay;1;other
+deceased;1;other
+decree;5;other
+dedicate;4;c1
+defect;1;c1
+defences;1;other
+defendant;37;other
+defilement;1;other
+defiler;1;other
+degenerate;1;other
+degrade;1;other
+deigned;1;other
+delicate;1;c1
+delude;1;other
+der;3;other
+describe;4;a1
+detail;2;a1
+deutschland;3;other
+devastate;2;c1
+devil;2;c1
+dictatorship;1;other
+difference;3;a1
+digit;1;other
+dignity;3;c1
+dilemma;2;c1
+dir;4;other
+disagreeable;2;other
+discard;3;c1
+discipline;2;b2
+discredit;1;other
+disdained;1;other
+disease;1;a2
+disgrace;1;other
+disloyalty;1;other
+dispose;2;c1
+dissenting;2;other
+distinctive;1;c1
+distort;3;c1
+district;4;b2
+disunity;1;other
+do in;2;other
+do with;4;other
+do without;1;other
+doch;1;other
+dock;5;other
+doughboy;1;other
+douglas;1;other
+drag;2;b2
+dumb;1;c1
+durer;1;other
+earphones;2;other
+ease;1;c1
+echo;1;c1
+efficiency;2;c1
+eichinger;1;other
+eichmann;1;other
+ein;2;other
+einem;1;other
+einst;2;other
+elect;1;b2
+electorate;2;other
+eloquent;1;other
+elsa;4;other
+embodiment;1;other
+embrace;1;b2
+emerge;1;b2
+emil;11;other
+enactment;1;other
+endeavour;1;c1
+enforcement;1;c1
+england;1;other
+english;4;other
+entitle;1;c1
+ernst;37;other
+ersatz;1;other
+erscheint;1;other
+eskimos;2;other
+establish;2;b2
+europe;4;other
+evade;1;other
+eventual;1;other
+excrement;1;other
+excuse;11;b2
+execute;5;c1
+execution;3;c1
+executioners;1;other
+executive;1;b2
+exhibit;1;b2
+expectation;1;b2
+expedient;1;other
+expropriation;1;other
+extension;2;b2
+exterminated;1;other
+extermination;5;other
+exterminations;1;other
+extraordinary;2;b2
+extreme;1;a2
+extremist;2;c1
+facility;1;b2
+fact;5;a1
+faith;1;b2
+faithfulness;1;other
+fall;2;a1
+fanatic;1;other
+farben;1;other
+fate;1;c1
+fdr;2;other
+fee;1;a2
+feeble;3;other
+feldenstein;24;other
+ferne;1;other
+fever;2;b2
+fibre;1;c1
+fifties;1;other
+fill;3;a1
+firm;1;b2
+flaw;2;c1
+fleh;1;other
+flower;1;a1
+folder;1;other
+forcibly;1;other
+forgetfulness;1;other
+forgive;1;b2
+formal;1;a2
+formality;1;other
+found;1;other
+fragile;1;c1
+framers;1;other
+france;1;other
+frank;1;other
+frankfurt;2;other
+franklin;1;other
+frankly;1;c1
+french;1;other
+friedrich;5;other
+fugitive;1;other
+fulfil;1;b2
+furnish;1;other
+führer;1;other
 gain;1;b2
-gap;1;a2
-gently;1;other
-get ahead;1;other
+gazette;1;other
+gemütlich;1;other
+gentlemen;5;other
+genuine;1;b2
+geographical;1;other
+german;23;other
+germans;7;other
+germany;28;other
+gerne;1;other
+gestapo;1;other
 get away;2;other
-get through;1;other
-giovinazzi;3;other
-go around;1;other
-go for;1;other
-go into;3;other
-go off;1;other
-go over;1;other
-go to;8;other
-grande;4;other
-grid;1;c1
-hamilton;19;other
-hold;1;a2
-hold on;2;other
-hoop;1;other
-italian;2;other
-lando;10;other
-lap;2;c1
-latifi;1;other
-leclerc;10;other
-lesmos;1;other
-lewis;3;other
-light out;1;other
-lock up;1;other
+get on;1;other
+get to;2;other
+geuter;2;other
+glas;1;other
+glass;1;a1
+go ahead;1;other
+go back;4;other
+go for;3;other
+go forward;1;other
+go on;9;other
+go over;2;other
+go through;1;other
+go to;33;other
+go up;1;other
+goebbels;6;other
+gonna;1;other
+grandpa;1;other
+grant;1;b2
+grasp;1;c1
+gravamen;1;other
+greatest;1;other
+greece;1;other
+gretweg;1;other
+groan;1;other
+grosseplatz;1;other
+großen;1;other
+guaranties;1;other
+guilt;4;c1
+guinea;1;other
+gut;3;c1
+guten;2;other
+gypsies;1;other
+göring;2;other
+hack;1;other
+hahn;14;other
+halbestadt;11;other
+halt;1;c1
+ham;1;other
+hand over;1;other
+handwrite;1;other
+hang with;1;other
+hans;1;other
+hardworking;1;other
+hare;6;other
+harrison;1;other
+harry;3;other
+have in;1;other
+have on;1;other
+haywood;9;other
+hear about;1;other
+hear from;1;other
+heinous;1;other
+helper;4;other
+helpless;1;other
+hereditary;2;other
+heritage;1;c1
+herr;17;other
+hick;1;other
+highest;1;other
+himmler;1;other
+hinter;1;other
+hiroshima;1;other
+hitler;31;other
+hoffman;13;other
+hofstetter;9;other
+hold;9;a2
+holland;1;other
+holmes;2;other
+honestly;1;other
+honourable;2;other
+honours;10;other
+hop;1;other
+hop it;1;other
+horn;2;c1
+hugo;1;other
+huh;1;other
+humanity;3;c1
+humiliation;1;other
+hungary;1;other
+hunter;6;other
+ich;2;other
+ideology;1;c1
+illuminate;1;other
+imbeciles;1;other
+imbecility;1;other
+immer;1;other
+immunisation;1;other
+implication;2;b2
+imprisonment;5;c1
+incendiaries;1;other
+incidentally;1;other
+incompetence;2;other
+incompetent;2;other
+indecent;1;other
+independence;2;b2
+indict;3;other
+indictment;8;c1
+indignity;1;other
+indoctrinate;1;other
+industrialists;3;other
+inferiority;1;other
+infraction;1;other
+inject;1;c1
+injustice;1;c1
+inmates;3;other
+inscribe;1;other
+insignia;2;other
+inspire;1;b2
+instance;2;b2
+internal;1;b2
+interpretation;1;b2
+interpreter;1;other
+interrogatories;1;other
+interrupt;1;b2
+intimate;2;c1
+invade;1;b2
+irene;10;other
+ironic;2;c1
+issue;5;b1
+ist;2;other
+ives;3;other
+jahreiss;1;other
+janning;52;other
+jew;2;other
+jewish;2;other
+jews;6;other
+jordan;1;other
+journey;1;a1
+judgment;4;other
+judiciary;3;other
+julius;2;other
+jurist;6;other
+jurists;1;other
+justification;1;c1
+justizrat;1;other
+kampf;1;other
+karl;1;other
+karolinenstrasse;1;other
+keep in;1;other
+keep up;2;other
+ken;2;other
+key to;1;other
+kick up;1;other
+kindest;1;other
+kommt;1;other
+küsst;1;other
+labourer;3;other
+lamb;1;other
+lampe;6;other
+lampshade;1;other
+land;4;a1
+lantern;2;other
+lap;6;c1
+largest;1;other
+laterne;2;other
+latitude;1;other
+lawson;11;other
+lebt;1;other
+legalistic;1;other
+legitimacy;1;other
+lehman;2;other
+lemonade;1;other
+lenz;1;other
+lesser;1;c1
+lethal;1;c1
+leute;1;other
+lever;1;other
+liaison;1;other
+liberals;1;other
+liberate;2;other
+liberty;1;c1
+license;1;c1
+liebe;2;other
+liebesrausch;1;other
+liege;2;other
+liegt;1;other
+lili;3;other
+lindnow;6;other
+live in;1;other
+live with;2;other
+liverwurst;1;other
+liége;1;other
+loath;1;other
+lodge;1;other
+logic;1;c1
+london;1;other
+longer;1;other
 look back;1;other
-make it;2;other
-make up;1;other
-max;5;other
-mazepin;1;other
-mclaren;5;other
-mclarens;1;other
-men;1;other
-mercedes;2;other
-mick;1;other
-misdemeanor;1;other
-monza;2;other
-move on;3;other
-nikita;1;other
-norris;17;other
-ocon;3;other
-parabolica;1;other
-perez;10;other
-pit;3;c1
-podium;2;other
-presumably;1;c1
-prix;2;other
-protagonists;1;other
-racetrack;2;other
-rear;1;c1
-rejoin;1;other
-renault;1;other
-ricciardo;11;other
-roggia;6;other
-rollover;1;other
-rumble;2;other
-russel;1;other
-russell;1;other
-sainz;4;other
+look up;1;other
+louder;1;other
+loyalty;3;c1
+madam;1;other
+madame;5;other
+maine;2;other
+make for;1;other
+make it;8;other
+make of;1;other
+make out;1;other
+make up;3;other
+malice;1;other
+malignant;1;other
+malmedy;1;other
+mandatory;1;c1
+maniac;1;other
+mankind;2;other
+mark;3;a2
+marleen;3;other
+marschiert;1;other
+marshal;4;other
+masaryk;1;other
+matt;2;other
+maturity;1;other
+max;6;other
+mccarthy;1;other
+meeting;1;other
+mehr;2;other
+mein;2;other
+melt down;1;other
+men;24;other
+mentally;2;other
+merchant;1;c1
+mercy;2;c1
+mesmerised;2;other
+meyer;1;other
+mich;1;other
+microphone;1;other
+midst;1;c1
+milch;1;other
+mind;3;other
+ministry;2;c1
+misery;1;c1
+mitigation;1;other
+mockery;2;other
+modem;1;other
+monumental;1;other
+morality;1;c1
+morphia;1;other
+moselle;2;other
+motive;1;c1
+motto;1;other
+move in;1;other
+mrs;42;other
+must;23;other
+münch;3;other
+nacht;1;other
+nagasaki;1;other
+nationals;1;other
+nationwide;1;c1
+nazi;9;other
+nazis;5;other
+neck;1;a2
+neue;1;other
+nicht;4;other
+nobility;2;other
+noch;1;other
+non;2;other
+norris;1;other
+notice;3;a2
+notification;2;other
+notorious;3;c1
+nummer;1;other
+nur;1;other
+nuremberg;15;other
+oath;6;other
+objection;16;c1
+objectively;1;other
+oblige;2;c1
+obscene;1;other
+obsess;1;c1
+occupiers;1;other
+offspring;1;c1
+oliver;2;other
+omniscient;4;other
+ones;1;other
+opa;1;other
+operate on;1;other
+order;24;a1
+ordinary;2;a2
+organised;1;other
+outbursts;1;other
+oven;2;a2
+overrule;7;other
+overtones;2;other
+pact;1;other
+pacts;1;other
+painfully;1;other
+painting;1;other
+pardon;1;other
+parochial;1;other
+pass for;1;other
+patriot;2;other
+peculiarities;1;other
+pelvis;1;other
+pentagon;1;other
+perceptive;1;other
+peril;2;other
+perjury;2;other
+perkins;5;other
+persecute;1;other
+persecution;1;other
+pertaining;1;other
+pertinent;1;other
+perverted;2;other
+perverts;1;other
+petersen;23;other
+phrase;1;a1
+physician;1;c1
+pillar;2;other
+plea;5;c1
+plead;1;other
+pohl;2;other
+point out;2;other
+poland;1;other
+pole;1;c1
+polish;1;other
+politically;1;other
+precedent;2;c1
+preside;3;c1
+prestige;2;other
+pretext;2;other
+prevent;3;a2
+proceedings;1;other
+propagation;1;other
+prosecute;4;c1
+prosecution;23;c1
+prosecutor;3;c1
+prosit;2;other
+protégé;2;other
+provincial;1;c1
+prussia;1;other
+rack;1;other
+radical;1;c1
+radicals;2;other
+radnitz;2;other
+rage;1;c1
+railroad;2;other
+rally;2;c1
+rationalisation;1;other
+realise;4;other
+realised;1;other
+rebuilding;2;other
+reception;3;a2
+recess;2;other
+recognise;4;other
+reconsecration;1;other
+refuge;1;c1
+regardless;1;c1
+regime;2;c1
+reich;12;other
+reichstag;1;other
+reiss;1;other
+remilitarise;1;other
+render;2;c1
+reopen;1;other
+repetitive;1;other
+republic;1;c1
+republican;1;other
+residence;1;c1
+resistance;1;c1
+retribution;1;other
+revenge;1;c1
+revive;1;c1
+rhineland;1;other
+ridicule;1;other
+rise to;2;other
+ritual;2;c1
+roar;1;other
+robe;1;other
+rolfe;9;other
+roosevelt;1;other
+rose;1;other
+rudolf;4;other
+ruling;1;other
+run away;1;other
+run to;1;other
+russia;1;other
+russians;2;other
+sacrifice;2;c1
+sacrificial;2;other
+sadder;1;other
+sadistic;1;other
+salvation;1;other
+sanitary;1;other
+sap;1;other
 sausage;1;other
-schumacher;1;other
-sebastian;1;other
-sergio;6;other
-sparkly;1;other
-spin;1;c1
-spin around;1;other
-spray;1;other
-squeeze;1;c1
-strip;2;c1
-stroll;2;other
-sub;2;other
-subtly;1;other
-sunshine;1;other
-swing;1;c1
-teammate;1;other
-underbraking;2;other
-unsafe;1;other
-valtteri;8;other
-verstappen;12;other
-vettel;2;other
-weave;1;c1
-woking;1;other
+scheffler;2;other
+schmidt;4;other
+schuldig;2;other
+schwalbenwinkel;6;other
+schön;2;other
+scout;1;other
+seamstress;2;other
+secrecy;1;other
+secretly;1;other
+section;2;a1
+seem;2;other
+seh;1;other
+senator;5;c1
+sentiment;1;c1
+set forth;1;other
+shatter;1;c1
+showplace;1;other
+shred;1;other
+shriek;1;other
+shrunken;1;other
+sich;1;other
+sie;2;other
+sieben;1;other
+sign in;2;other
+silesia;1;other
+sit down;3;other
+sit in;6;other
+sit on;7;other
+sit through;1;other
+skilful;1;other
+slovakia;1;other
+socialism;7;other
+socialist;5;c1
+soll;1;other
+sonnenberg;2;other
+sooner;2;other
+soviet;1;other
+specialised;1;other
+specially;1;other
+specification;2;c1
+spectacle;2;c1
+spectre;1;other
+squad;1;c1
+stag;2;other
+stage;1;a2
+stand by;2;other
+stand for;4;other
+stand up;1;other
+stature;1;other
+stay in;1;other
+stay on;1;other
+steh;1;other
+steht;1;other
+sterilisation;7;other
+sterilisations;1;other
+sterilise;1;other
+sterilised;7;other
+stilled;1;other
+stove;1;other
+streicher;3;other
+stricken;1;other
+strudel;3;other
+stuttgart;6;other
+stürmer;1;other
+sudetenland;1;other
+suicide;2;c1
+sullen;1;other
+superior;1;c1
+supreme;2;c1
+sustain;2;c1
+swamp;1;other
+swastika;3;other
+sway;1;other
+swear by;4;other
+swear in;1;other
+tactics;1;other
+tad;3;other
+take it;6;other
+take on;1;other
+take over;3;other
+tangible;1;other
+tattooed;1;other
+teaching;1;other
+technically;1;other
+teeth;1;other
+tenant;1;c1
+tenth;1;other
+testify;4;c1
+testimony;3;c1
+therein;1;other
+thirst;1;other
+throne;1;other
+throw away;1;other
+tolerate;2;c1
+tom;1;other
+tor;1;other
+torture;3;c1
+townspeople;1;other
+traitor;3;other
+traitors;1;other
+transcend;1;other
+travesty;1;other
+tremendous;1;c1
+tribunal;50;c1
+truman;1;other
+trunk;1;other
+tum;1;other
+turn on;1;other
+tut;2;other
+und;2;other
+understood;1;other
+undesirable;1;other
+undoubtedly;1;c1
+uns;5;other
+uphold;2;c1
+upstairs;2;a1
+vanquished;1;other
+vatican;2;other
+verdict;6;c1
+vereint;1;other
+verweile;1;other
+victors;1;other
+violate;1;c1
+violation;1;c1
+violator;1;other
+virginia;1;other
+virtue;2;c1
+voluntarily;4;other
+vor;1;other
+waffen;1;other
+wager;2;other
+wagers;1;other
+wagner;1;other
+walk into;1;other
+walk out;1;other
+wallner;19;other
+warp;1;other
+warrant;1;c1
+weimar;3;other
+wendell;3;other
+wenn;1;other
+werner;5;other
+whatsoever;1;c1
+whimper;1;other
+whiten;1;other
+widest;1;other
+widow;1;c1
+wie;2;other
+wieck;12;other
+wiederseh;1;other
+wiedersehen;1;other
+wildest;2;other
+wilhelm;1;other
+wilkie;2;other
+winston;3;other
+wir;3;other
+withhold;5;other
+wives;1;other
+wolfe;1;other
+woll;1;other
+wollen;1;other
+women;3;other
+wünscht;1;other
+zigaretten;1;other
+zur;1;other
+zyklon;1;other
+ﬂiegt;1;other
+ﬂüsterndes;1;other
