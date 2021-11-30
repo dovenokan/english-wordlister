@@ -1,4 +1,4 @@
-1
+﻿1
 00:03:18,396 --> 00:03:20,900
 I didn't know it was so bad.
 
@@ -453,7 +453,7 @@ Ernst Janning, are you represented
 by counsel before this tribunal?
 
 97
-00:11:48,240 --> 00:11:53,255
+00:11:48,240 --> 00:11:54,255
 Ernst Janning, are you represented
 by counsel before this tribunal?
 
@@ -725,12 +725,12 @@ is broader than the visiting
 of retribution on a few men.
 
 155
-00:17:05,140 --> 00:17:10,487
+00:17:05,140 --> 00:17:11,487
 It is dedicated to the reconsecration
 of the temple of justice.
 
 156
-00:17:11,605 --> 00:17:16,952
+00:17:11,605 --> 00:17:17,952
 It is dedicated to finding a code of justice
 the whole world will be responsible to.
 
@@ -743,7 +743,7 @@ How will this code be established?
 It will be established
 
 159
-00:17:31,917 --> 00:17:37,141
+00:17:31,917 --> 00:17:39,141
 in a clear, honest evaluation of
 the responsibility for the crimes
 
@@ -764,17 +764,17 @@ be found only in documents
 
 163
 00:17:52,062 --> 00:17:55,075
-that no one contests or denies. "
+that no one contests or denies."
 
 164
 00:17:55,190 --> 00:18:00,363
 "it will be found in considerations
-of a political or social nature. "
+of a political or social nature."
 
 165
-00:18:00,487 --> 00:18:06,462
+00:18:00,487 --> 00:18:07,462
 "it will be found, most of
-all, in the character of men. "
+all, in the character of men."
 
 166
 00:18:09,829 --> 00:18:13,211
@@ -1081,7 +1081,7 @@ Auf Wiedersehen, Opa.
 229
 00:24:27,290 --> 00:24:31,513
 - What did she say?
-- She said "Goodbye, Grandpa. "
+- She said "Goodbye, Grandpa."
 
 230
 00:25:20,302 --> 00:25:23,101
@@ -1158,7 +1158,7 @@ The game will be played
 according to their own rules.
 
 246
-00:26:43,551 --> 00:26:48,982
+00:26:43,551 --> 00:26:49,982
 We'll see whether they have the courage
 to sit in judgment on a man like you.
 
@@ -1167,7 +1167,7 @@ to sit in judgment on a man like you.
 The way I see it,
 
 248
-00:26:53,645 --> 00:26:59,194
+00:26:53,645 --> 00:27:00,194
 the most important elements in the
 case are the sterilisation decrees
 
@@ -1272,7 +1272,7 @@ would you tell us, from
 your own experience,
 
 271
-00:28:49,469 --> 00:28:54,816
+00:28:49,469 --> 00:28:55,816
 the position of the judge in Germany
 prior to the advent of Adolf Hitler?
 
@@ -1329,7 +1329,7 @@ And what other changes were there?
 The right to appeal was eliminated.
 
 283
-00:29:39,561 --> 00:29:45,074
+00:29:39,561 --> 00:29:46,074
 The Supreme Court of the Reich was
 replaced by peoples' and special courts.
 
@@ -1407,7 +1407,7 @@ Now, would you please describe for
 us the changes in criminal law.
 
 300
-00:30:50,966 --> 00:30:56,147
+00:30:50,966 --> 00:30:57,147
 Its characteristic was an ever-increasing
 inflation of the death penalty.
 
@@ -1417,7 +1417,7 @@ Sentences were passed
 against defendants
 
 302
-00:31:00,225 --> 00:31:05,323
+00:31:00,225 --> 00:31:06,323
 just because they were Poles or
 Jews, or politically undesirable.
 
@@ -1432,7 +1432,7 @@ among them sexual sterilisation for
 those who were categorised as asocial.
 
 305
-00:31:16,449 --> 00:31:22,378
+00:31:16,449 --> 00:31:23,378
 Was it necessary for judges to wear any
 distinctive mark on their robes in 1935?
 
@@ -1482,9 +1482,9 @@ Herr Rolfe.
 Herr Justizrat Dr Wieck.
 
 316
-00:32:10,420 --> 00:32:16,016
+00:32:10,420 --> 00:32:17,016
 You used the phrase "necessary for
-the protection of the country. "
+the protection of the country."
 
 317
 00:32:17,135 --> 00:32:19,686
@@ -1533,7 +1533,7 @@ party in Germany?
 Mm... yes.
 
 327
-00:32:43,286 --> 00:32:49,013
+00:32:43,286 --> 00:32:50,013
 Would you say that National Socialism
 helped to cure some of these conditions?
 
@@ -1566,7 +1566,7 @@ No. It was not possible.
 Dr Wieck,
 
 334
-00:33:15,694 --> 00:33:20,788
+00:33:15,694 --> 00:33:22,788
 you were not in the administration
 from the years 1935 to 1943,
 
@@ -1575,7 +1575,7 @@ from the years 1935 to 1943,
 by your own admission.
 
 336
-00:33:25,745 --> 00:33:31,006
+00:33:25,745 --> 00:33:33,006
 Is it not possible that your view of
 the administration might be distorted?
 
@@ -1612,7 +1612,7 @@ National Socialist measures introduced,
 
 344
 00:34:04,117 --> 00:34:07,332
-among them sexual sterilisation. "
+among them sexual sterilisation."
 
 345
 00:34:07,454 --> 00:34:11,713
@@ -1667,7 +1667,7 @@ that the public welfare
 356
 00:34:52,499 --> 00:34:55,216
 may call upon their best
-citizens for their lives. "
+citizens for their lives."
 
 357
 00:34:55,335 --> 00:34:58,218
@@ -1682,7 +1682,7 @@ the state for these lesser sacrifices
 359
 00:35:02,884 --> 00:35:06,313
 in order to prevent our being
-swamped by incompetence. "
+swamped by incompetence."
 
 360
 00:35:06,429 --> 00:35:10,570
@@ -1695,14 +1695,14 @@ or to let them starve
 for their imbecility,
 
 362
-00:35:13,061 --> 00:35:18,574
+00:35:13,061 --> 00:35:19,574
 society can prevent their propagation
-by medical means in the first place. "
+by medical means in the first place."
 
 363
 00:35:21,736 --> 00:35:25,747
 "Three generations of
-imbeciles are enough. "
+imbeciles are enough."
 
 364
 00:35:28,243 --> 00:35:32,715
@@ -1752,7 +1752,7 @@ was a "novel National Socialist measure"?
 Yes, I can say it,
 
 374
-00:36:15,624 --> 00:36:21,054
+00:36:15,624 --> 00:36:22,054
 because it was never before used as a
 weapon against political opponents.
 
@@ -1826,7 +1826,7 @@ free of responsibility?
 Yes, I do.
 
 390
-00:37:37,831 --> 00:37:43,213
+00:37:37,831 --> 00:37:44,213
 Dr Wieck, did you ever swear to the
 Civil Servant Loyalty Oath of 1934?
 
@@ -1885,7 +1885,7 @@ that I will observe the laws
 402
 00:38:32,052 --> 00:38:36,892
 and that I will conscientiously
-fulfil my duties, so help me God. "
+fulfil my duties, so help me God."
 
 403
 00:38:37,015 --> 00:38:39,067
@@ -1900,7 +1900,7 @@ It was mandatory.
 Yes.
 
 406
-00:38:46,566 --> 00:38:51,664
+00:38:46,566 --> 00:38:52,664
 But you're such a perceptive man, Dr
 Wieck. You could see what was coming.
 
@@ -1912,7 +1912,7 @@ was leading Germany to disaster.
 408
 00:38:57,661 --> 00:39:00,591
 "It was clear to anyone
-who had eyes and ears. "
+who had eyes and ears."
 
 409
 00:39:02,457 --> 00:39:06,598
@@ -1925,7 +1925,7 @@ if you, and men like you, would
 have refused to swear to the oath?
 
 411
-00:39:12,717 --> 00:39:17,934
+00:39:12,717 --> 00:39:18,934
 It would have meant that Hitler could
 never have come to absolute power!
 
@@ -2057,22 +2057,22 @@ of the Weimar constitution.
 438
 00:41:17,467 --> 00:41:21,347
 "Now we can look forward to a Germany
-without guns and bloodshed. "
+without guns and bloodshed."
 
 439
 00:41:21,471 --> 00:41:25,398
 "A Germany of justice, where
-men can live instead of die. "
+men can live instead of die."
 
 440
 00:41:25,517 --> 00:41:28,566
 "A Germany of purpose, of
-freedom, of humanity. "
+freedom, of humanity."
 
 441
 00:41:28,687 --> 00:41:30,941
 "A Germany that calls
-for the best in man. "
+for the best in man."
 
 442
 00:41:31,064 --> 00:41:33,199
@@ -2383,7 +2383,7 @@ Halbestadt and I are not political.
 - Ja.
 
 507
-00:46:10,302 --> 00:46:15,602
+00:46:10,302 --> 00:46:16,602
 No, but you must have been aware of
 some of the events that were going on.
 
@@ -2584,7 +2584,7 @@ below for "medical treatment".
 551
 00:49:21,326 --> 00:49:24,754
 Next, prosecution presents
-affidavit document no. 488,
+affidavit document no.488,
 
 552
 00:49:24,871 --> 00:49:27,837
@@ -2603,7 +2603,7 @@ Main has decided the following:
 555
 00:49:33,672 --> 00:49:37,764
 the seamstress Anni Münch, daughter of
-Wilhelm Münch, is to be sterilised. "
+Wilhelm Münch, is to be sterilised."
 
 556
 00:49:37,884 --> 00:49:40,814
@@ -2613,16 +2613,16 @@ herself within two weeks
 557
 00:49:40,929 --> 00:49:43,432
 at one of the hospitals
-mentioned below. "
+mentioned below."
 
 558
 00:49:43,557 --> 00:49:49,156
 "if she does not take herself
-voluntarily, she will be taken by force. "
+voluntarily, she will be taken by force."
 
 559
 00:49:49,271 --> 00:49:54,823
-Next, document no. 449, interrogatories
+Next, document no.449, interrogatories
 in the German and English text,
 
 560
@@ -2669,7 +2669,7 @@ the defence a question?
 Yes.
 
 569
-00:50:25,432 --> 00:50:30,648
+00:50:25,432 --> 00:50:31,648
 Would evidence on sterilisation be
 admissible if there were a witness?
 
@@ -2768,7 +2768,7 @@ Uh-huh.
 Now, think back.
 
 591
-00:52:36,104 --> 00:52:41,534
+00:52:36,104 --> 00:52:42,534
 Do you remember anything unusual that
 happened to you and your family in 1933,
 
@@ -2854,7 +2854,7 @@ and turned them over to the police.
 Why not?
 
 610
-00:53:46,341 --> 00:53:51,522
+00:53:46,341 --> 00:53:52,522
 It was then at the time of
 the national elections.
 
@@ -2994,7 +2994,7 @@ it for the tribunal?
 
 640
 00:56:14,906 --> 00:56:18,963
-"District court of Stuttgart. "
+"District court of Stuttgart."
 
 641
 00:56:19,077 --> 00:56:23,502
@@ -3008,30 +3008,30 @@ Hans Petersen,
 
 643
 00:56:28,670 --> 00:56:33,807
-is to be sterilised. "
+is to be sterilised."
 
 644
 00:56:34,801 --> 00:56:37,387
 Would you read the last paragraph?
 
 645
-00:56:42,017 --> 00:56:47,743
+00:56:42,017 --> 00:56:48,743
 "It is therefore requested he
 present himself within two weeks
 
 646
 00:56:48,857 --> 00:56:52,451
 to one of the hospitals
-mentioned below. "
+mentioned below."
 
 647
-00:56:53,361 --> 00:56:58,670
+00:56:53,361 --> 00:57:00,670
 "if he does not betake
 himself voluntarily,
 
 648
 00:57:02,203 --> 00:57:04,458
-he will be taken by force. "
+he will be taken by force."
 
 649
 00:57:08,668 --> 00:57:11,386
@@ -3040,7 +3040,7 @@ signature at the bottom.
 
 650
 00:57:14,633 --> 00:57:17,646
-"Presiding Justice Hofstetter. "
+"Presiding Justice Hofstetter."
 
 651
 00:57:21,640 --> 00:57:24,902
@@ -3058,7 +3058,7 @@ written below the signature?
 
 654
 00:57:36,071 --> 00:57:38,918
-Minister of Justice. "
+Minister of Justice."
 
 655
 00:57:41,117 --> 00:57:43,169
@@ -3138,7 +3138,7 @@ And she said she thought the
 whole thing was terrible.
 
 672
-00:58:50,645 --> 00:58:56,076
+00:58:50,645 --> 00:58:57,076
 And then the doctor came in,
 who was supposed to do the...
 
@@ -3200,7 +3200,7 @@ I have worked for my father.
 Yes, but what did he do?
 
 686
-01:00:13,144 --> 01:00:19,114
+01:00:13,144 --> 01:00:22,114
 He would raise and lower the barrier
 at the crossing for traffic.
 
@@ -3352,7 +3352,7 @@ sterilise the mentally incompetent.
 Objection overruled.
 
 720
-01:02:34,452 --> 01:02:39,669
+01:02:34,452 --> 01:02:40,669
 Were you able or were you not
 able to keep up with the others?
 
@@ -3362,7 +3362,7 @@ I would like to refer to the efficiency
 report from the school about Mr Petersen.
 
 722
-01:02:51,177 --> 01:02:56,275
+01:02:51,177 --> 01:02:57,275
 He failed to be promoted and was placed
 in a class of backward children.
 
@@ -3436,7 +3436,7 @@ to put me on the operating table.
 - Yes!
 
 738
-01:03:52,864 --> 01:03:58,460
+01:03:52,864 --> 01:03:59,460
 Mr Petersen, there was a simple test
 that the Health Court used to ask
 
@@ -4097,7 +4097,7 @@ inferiority complex.
 We forgive and forget easy.
 
 882
-01:13:39,826 --> 01:13:44,924
+01:13:39,826 --> 01:13:45,924
 We give the other guy the benefit of
 the doubt... that's the American way.
 
@@ -4278,7 +4278,7 @@ Guten Abend.
 921
 01:16:22,447 --> 01:16:27,453
 "President Truman responded by calling
-for an extension of military training. "
+for an extension of military training."
 
 922
 01:16:27,577 --> 01:16:32,168
@@ -4288,11 +4288,11 @@ with the survival of the Western nations
 923
 01:16:32,290 --> 01:16:35,220
 in face of the threat
-from the east. "
+from the east."
 
 924
 01:16:35,335 --> 01:16:37,174
-"Threat from the east. "
+"Threat from the east."
 
 925
 01:16:37,295 --> 01:16:41,352
@@ -4302,7 +4302,7 @@ what is in the paper?
 926
 01:16:41,466 --> 01:16:45,808
 Exactly what Hitler said: "The clash
-for survival between east and west. "
+for survival between east and west."
 
 927
 01:16:45,929 --> 01:16:48,148
@@ -4451,7 +4451,7 @@ I'll wait for you, Your Honour.
 <i>Da wollen wir uns wiederseh'n</i>
 
 958
-01:20:03,752 --> 01:20:09,015
+01:20:03,752 --> 01:20:10,015
 <i>Bei der Laterne woll'n wir steh'n</i>
 
 959
@@ -4505,21 +4505,21 @@ Much sadder than the English words.
 970
 01:20:55,512 --> 01:21:01,396
 "The German soldier knows he's going
-to lose his girl and his life. "
+to lose his girl and his life."
 
 971
 01:21:04,813 --> 01:21:06,865
-"The lantern burns every night. "
+"The lantern burns every night."
 
 972
 01:21:06,982 --> 01:21:10,576
 "it knows your steps
-and the way you walk. "
+and the way you walk."
 
 973
 01:21:12,529 --> 01:21:17,250
 "it burns every night, but
-I've been long forgotten. "
+I've been long forgotten."
 
 974
 01:21:17,367 --> 01:21:20,131
@@ -4535,7 +4535,7 @@ under the lantern with you,
 
 977
 01:21:28,169 --> 01:21:30,222
-Lili Marleen. "
+Lili Marleen."
 
 978
 01:21:31,464 --> 01:21:36,518
@@ -4684,15 +4684,15 @@ the lemonade stand with the others.
 
 1009
 01:23:41,553 --> 01:23:44,981
-I was told "Control your thirst. "
+I was told "Control your thirst."
 
 1010
 01:23:46,016 --> 01:23:48,068
-"Control hunger. "
+"Control hunger."
 
 1011
 01:23:48,935 --> 01:23:50,987
-"Control emotion. "
+"Control emotion."
 
 1012
 01:23:51,104 --> 01:23:53,156
@@ -4800,18 +4800,18 @@ I don't think anybody did
 it to him quite that way.
 
 1035
-01:25:18,567 --> 01:25:24,542
+01:25:18,567 --> 01:25:25,542
 He said "Chancellor, I do not object
-so much that you are so ill-mannered. "
+so much that you are so ill-mannered."
 
 1036
 01:25:25,657 --> 01:25:28,872
-"I do not object to that so much. "
+"I do not object to that so much."
 
 1037
 01:25:28,994 --> 01:25:31,711
 "I object that you are
-such a bourgeois. "
+such a bourgeois."
 
 1038
 01:25:33,039 --> 01:25:37,465
@@ -4847,7 +4847,7 @@ and the little corporal
 couldn't tolerate that.
 
 1045
-01:26:03,904 --> 01:26:09,120
+01:26:03,904 --> 01:26:10,120
 And he hated him because he married
 into nobility, which was my family.
 
@@ -5004,7 +5004,7 @@ The people do not like them, they do not
 want Germans to testify against Germans.
 
 1078
-01:29:31,528 --> 01:29:36,631
+01:29:31,528 --> 01:29:39,631
 I haven't been prosecuting these cases for
 the past two years without knowing that.
 
@@ -5133,7 +5133,7 @@ Would you read it to the tribunal?
 
 1106
 01:32:26,494 --> 01:32:28,665
-"Death to the race defiler. "
+"Death to the race defiler."
 
 1107
 01:32:28,788 --> 01:32:33,794
@@ -5163,7 +5163,7 @@ It is a notorious case, perhaps
 the most notorious of the period.
 
 1113
-01:32:50,352 --> 01:32:56,114
+01:32:50,352 --> 01:32:57,114
 It has overtones and appeals to emotion
 that would perhaps be best not raised.
 
@@ -5173,7 +5173,7 @@ There are no issues or overtones that
 may not be raised in this courtroom.
 
 1115
-01:33:02,572 --> 01:33:08,501
+01:33:02,572 --> 01:33:09,501
 The tribunal is interested in everything
 that is relevant. Objection is overruled.
 
@@ -5210,7 +5210,7 @@ This is the charge that is
 referred to in the Nuremberg laws.
 
 1123
-01:33:50,579 --> 01:33:56,044
+01:33:50,579 --> 01:33:57,044
 Any non-Aryan having sexual relations
 with an Aryan may be punished by death.
 
@@ -5321,7 +5321,7 @@ It was used as a showplace
 for National Socialism.
 
 1146
-01:35:29,219 --> 01:35:34,566
+01:35:29,219 --> 01:35:35,566
 It was the time of the September
 celebrations, the Nuremberg rallies.
 
@@ -5456,7 +5456,7 @@ Yes.
 When did you first meet him?
 
 1176
-01:38:04,708 --> 01:38:10,220
+01:38:04,708 --> 01:38:11,220
 It was 1925 or 1926.
 I am not sure exactly.
 
@@ -5495,7 +5495,7 @@ after your parents died?
 - Why?
 
 1184
-01:38:40,952 --> 01:38:46,335
+01:38:40,952 --> 01:38:47,335
 We were friends. He owned the
 building that I lived in.
 
@@ -5563,7 +5563,7 @@ and the only pardon for this
 was to kill the violator.
 
 1199
-01:39:52,524 --> 01:39:57,950
+01:39:52,524 --> 01:39:59,950
 He told me that if I
 protected Mr Feldenstein,
 
@@ -5604,7 +5604,7 @@ Yes.
 Mrs Wallner, tell us,
 
 1208
-01:40:32,147 --> 01:40:37,957
+01:40:32,147 --> 01:40:38,957
 what was the manner in which Emil
 Hahn conducted the prosecution?
 
@@ -5697,7 +5697,7 @@ That's all.
 Any questions?
 
 1229
-01:42:28,013 --> 01:42:33,313
+01:42:28,013 --> 01:42:34,313
 Your Honour, I would like to request
 that the witness be kept available.
 
@@ -5924,7 +5924,7 @@ break the spirit,
 
 1279
 01:46:46,897 --> 01:46:49,614
-break the heart. "
+break the heart."
 
 1280
 01:46:50,942 --> 01:46:53,327
@@ -6007,7 +6007,7 @@ their normal size.
 A human pelvis used as an ashtray.
 
 1298
-01:48:10,605 --> 01:48:15,905
+01:48:10,605 --> 01:48:16,905
 Children who had been tattooed to
 mark them for eventual extermination.
 
@@ -6035,9 +6035,9 @@ then place ropes around their necks,
 and in the doctor's own words:
 
 1304
-01:48:37,173 --> 01:48:42,390
+01:48:37,173 --> 01:48:43,390
 "Like pictures, they were then
-hanged by hooks on the walls. "
+hanged by hooks on the walls."
 
 1305
 01:48:47,267 --> 01:48:50,945
@@ -6070,31 +6070,31 @@ gave the following description:
 1311
 01:49:14,002 --> 01:49:17,265
 "inmates were made to leave
-their clothing on a rack. "
+their clothing on a rack."
 
 1312
 01:49:17,839 --> 01:49:21,470
 "They were told they were
-going to take baths. "
+going to take baths."
 
 1313
 01:49:21,593 --> 01:49:24,606
-"Then the doors were locked. "
+"Then the doors were locked."
 
 1314
 01:49:24,721 --> 01:49:30,439
 "Tins of Zyklon B were released through
-the specially constructed apertures. "
+the specially constructed apertures."
 
 1315
 01:49:32,270 --> 01:49:37,241
 "You could hear the groaning
-and the whimpering inside. "
+and the whimpering inside."
 
 1316
 01:49:37,400 --> 01:49:41,707
 "After two or three
-minutes, all was quiet. "
+minutes, all was quiet."
 
 1317
 01:49:50,038 --> 01:49:55,840
@@ -6297,7 +6297,7 @@ That's the problem.
 <i>Das tut gut</i>
 
 1362
-01:53:25,629 --> 01:53:31,094
+01:53:25,629 --> 01:53:32,094
 <i>Was man alles im Liebesrausch tut</i>
 
 1363
@@ -6306,7 +6306,7 @@ That's the problem.
 ein ﬂüsterndes Fleh'n</i>
 
 1364
-01:53:38,350 --> 01:53:43,776
+01:53:38,350 --> 01:53:45,776
 <i>"ach verweile,
 du bist ja so schön"</i>
 
@@ -6316,7 +6316,7 @@ du bist ja so schön"</i>
 nur, wo sie ist</i>
 
 1366
-01:53:51,988 --> 01:53:57,798
+01:53:51,988 --> 01:53:58,798
 <i>Wenn man immer aufs neue sich küsst</i>
 
 1367
@@ -6447,7 +6447,7 @@ The rapidly ageing jurist
 and the beautiful widow
 
 1394
-01:55:41,181 --> 01:55:47,026
+01:55:41,181 --> 01:55:48,026
 would transcend their difficulties and
 travel places either by land or by sea.
 
@@ -6570,7 +6570,7 @@ the dignity of a firing squad.
 You know what happened.
 
 1420
-01:57:43,803 --> 01:57:48,901
+01:57:43,803 --> 01:57:49,901
 He was hanged with the others. And after
 that, I knew what it was to hate.
 
@@ -6580,7 +6580,7 @@ I never left the house.
 I never left the room. I drank.
 
 1422
-01:57:54,272 --> 01:57:59,536
+01:57:54,272 --> 01:58:00,536
 I hated with every fibre of my being.
 I hated every American I've ever known.
 
@@ -6688,7 +6688,7 @@ and terribly unfair
 of the prosecution
 
 1447
-02:00:30,929 --> 02:00:35,988
+02:00:30,929 --> 02:00:37,988
 to show such films in this case,
 in this court, at this time
 
@@ -6753,7 +6753,7 @@ show only too clearly that
 he is not telling the truth.
 
 1461
-02:01:35,911 --> 02:01:41,839
+02:01:35,911 --> 02:01:42,839
 The truth is that these brutalities were
 brought about by the few extremists.
 
@@ -6784,7 +6784,7 @@ None of us.
 But the most ironic part of it
 
 1468
-02:02:11,613 --> 02:02:17,162
+02:02:11,613 --> 02:02:18,162
 is that the prosecution showed these
 films against these defendants,
 
@@ -6808,7 +6808,7 @@ The man who escapes or
 resigns in times of peril?
 
 1473
-02:02:35,512 --> 02:02:40,728
+02:02:35,512 --> 02:02:41,728
 Or the man who stays on his post at
 the risk of his own personal safety?
 
@@ -6871,7 +6871,7 @@ pleading that special consideration
 must be made in this case,
 
 1486
-02:03:32,986 --> 02:03:38,249
+02:03:32,986 --> 02:03:39,249
 saying that the entire work of Ernst
 Janning was inspired by one motive only:
 
@@ -6881,7 +6881,7 @@ the endeavour to preserve justice
 and the concept of justice.
 
 1488
-02:03:48,627 --> 02:03:53,848
+02:03:48,627 --> 02:03:56,848
 Now, what has the prosecution
 to offer against this?
 
@@ -7006,7 +7006,7 @@ you noticed anything unusual?
 Yes.
 
 1515
-02:05:52,751 --> 02:05:58,300
+02:05:52,751 --> 02:05:59,300
 I saw Miss Hoffman kissing Mr Feldenstein
 at the door of her apartment.
 
@@ -7089,7 +7089,7 @@ We were forced to be.
 
 1533
 02:07:15,584 --> 02:07:17,920
-"We were forced to be. "
+"We were forced to be."
 
 1534
 02:07:18,962 --> 02:07:21,845
@@ -7101,7 +7101,7 @@ member of the Nazi party?
 1933.
 
 1536
-02:07:27,637 --> 02:07:33,269
+02:07:27,637 --> 02:07:34,269
 Were all German nationals forced to
 become Nazi party members in 1933?
 
@@ -7374,7 +7374,7 @@ rulings in this case, not the prosecution.
 - Did you sit on his lap?
 
 1595
-02:11:46,021 --> 02:11:51,237
+02:11:46,021 --> 02:11:52,237
 Yes. But there was nothing
 wrong or ugly about it.
 
@@ -7470,7 +7470,7 @@ Herr Rolfe!
 Are we going to do this again?
 
 1616
-02:13:06,935 --> 02:13:11,986
+02:13:06,935 --> 02:13:12,986
 Your Honour, the defendant has been under
 such stress that he is not aware...
 
@@ -7846,17 +7846,17 @@ Because he said to us:
 1696
 02:18:40,644 --> 02:18:44,950
 "Lift your heads.
-Be proud to be German. "
+Be proud to be German."
 
 1697
 02:18:45,065 --> 02:18:50,071
 "There are devils among us...
-communists, liberals, Jews, Gypsies. "
+communists, liberals, Jews, Gypsies."
 
 1698
-02:18:50,195 --> 02:18:55,495
+02:18:50,195 --> 02:18:56,495
 "Once these devils will be destroyed,
-your misery will be destroyed. "
+your misery will be destroyed."
 
 1699
 02:18:56,618 --> 02:19:01,588
@@ -7914,11 +7914,11 @@ discarded sooner or later.
 1710
 02:19:43,623 --> 02:19:46,838
 "The country is in danger!
-We will march out of the shadows. "
+We will march out of the shadows."
 
 1711
 02:19:46,960 --> 02:19:51,717
-"We will go forward. "
+"We will go forward."
 "Forward" is the great password.
 
 1712
@@ -7958,11 +7958,11 @@ The world said
 1719
 02:20:25,957 --> 02:20:29,837
 "Take Sudetenland.
-Take the Rhineland. Remilitarise it. "
+Take the Rhineland. Remilitarise it."
 
 1720
 02:20:29,961 --> 02:20:32,429
-"Take all of Austria! Take it. "
+"Take all of Austria! Take it."
 
 1721
 02:20:35,634 --> 02:20:39,395
@@ -8039,12 +8039,12 @@ He has suggested that we sterilised
 men for the welfare of the country.
 
 1737
-02:21:53,461 --> 02:21:59,354
+02:21:53,461 --> 02:22:00,354
 He suggested that perhaps the old Jew did
 sleep with the 16-year-old girl after all.
 
 1738
-02:22:00,468 --> 02:22:06,444
+02:22:00,468 --> 02:22:07,444
 Once more, it is being
 done for love of country.
 
@@ -8353,7 +8353,7 @@ Where is the responsibility
 of the Soviet Union,
 
 1805
-02:28:32,277 --> 02:28:37,375
+02:28:32,277 --> 02:28:38,375
 who signed in 1939 the pact with
 Hitler that enabled him to make war?
 
@@ -8403,7 +8403,7 @@ disaster, I should pray to God
 1815
 02:29:15,237 --> 02:29:19,745
 to send a man of the strength of
-mind and will of an Adolf Hitler. "
+mind and will of an Adolf Hitler."
 
 1816
 02:29:19,866 --> 02:29:23,045
@@ -8618,7 +8618,7 @@ We need the help of
 the German people.
 
 1861
-02:32:42,277 --> 02:32:47,458
+02:32:42,277 --> 02:32:48,458
 You don't get their help by sentencing
 their leaders to stiff prison sentences.
 
@@ -8683,12 +8683,12 @@ There's talk of cold war while
 men and women die in real wars,
 
 1875
-02:34:17,706 --> 02:34:22,725
+02:34:17,706 --> 02:34:25,725
 and the echoes of persecution and
 atrocities will not be stilled.
 
 1876
-02:34:28,341 --> 02:34:33,807
+02:34:28,341 --> 02:34:34,807
 These events cannot help but colour
 what happens in this courtroom.
 
@@ -8698,7 +8698,7 @@ But somewhere in the
 midst of these events,
 
 1878
-02:34:39,603 --> 02:34:45,234
+02:34:39,603 --> 02:34:46,234
 the responsibility for the crimes that
 we brought forward during this trial
 
@@ -8707,7 +8707,7 @@ we brought forward during this trial
 must be placed in true perspective.
 
 1880
-02:34:50,947 --> 02:34:56,211
+02:34:50,947 --> 02:34:57,211
 And this is the decision
 that faces Your Honours.
 
@@ -8817,7 +8817,7 @@ to be the highest in my profession,
 the concept that says:
 
 1903
-02:37:16,092 --> 02:37:21,392
+02:37:16,092 --> 02:37:22,392
 to sacrifice one's own sense of justice
 to the authoritative legal order,
 
@@ -8955,7 +8955,7 @@ against the Third Reich.
 1932
 02:40:28,827 --> 02:40:32,540
 "By order of Justice
-Friedrich Hofstetter. "
+Friedrich Hofstetter."
 
 1933
 02:40:32,664 --> 02:40:37,089
@@ -8980,7 +8980,7 @@ organised along modem lines,
 1937
 02:40:46,177 --> 02:40:50,567
 responsibility is confined to those
-who act directly for the state. "
+who act directly for the state."
 
 1938
 02:40:50,682 --> 02:40:54,609
@@ -8989,7 +8989,7 @@ judge the legitimacy of the given orders,
 
 1939
 02:40:54,728 --> 02:40:57,196
-they alone can be prosecuted. "
+they alone can be prosecuted."
 
 1940
 02:40:57,314 --> 02:40:59,947
@@ -9022,7 +9022,7 @@ Regardless of the acts committed,
 we cannot make the interpretation
 
 1946
-02:41:17,167 --> 02:41:22,798
+02:41:17,167 --> 02:41:23,798
 that these defendants are really
 responsible for crimes against humanity.
 
@@ -9123,7 +9123,7 @@ explain it very carefully.
 The tribunal is now in session.
 
 1967
-02:42:47,966 --> 02:42:52,981
+02:42:47,966 --> 02:42:53,981
 God bless the United States of America
 and this honourable tribunal.
 
@@ -9162,7 +9162,7 @@ in a nationwide, government-organised
 system of cruelty and injustice,
 
 1975
-02:43:47,108 --> 02:43:52,870
+02:43:47,108 --> 02:43:53,870
 in violation of every moral and legal
 principle known to all civilised nations.
 
@@ -9176,7 +9176,7 @@ studied the record
 and found therein abundant evidence
 
 1978
-02:44:03,792 --> 02:44:09,222
+02:44:03,792 --> 02:44:10,222
 to support beyond a reasonable doubt
 the charges against these defendants.
 
@@ -9203,7 +9203,7 @@ for what happened here in Germany.
 There is truth in this.
 
 1984
-02:44:41,162 --> 02:44:46,426
+02:44:41,162 --> 02:44:47,426
 The real complaining party at the bar
 in this courtroom is civilisation.
 
@@ -9225,7 +9225,7 @@ Men who sat in black robes,
 in judgment on other men.
 
 1989
-02:45:09,274 --> 02:45:14,787
+02:45:09,274 --> 02:45:15,787
 Men who took part in the
 enactment of laws and decrees,
 
@@ -9248,7 +9248,7 @@ enforcement of these laws,
 illegal even under German law.
 
 1994
-02:45:40,972 --> 02:45:45,983
+02:45:40,972 --> 02:45:47,983
 The principle of criminal law
 in every civilised society
 
@@ -9262,7 +9262,7 @@ any person who sways
 another to commit murder,
 
 1997
-02:45:58,782 --> 02:46:04,212
+02:45:58,782 --> 02:46:05,212
 any person who furnishes the lethal
 weapon for the purpose of the crime,
 
@@ -9276,7 +9276,7 @@ accessory to the crime,
 is guilty.
 
 2000
-02:46:18,176 --> 02:46:23,357
+02:46:18,176 --> 02:46:24,357
 Herr Rolfe further asserts
 that the defendant Janning
 
@@ -9313,7 +9313,7 @@ present torture of his soul
 must not beget forgetfulness
 
 2008
-02:46:51,293 --> 02:46:56,758
+02:46:51,293 --> 02:46:57,758
 of the torture and the death of millions
 by the government of which he was part.
 
@@ -9332,7 +9332,7 @@ If he, and all of the other defendants,
 had been degraded perverts,
 
 2012
-02:47:09,853 --> 02:47:15,153
+02:47:09,853 --> 02:47:16,153
 if all of the leaders of the Third Reich
 had been sadistic monsters and maniacs,
 
@@ -9347,7 +9347,7 @@ than an earthquake, or any
 other natural catastrophe.
 
 2015
-02:47:24,200 --> 02:47:29,334
+02:47:24,200 --> 02:47:30,334
 But this trial has shown
 that under a national crisis
 
@@ -9424,7 +9424,7 @@ what is expedient,
 to look the other way.
 
 2031
-02:48:26,846 --> 02:48:31,897
+02:48:26,846 --> 02:48:32,897
 Well, the answer to that is...
 survival as what?
 
@@ -9442,7 +9442,7 @@ of one's self.
 It's what it stands for.
 
 2035
-02:48:40,443 --> 02:48:45,874
+02:48:40,443 --> 02:48:46,874
 It's what it stands for when standing
 for something is the most difficult.
 
@@ -9451,7 +9451,7 @@ for something is the most difficult.
 Before the people of the world,
 
 2037
-02:48:52,038 --> 02:48:58,014
+02:48:52,038 --> 02:48:59,014
 let it now be noted that here, in our
 decision, this is what we stand for:
 
@@ -9484,7 +9484,7 @@ Today you sentence me. Tomorrow
 the Bolsheviks sentence you!
 
 2044
-02:49:43,340 --> 02:49:49,102
+02:49:43,340 --> 02:49:50,102
 The marshal will produce the defendant
 Hofstetter before the tribunal.
 
@@ -9493,7 +9493,7 @@ Hofstetter before the tribunal.
 Fried rich Hofstetter,
 
 2046
-02:49:53,225 --> 02:49:58,322
+02:49:53,225 --> 02:49:59,322
 the tribunal finds you guilty and
 sentences you to life imprisonment.
 
@@ -9507,7 +9507,7 @@ defendant Lampe before the tribunal.
 Werner Lampe,
 
 2049
-02:50:15,830 --> 02:50:20,928
+02:50:15,830 --> 02:50:21,928
 the tribunal finds you guilty and
 sentences you to life imprisonment.
 
@@ -9843,4 +9843,3 @@ Herr Janning, it came to that
 02:57:48,909 --> 02:57:53,713
 the first time you sentenced a man
 to death you knew to be innocent.
-
