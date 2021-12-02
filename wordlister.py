@@ -5,6 +5,7 @@ from oxfords import *
 import time
 import re
 import shutil
+from datetime import datetime
 
 a1countq = []
 a2countq = []
@@ -221,6 +222,8 @@ def wordlister(coType="-",co="-"):
     othercount = list(set(othercountq))
 
     stats = {
+        "ts":datetime.timestamp(datetime.now()),
+        "date":datetime.now(),
         "a1":len(a1count),
         "a2":len(a2count),
         "b1":len(b1count),
