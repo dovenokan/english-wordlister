@@ -242,7 +242,7 @@ def wordlister(coType="-",co="-"):
         "oxB":len(b1count)+len(b2count),
         "oxC":len(c1count),
         "percentage": {
-            "Typical%": round((len(wordlist)-len(undefcount)) / len(wordlist) * 100,2),
+            "typical%": round((len(wordlist)-len(undefcount)) / len(wordlist) * 100,2),
             "oxford%": round((len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) / (len(wordlist)-len(undefcount)) * 100,2),
             "oxA%": round((len(a1count)+len(a2count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,2),
             "oxB%": round((len(b1count)+len(b2count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,2),
