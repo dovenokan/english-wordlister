@@ -81,6 +81,7 @@
             <div id="uploadfile">
                 <br>
                 <form method="post" action="/" enctype="multipart/form-data" >
+                    {{ render_field(form.mongo_title,class="mongo_title") }}
                     <input type="file" name="file" class="btn btn-upload">
                     <br>
                     <button type="submit" class="btn btn-success">List it!</button>
@@ -91,6 +92,9 @@
     </div>
 
     {% if wordlist %}
+    <div>
+        {{stats.percentage}}
+    </div>
     <div class="filterArea">
         <button class="btn btn-secondary allfilter active">All</button>
         <button class="btn btn-secondary nounfilter">Noun</button>

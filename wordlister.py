@@ -250,9 +250,8 @@ def wordlister(coType="-",co="-"):
     with open("uploads/generated.txt", "a", encoding="utf-8") as f:
         f.truncate(0)
         for w in wordlist:
-            print(w)
             f.write( "{};{};{}".format(w[0],w[1][0],w[1][2]) )
             f.write("\n")
     shutil.copyfile('uploads/generated.txt', 'uploads/generated.csv')        
-            
+    print(stats)
     return wordlist , stats

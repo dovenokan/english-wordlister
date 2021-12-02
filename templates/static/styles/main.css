@@ -92,3 +92,10 @@ b .bcount2{
     background-color: #28a745;
     color: pink;
 }
+
+.mongo_title{
+    margin-bottom: -7px;
+    margin-top: -27px;
+    border-radius: 4px;
+    text-transform: capitalize;
+}
