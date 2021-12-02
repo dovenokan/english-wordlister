@@ -85,10 +85,113 @@ def wordlisterarea():
             return render_template("index.html",lenned=len(wordlist),wordlist=wordlist,stats=stats,form=form,seans=session["username"])
     return render_template("index.html",form=form,seans=session["username"])
 ################################################################################################
+
+# @app.route("/home")
+# def home():
+#     form = ArticleForm(request.form)
+#     return render_template("home.html",form=form)
+
+
+# @app.route("/register",methods = ["GET","POST"])
+# def register():
+#     form = ArticleForm(request.form)
+#     try:
+#         if session["logged_in"]:
+#             return redirect(url_for('wordlisterarea'))
+#     except:
+#         pass
+#     if request.method == "POST":
+#         username = form.username.data
+#         email = form.email.data
+#         password = sha256_crypt.hash(form.password.data)
+#         # password = form.password.data
+#         with sql.connect("wordlisterdb.db") as check:
+#             try:
+#                 cur = check.cursor()
+#                 cur.execute('SELECT * FROM userlist WHERE email=? OR username=?', (email,username,))
+#                 rows = cur.fetchall()[0]
+#                 if rows[1]==username or rows[2]==email:
+#                     print("BAŞKA BİR ŞEY SEÇMEN GEREK!")
+#                 else:
+#                     with sql.connect("wordlisterdb.db") as con:
+#                         cur = con.cursor()
+#                         cur.execute("INSERT INTO userlist (username,email,password) VALUES (?,?,?)",(username,email,password) )
+#                         con.commit()
+#                         return redirect(url_for('login'))
+#             except:
+#                 with sql.connect("wordlisterdb.db") as con:
+#                     cur = con.cursor()
+#                     cur.execute("INSERT INTO userlist (username,email,password) VALUES (?,?,?)",(username,email,password) )
+#                     con.commit()
+#                     return redirect(url_for('login'))
+#     return render_template("register.html",form=form)
+
+
+# @app.route("/login",methods = ["GET","POST"])
+# def login():
+#     form = ArticleForm(request.form)
+#     try:
+#         if session["logged_in"]:
+#             return redirect(url_for('wordlisterarea'))
+#     except:
+#         pass
+#     if request.method == "POST":
+#         email = form.email.data
+#         password = form.password.data
+#         try:
+#             with sql.connect("wordlisterdb.db") as con:
+#                 cur = con.cursor()
+#                 cur.execute('SELECT * FROM userlist WHERE email=?', (email,))
+#                 rows = cur.fetchall()[0]
+#                 # if rows[3] == password:
+#                 if sha256_crypt.verify(password, rows[3]):
+#                     session["logged_in"]=True
+#                     session["username"]=rows[1]
+#                     return redirect(url_for('wordlisterarea'))
+#         except:
+#             pass
+#     return render_template("login.html",form=form)
+
+
+# @app.route("/logout")
+# def logout():
+#     session.clear()
+#     return redirect(url_for("home"))
+
+
+# @app.route("/www",methods = ["GET","POST"])
+# def www():
+#     with sql.connect("wordlisterdb.db") as con:
+#         cur = con.cursor()
+#         cur.execute('SELECT * FROM userlist')
+#         rows = cur.fetchall()
+#     return render_template("www.html",rows=rows)
+
+
+# @app.route("/dashboard",methods = ["GET","POST"])
+# def dashboard():
+#     with sql.connect("wordlisterdb.db") as con:
+#         cur = con.cursor()
+#         cur.execute('SELECT * FROM userlist')
+#         rows = cur.fetchall()
+#     return render_template("dashboard.html",rows=rows)
+
+
+# @app.route("/delete/<string:id>",methods = ["GET","POST"])
+# def deleteuser(id):
+#     with sql.connect("wordlisterdb.db") as con:
+#         cur = con.cursor()
+#         rows = cur.fetchall()
+#         sorgu = "DELETE FROM userlist WHERE username=?"
+#         cur.execute(sorgu,(id,))
+#         return redirect(url_for("dashboard"))
+#     return render_template("dashboard.html",rows=rows,userid=id)
+
 @app.route('/uploads/<path:filename>', methods=['GET', 'POST'])
 def download(filename):
     uploads = os.path.join("", app.config['UPLOAD_FOLDER'])
     return send_from_directory(directory=uploads, filename=filename)
+
 ################################################################################################
 if __name__ == '__main__':
     app.run(host='127.0.0.1',debug=True,port=9191)

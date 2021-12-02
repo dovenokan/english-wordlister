@@ -1,0 +1,47 @@
+
+/* tabs.css */
+#container {
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.tabs-nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.tabs-nav a {
+  display: inline-flex;
+  padding: 10px 15px;
+  font-weight: bold;
+  background: white;
+  color: black;
+  border-width: 1px 1px 1px 1px;
+}
+/* active tab */
+.tabs-nav a.active {
+  background: #007bff;
+  color: white;
+}
+
+.tabs-nav a.active{
+  color: inherit;
+}
+
+/* Tab content */
+.tabs-content {
+  /* padding: 10px; */
+  margin-top: -15px;
+  overflow: hidden;
+}
+
+.tabs-content IMG {
+  margin-right: 10px;
+}
+/* Hide all but first content div */
+.tabs-content div:not(:first-child) {
+  display: none;
+}
+

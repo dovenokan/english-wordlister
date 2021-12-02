@@ -24,5 +24,3 @@ def f(x,y):
         364
 
 # Filter TABS
-
-# bs4 scraping for url input

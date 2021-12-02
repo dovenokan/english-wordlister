@@ -59,6 +59,8 @@
     </div>
     
 
+
+
     {% if wordlist %}
     <div class="changelog filters">
 
@@ -73,14 +75,12 @@
             <p class="total">Total: </p>
             <p class="totaltypical">Typical: </p>
         </div>
-        
         <div class="col twoface analiz mb-3 d-grid">
           <p class="totaloxford">Oxford: </p>
           <p class="totala">Oxford A: </p>
           <p class="totalb">Oxford B: </p>
           <p class="totalc">Oxford C: </p>
         </div>
-
         <div class="col twoface analiz mb-3 d-grid">
           <p class="noun_count">Noun: </p>
           <p class="verb_count">Verb: </p>
@@ -89,25 +89,24 @@
           <p class="undef_count">Undefined: </p>
         </div>
       </div>
-
-        <div class="filterType filterArea">
-            <button class="btn filterButton btn-secondary allfilter">AllType</button>
-            <button class="btn filterButton btn-secondary nounfilter">Noun</button>
-            <button class="btn filterButton btn-secondary adjfilter">Adj</button>
-            <button class="btn filterButton btn-secondary verbfilter">Verb</button>
-            <button class="btn filterButton btn-secondary phrverbfilter">PhrVerb</button>
-            <button class="btn filterButton btn-secondary undeffilter">Undef</button>
-        </div>
-        <br>
-        <div class="filterOxford filterArea">
-            <button class="btn filterButton btn-info alllevelfilter">AllLevel</button>
-            <button class="btn filterButton btn-info a1filter">A1</button>
-            <button class="btn filterButton btn-info a2filter">A2</button>
-            <button class="btn filterButton btn-info b1filter">B1</button>
-            <button class="btn filterButton btn-info b2filter">B2</button>
-            <button class="btn filterButton btn-info c1filter">C1</button>
-            <button class="btn filterButton btn-info otherfilter">Other</button>
-        </div>     
+      <div class="filterType filterArea">
+          <button class="btn filterButton btn-secondary allfilter">AllType</button>
+          <button class="btn filterButton btn-secondary nounfilter">Noun</button>
+          <button class="btn filterButton btn-secondary adjfilter">Adj</button>
+          <button class="btn filterButton btn-secondary verbfilter">Verb</button>
+          <button class="btn filterButton btn-secondary phrverbfilter">PhrVerb</button>
+          <button class="btn filterButton btn-secondary undeffilter">Undef</button>
+      </div>
+      <br>
+      <div class="filterOxford filterArea">
+          <button class="btn filterButton btn-info alllevelfilter">AllLevel</button>
+          <button class="btn filterButton btn-info a1filter">A1</button>
+          <button class="btn filterButton btn-info a2filter">A2</button>
+          <button class="btn filterButton btn-info b1filter">B1</button>
+          <button class="btn filterButton btn-info b2filter">B2</button>
+          <button class="btn filterButton btn-info c1filter">C1</button>
+          <button class="btn filterButton btn-info otherfilter">Other</button>
+      </div>     
     </div>
 
     <div class="callout wordsec" id="lesen">
@@ -115,8 +114,8 @@
         <p class="word {{element[1][1]}} {{element[1][2]}} filtoken"> {{ element[0] }}  <b class="countNumber"> {{ element[1][0] }} </b> </p>
         {% endfor %}
     </div>
-
     {% endif %}
+
 
 
     <footer class="footer">Wordlister 2021 ♻</footer>

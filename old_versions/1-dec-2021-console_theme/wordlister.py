@@ -207,6 +207,7 @@ def wordlister(coType="-",co="-"):
 
     wordlist = sorted(dc.items(), key=lambda kv: kv[1], reverse=True) # 0 False letter 1 True count
 
+
     a1count = list(set(a1countq))
     a2count = list(set(a2countq))
     b1count = list(set(b1countq))
@@ -250,9 +251,9 @@ def wordlister(coType="-",co="-"):
     with open("uploads/generated.txt", "a", encoding="utf-8") as f:
         f.truncate(0)
         for w in wordlist:
-            print(w)
             f.write( "{};{};{}".format(w[0],w[1][0],w[1][2]) )
             f.write("\n")
     shutil.copyfile('uploads/generated.txt', 'uploads/generated.csv')        
             
     return wordlist , stats
+
