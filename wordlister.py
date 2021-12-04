@@ -202,6 +202,7 @@ def wordlister(coType="-",co="-"):
 
     phrasalVerb(words)
     settedwords = list({ st for st in words if not len(st) == 0 and len(st) > 2 and st.replace(" ","").isalpha() and st not in stopwords and st not in whatiknow})
+    allWordsCount = len(words)
 
     for w in settedwords:
         dc[w] = [words.count(w), wordType(w), oxford(w)] 
@@ -224,30 +225,37 @@ def wordlister(coType="-",co="-"):
     stats = {
         "ts":datetime.timestamp(datetime.now()),
         "date":datetime.now(),
-        "a1":len(a1count),
-        "a2":len(a2count),
-        "b1":len(b1count),
-        "b2":len(b2count),
-        "c1":len(c1count),
-        "other":len(othercount),
-        "verb":len(verbcount),
-        "noun":len(nouncount),
-        "adj":len(adjcount),
-        "phrverb":len(phrverbcount),
-        "undef":len(undefcount),
-        "total":len(wordlist),
-        "typical":len(wordlist)-len(undefcount),
-        "oxford":len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count),
-        "oxA":len(a1count)+len(a2count),
-        "oxB":len(b1count)+len(b2count),
-        "oxC":len(c1count),
+        "oxford":{
+            "a1":len(a1count),
+            "a2":len(a2count),
+            "b1":len(b1count),
+            "b2":len(b2count),
+            "c1":len(c1count),
+            "other":len(othercount),
+        },
+        "type":{
+            "verb":len(verbcount),
+            "noun":len(nouncount),
+            "adj":len(adjcount),
+            "phrverb":len(phrverbcount),
+            "undef":len(undefcount),
+        },
+        "count":{
+            "total":len(wordlist),
+            "typical":len(wordlist)-len(undefcount),
+            "oxAll":len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count),
+            "oxA":len(a1count)+len(a2count),
+            "oxB":len(b1count)+len(b2count),
+            "oxC":len(c1count),
+        },
         "percentage": {
             "typical%": round((len(wordlist)-len(undefcount)) / len(wordlist) * 100,2),
             "oxford%": round((len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) / (len(wordlist)-len(undefcount)) * 100,2),
             "oxA%": round((len(a1count)+len(a2count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,2),
             "oxB%": round((len(b1count)+len(b2count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,2),
             "oxC%": round((len(c1count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,2)
-        }
+        },
+        "wordlist":wordlist
     }
     
     with open("uploads/generated.txt", "a", encoding="utf-8") as f:
@@ -256,5 +264,5 @@ def wordlister(coType="-",co="-"):
             f.write( "{};{};{}".format(w[0],w[1][0],w[1][2]) )
             f.write("\n")
     shutil.copyfile('uploads/generated.txt', 'uploads/generated.csv')        
-    print(stats)
-    return wordlist , stats
+    print(stats["percentage"])
+    return wordlist, stats, allWordsCount

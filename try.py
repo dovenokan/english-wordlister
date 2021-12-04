@@ -18,3 +18,15 @@
 #     x = set(f.read().split())
 #     z = ox.difference(x)
 #     print(sorted(list(z)))
+
+
+##### bs4 scrapings
+# import requests
+# from bs4 import BeautifulSoup
+# import lxml
+
+# req = requests.get("https://www.gutenberg.org/cache/epub/5200/pg5200.txt")
+# html = req.content
+# content = BeautifulSoup(html, 'lxml')
+
+# print(content)

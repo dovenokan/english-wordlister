@@ -64,13 +64,14 @@ def wordlisterarea():
             job = wordlister(coType="file")
             wordlist = job[0]
             stats = job[1]
+            allWordsCount = job[2]
             mongo_title = form.mongo_title.data
             
             if len(mongo_title) > 3:
                 MongoSave(
                     {mongo_title:stats}
                 ) 
-            return render_template("index.html",lenned=len(wordlist),wordlist=wordlist,stats=stats,form=form,seans=session["username"])
+            return render_template("index.html",lenned=len(wordlist),wordlist=wordlist,stats=stats,allWordsCount=allWordsCount,form=form,seans=session["username"])
         else:
             text = form.text.data
             mongo_title = form.mongo_title.data
