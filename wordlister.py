@@ -241,8 +241,8 @@ def wordlister(coType="-",co="-"):
             "undef":len(undefcount),
         },
         "count":{
-            "allWordsCount":allWordsCount,
-            "total":len(wordlist),
+            "total":allWordsCount,
+            "unique":len(wordlist),
             "typical":len(wordlist)-len(undefcount),
             "oxAll":len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count),
             "oxA":len(a1count)+len(a2count),

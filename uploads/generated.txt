@@ -1,789 +1,204 @@
-harvey;74;other
-dent;60;other
-joker;60;other
-batman;55;other
-gonna;51;other
-rachel;43;other
-wanna;39;other
-gotham;38;other
-gordon;33;other
-swat;29;other
-wayne;26;other
-okay;24;other
-come on;21;other
-lau;20;other
-bruce;19;other
-grunt;18;other
-men;18;other
-cop;18;c1
-mob;17;c1
-alfred;16;other
-fox;16;other
-commissioner;14;c1
-must;13;other
-grumpy;13;other
-yell;12;c1
-maroni;12;other
-go to;12;other
-bring;11;a1
-barbara;11;other
-blow;9;a2
-chinese;9;other
-jim;9;other
-take it;9;other
-chuckle;8;other
-wail;8;other
-charge;8;b1
-reese;8;other
-thug;8;other
-bark;7;other
-shh;7;other
-engel;7;other
-sirens;7;other
-chechen;7;other
-chatter;6;other
-hold;6;a2
-ramirez;6;other
-huh;6;other
-gotta;6;other
-wuertz;6;other
-do with;6;other
-make it;6;other
-get to;6;other
-growl;5;other
-ferry;5;other
-screech;5;other
-mask;5;c1
-bill;5;a1
-clown;5;other
-hostages;5;other
-jesus;5;other
-clowns;5;other
-kong;5;other
-loeb;5;other
-dopey;5;other
-hong;5;other
-dna;5;other
-natascha;5;other
-look for;5;other
-freak;5;other
-aware;5;b1
-beep;4;other
-knight;4;other
-cock;4;other
-blast;4;c1
-assume;4;b2
-consider;4;a2
-fall;4;a1
-mcu;4;other
-pal;4;other
-vigilante;4;other
-surrillo;4;other
-shotgun;4;other
-gunshot;4;other
-gambol;4;other
-schemers;4;other
-scum;4;other
-get out;4;other
-give in;4;other
-stand by;4;other
-phone in;4;other
-come in;4;other
-be in;4;other
-stand for;4;other
-scarecrow;4;other
-mobster;4;other
-makeup;4;other
-crackle;3;other
-imitate;3;other
-sob;3;other
-honor;3;other
-hum;3;other
-rack;3;other
-bloody;3;other
-appoint;3;c1
-inspire;3;b2
-excuse;3;b2
-crack;3;b2
-aim;3;b1
-afford;3;b1
-mark;3;a2
-medic;3;other
-detonator;3;other
-arkham;3;other
-fundraiser;3;other
-lucius;3;other
-bandit;3;other
-gentlemen;3;other
-guardsman;3;other
-stephens;3;other
-obstruction;3;other
-davis;3;other
-caller;3;other
-brian;3;other
-dawes;3;other
-jurisdiction;3;c1
-sit down;3;other
-get down;3;other
-stand up;3;other
-go on;3;other
-deal with;3;other
-be off;3;other
-blow up;3;other
-go back;3;other
-put down;3;other
-take off;3;other
-clean up;3;other
-go down;3;other
-find out;3;other
-pick up;3;other
-damn;3;other
-shit;3;other
-sonar;3;other
-counselor;3;other
-lieutenant;3;other
+gonna;23;other
+ted;21;other
+olive;20;other
+marshall;18;other
+lilly;13;other
+okay;12;other
+gotta;7;other
+barney;6;other
+carl;6;other
+lebanese;5;other
+come on;5;other
+get to;5;other
+engage;4;b1
+wanna;4;other
+french;4;other
+laser;4;c1
+suit up;4;other
+champagne;4;other
+doin;3;other
+smurf;3;other
+whoa;3;other
+orlando;3;other
+go to;3;other
+mom;3;other
+scotch;3;other
+penis;3;other
 horn;3;c1
-custody;3;c1
-chaos;3;c1
-enterprise;3;c1
-faith;3;b2
-neck;3;a2
-difference;3;a1
-longer;3;other
-clamoring;3;other
-hostile;3;c1
-rig;2;other
-converge;2;other
-mind;2;other
-muffle;2;other
-buzz;2;other
-outlaw;2;other
-groan;2;other
-squeal;2;other
-extradite;2;other
-pad;2;c1
-applaud;2;c1
-dawn;2;c1
-seal;2;c1
-sacrifice;2;c1
-venture;2;c1
-warrant;2;c1
-squeeze;2;c1
-endure;2;c1
-dare;2;b2
-deposit;2;b2
-demand;2;b2
-attempt;2;b2
-assure;2;b2
-chase;2;b2
-elect;2;b2
-fund;2;b2
-identify;2;a2
-notice;2;a2
-involve;2;a2
+toast;2;other
+hop;2;other
+patch;2;c1
+bring;2;a1
 order;2;a1
-compare;2;a1
-land;2;a1
-gunshots;2;other
-desperation;2;other
-burma;2;other
-madness;2;other
-craziness;2;other
-prima;2;other
-faster;2;other
-undone;2;other
-mike;2;other
-safer;2;other
-rico;2;other
-falcone;2;other
-intercom;2;other
-hee;2;other
-china;2;other
-fireworks;2;other
-knives;2;other
-accomplice;2;other
-gcn;2;other
-holdings;2;other
-murphy;2;other
-ooh;2;other
-penthouse;2;other
-racketeering;2;other
-whirring;2;other
-children;2;other
-swats;2;other
-lsi;2;other
-diligence;2;other
-stature;2;other
-whoa;2;other
-villain;2;other
-gunfire;2;other
-lighter;2;other
-schemer;2;other
-closer;2;other
-halfway;2;c1
-frankly;2;c1
-step up;2;other
-get on;2;other
-figure out;2;other
-have in;2;other
-look out;2;other
-come back;2;other
-move in;2;other
-get in;2;other
-stay on;2;other
-play with;2;other
-order in;2;other
-answer for;2;other
-back off;2;other
-turn to;2;other
-get it;2;other
-back into;2;other
+psycho;2;other
+brooklyn;2;other
+fiancée;2;other
+chickened;2;other
+bunk;2;other
+women;2;other
+handshake;2;other
+kisser;2;other
+ranjit;2;other
 get back;2;other
-sleep in;2;other
-head off;2;other
-lock up;2;other
-go ahead;2;other
-go after;2;other
-fiber;2;other
-submarine;2;other
-wallet;2;other
-shot;2;other
-manor;2;other
-daddy;2;other
-liberty;2;c1
-bench;2;c1
-prosecution;2;c1
-calculation;2;c1
-backup;2;c1
-casualty;2;c1
-attorney;2;c1
-ballet;2;b2
-conspiracy;2;b2
-district;2;b2
-bullet;2;b2
-affair;2;b2
-chest;2;b1
-permission;2;a2
-honking;2;other
+get it;2;other
+make it;2;other
+settle down;2;other
+go on;2;other
+metro;2;other
+dude;2;other
+honey;2;other
+damn;2;other
+robin;2;other
+pirate;2;c1
+biggest;2;other
+awesome;2;other
 bigger;2;other
-inaudible;2;other
-heroic;2;other
-subtle;2;c1
-internal;2;b2
-curious;2;b2
-ordinary;2;a2
-patient;2;a2
-moan;1;other
-armor;1;other
-rattle;1;other
-duck;1;other
-cage;1;other
-mince;1;other
-dye;1;other
-rumble;1;other
-vault;1;other
-swap;1;other
-contaminate;1;other
-console;1;other
-hammer;1;other
-replenish;1;other
-accord;1;other
-blush;1;other
-horrify;1;other
-eject;1;other
-glorify;1;other
-whine;1;other
-maul;1;other
-feed;1;other
-bribe;1;other
-spit;1;other
-bully;1;other
-agonize;1;other
-civilize;1;other
-tick;1;other
-dial;1;other
-flip;1;other
-intimidate;1;other
-abduct;1;other
-misplace;1;other
-bait;1;other
-mourn;1;other
-socialize;1;other
-irradiate;1;other
+hypothetical;2;other
+jar;1;other
+exhaust;1;other
+obscure;1;other
+reconsider;1;other
+seem;1;other
+dice;1;other
 suffice;1;other
-harden;1;other
-gasp;1;other
-whimper;1;other
-graft;1;other
-cough;1;other
-curb;1;other
-stitch;1;other
-leverage;1;other
-savor;1;other
-scoff;1;other
-ambush;1;other
-aggravate;1;other
-enact;1;c1
-preside;1;c1
-spy;1;c1
-condemn;1;c1
-divert;1;c1
-conceal;1;c1
-pledge;1;c1
-archive;1;c1
-smash;1;c1
-patrol;1;c1
-shatter;1;c1
-assault;1;c1
-breach;1;c1
-testify;1;c1
-dedicate;1;c1
-stake;1;c1
-overlook;1;c1
-thrill;1;c1
-seize;1;c1
-raid;1;c1
-initiate;1;c1
-crawl;1;c1
-halt;1;c1
-log;1;c1
-bail;1;c1
-carve;1;c1
-gamble;1;c1
-accelerate;1;c1
-leak;1;c1
-bare;1;c1
-charter;1;c1
-cooperate;1;c1
-oblige;1;c1
-peak;1;c1
-clip;1;b2
-appropriate;1;b2
-gain;1;b2
-establish;1;b2
-acquire;1;b2
-compound;1;b2
-drag;1;b2
+jerk;1;other
+pardon;1;other
+vow;1;c1
+suck;1;c1
+linger;1;c1
+screw;1;c1
+leap;1;c1
+congratulate;1;c1
+dawn;1;c1
+attempt;1;b2
 dump;1;b2
-grant;1;b2
-brief;1;b2
-dive;1;b2
-disturb;1;b2
-appeal;1;b2
-bunch;1;b2
-impress;1;b2
-fuel;1;b1
-disappoint;1;b1
-attract;1;b1
-admit;1;b1
-shake;1;a2
-jam;1;a2
-detail;1;a1
-trip;1;a1
-arm;1;a1
-reengineered;1;other
-douglas;1;other
-smalltimers;1;other
-hmm;1;other
-italian;1;other
-precaution;1;other
-outcast;1;other
-honorably;1;other
-salvatore;1;other
+excuse;1;b2
+exhibit;1;b2
+commit;1;b1
+mark;1;a2
+crowd;1;a2
+avoid;1;a2
+describe;1;a1
+fall;1;a1
+flower;1;a1
+land;1;a1
+somethin;1;other
+retriever;1;other
+waitin;1;other
+nied;1;other
+bangladesh;1;other
+urinal;1;other
+ayou;1;other
+mosby;1;other
 bitch;1;other
-stairwells;1;other
-fiend;1;other
-triangulate;1;other
-sergeant;1;other
-midlevel;1;other
-thomas;1;other
-traitor;1;other
-scumbag;1;other
-powerhouse;1;other
-leper;1;other
-cowards;1;other
-ahem;1;other
-vouched;1;other
-sal;1;other
-batpod;1;other
-pyongyang;1;other
-coleman;1;other
-heh;1;other
-kevlar;1;other
-ballistics;1;other
-reassign;1;other
-patrolman;1;other
-russian;1;other
-rappels;1;other
-sam;1;other
-powerball;1;other
-anna;1;other
-forensics;1;other
-stairwell;1;other
-pov;1;other
-randolph;1;other
-mommy;1;other
-berg;1;other
-ballerina;1;other
-tryouts;1;other
-blackmail;1;other
-consultancy;1;other
-rebuilt;1;other
-idealist;1;other
-beware;1;other
-underworld;1;other
-unethical;1;other
-farce;1;other
-underbelly;1;other
-destined;1;other
-amen;1;other
-guardian;1;other
-reelection;1;other
-wealthiest;1;other
-moscow;1;other
-encrypted;1;other
-cia;1;other
-palisades;1;other
-crazier;1;other
-gunning;1;other
-telecommunications;1;other
-darkest;1;other
-dings;1;other
-vigilance;1;other
-tootsie;1;other
-floodlight;1;other
-drinker;1;other
-contusion;1;other
-weap;1;other
-bodyguard;1;other
-jimmy;1;other
-announcer;1;other
-romans;1;other
-schiff;1;other
-tradeoff;1;other
-ace;1;other
-launderer;1;other
-scourge;1;other
-thumbprint;1;other
-jeez;1;other
-immunity;1;other
-indistinctly;1;other
-madman;1;other
-stabilizers;1;other
-lint;1;other
-paranoid;1;other
-evac;1;other
-patrick;1;other
-topside;1;other
-richards;1;other
-beta;1;other
-gangbanger;1;other
-fingerprints;1;other
-christmas;1;other
-nitrate;1;other
-lamborghini;1;other
-sally;1;other
-convoys;1;other
-commissioners;1;other
-thanksgiving;1;other
-consultants;1;other
-misunderstanding;1;other
-pulp;1;other
-irregularities;1;other
-obituary;1;other
-tally;1;other
-getaway;1;other
-aah;1;other
-quieter;1;other
-auxiliary;1;other
-ceo;1;other
-parkside;1;other
-pals;1;other
-wackjob;1;other
-gor;1;other
-rookie;1;other
-perimeter;1;other
-scumbags;1;other
-liaise;1;other
-aha;1;other
-caesar;1;other
-sdi;1;other
-sdh;1;other
-teeoff;1;other
-idolizes;1;other
-squealers;1;other
-cav;1;other
-ledgers;1;other
-youse;1;other
-richard;1;other
-bastards;1;other
-chihuahuas;1;other
-finest;1;other
-easier;1;other
-zachary;1;other
-bazooka;1;other
-heck;1;other
-rangoon;1;other
-brigade;1;other
-safest;1;other
-english;1;other
-melvin;1;other
-lightly;1;other
-mex;1;other
-agile;1;other
-unprejudiced;1;other
-tri;1;other
-cicero;1;other
-goddamn;1;other
-suntan;1;other
-korean;1;other
-extortion;1;other
-american;1;other
-volts;1;other
-swiftly;1;other
-malfunctioning;1;other
-bailiff;1;other
-bozo;1;other
-nightfall;1;other
-rottweilers;1;other
-unpopular;1;other
-psychopath;1;other
-bunny;1;other
-ammonium;1;other
-punks;1;other
-morals;1;other
-ones;1;other
-truckload;1;other
-honestly;1;other
-pooches;1;other
-fistfight;1;other
-somewh;1;other
-gibbers;1;other
-arizona;1;other
-protector;1;other
-mmm;1;other
-pancaking;1;other
-whims;1;other
-freel;1;other
-secretly;1;other
-fingerprint;1;other
-copycats;1;other
-carmine;1;other
-zeroing;1;other
-smugglers;1;other
-predicament;1;other
-dental;1;other
-warehouse;1;c1
-simultaneously;1;c1
-odds;1;c1
-morality;1;c1
-resignation;1;c1
-hostage;1;c1
-hold on;1;other
-be out;1;other
-take to;1;other
-get up;1;other
-rip off;1;other
-look up;1;other
-have on;1;other
-sign up;1;other
-blow away;1;other
-sit in;1;other
-get off;1;other
-put away;1;other
-come through;1;other
-show up;1;other
+outta;1;other
+ooh;1;other
+cab;1;other
+someday;1;other
+gin;1;other
+doggy;1;other
+raceman;1;other
+spanish;1;other
+boogedyboo;1;other
+disneyworld;1;other
+bodega;1;other
+sup;1;other
+naturel;1;other
+yasmine;1;other
+goin;1;other
+freakin;1;other
+must;1;other
+feet;1;other
+sec;1;other
+loser;1;other
+lil;1;other
+ordinarily;1;other
+manhattan;1;other
+spankings;1;other
+badass;1;other
+dumbest;1;other
+conner;1;other
+virgin;1;other
+handshaker;1;other
+playin;1;other
+ledge;1;other
+strategically;1;other
+bastard;1;other
+vermouth;1;other
+jukebox;1;other
+anymore;1;other
+coverin;1;other
+dibs;1;other
+freaking;1;other
+york;1;other
+huh;1;other
+bistro;1;other
+fluff;1;other
+takin;1;other
+morse;1;other
+ghostbusters;1;other
+nope;1;other
+hotter;1;other
+greek;1;other
+mrs;1;other
+goatee;1;other
+dumb;1;c1
+barely;1;b2
 put on;1;other
-come to;1;other
-talk over;1;other
-hole up;1;other
-back up;1;other
-look into;1;other
-go out;1;other
-stand back;1;other
-send out;1;other
-grind out;1;other
-cut off;1;other
-sneak out;1;other
-do over;1;other
-go away;1;other
-count on;1;other
-hand in;1;other
-come up;1;other
-join in;1;other
-give up;1;other
-shut down;1;other
-go through;1;other
-hold up;1;other
+be in;1;other
 live in;1;other
-back out;1;other
-follow on;1;other
-double up;1;other
-go off;1;other
-stand down;1;other
-settle for;1;other
-run into;1;other
-run in;1;other
-be on;1;other
-die for;1;other
-see to;1;other
-dress up;1;other
-back away;1;other
-call in;1;other
-go in;1;other
-fall for;1;other
-pull out;1;other
-type in;1;other
-get through;1;other
-hear about;1;other
-pack up;1;other
-drop off;1;other
-plug in;1;other
-look after;1;other
-belong to;1;other
+ask in;1;other
+turn on;1;other
+fall in;1;other
+sit in;1;other
+turn to;1;other
+come down;1;other
 turn out;1;other
-check in;1;other
-shut up;1;other
-calm down;1;other
-take up;1;other
-close in;1;other
-make up;1;other
-do without;1;other
-go over;1;other
-underneath;1;other
-southeast;1;other
-maniac;1;other
-mansion;1;other
-shark;1;other
-nickel;1;other
-alias;1;other
-tram;1;other
-anarchy;1;other
-gasoline;1;other
-gunpowder;1;other
-diesel;1;other
-alpha;1;other
+well up;1;other
+slip out;1;other
+bear with;1;other
+hold on;1;other
+go with;1;other
+word up;1;other
+go out;1;other
+call up;1;other
+chicken out;1;other
+pull over;1;other
+walk up;1;other
+go in;1;other
+blazer;1;other
+willow;1;other
+pancake;1;other
+rum;1;other
+bout;1;other
+ukulele;1;other
+tuba;1;other
+destiny;1;other
+spank;1;other
+jumper;1;other
 subtitle;1;other
-ruby;1;other
-dynamite;1;other
-driveway;1;other
-mantle;1;other
-trash;1;other
-turkey;1;other
-grandma;1;other
-garbage;1;other
-max;1;other
-caravan;1;other
-courtroom;1;other
-killer;1;other
-leash;1;other
-buyer;1;other
-lotion;1;other
-percent;1;other
-tiger;1;other
-orchard;1;other
-ass;1;other
-daylight;1;other
-caliber;1;other
-clockwork;1;other
-felony;1;other
-killing;1;other
-titanium;1;other
-elevator;1;other
-tangerine;1;other
-razor;1;other
-schizophrenic;1;other
-saving;1;other
-fortress;1;other
-timer;1;other
-avenue;1;other
-bartender;1;other
-alibi;1;other
-defendant;1;other
-someplace;1;other
-airplane;1;other
-seizure;1;other
-cooperation;1;other
-microphone;1;other
-generator;1;other
-detector;1;other
-honey;1;other
-crusader;1;other
-flexibility;1;c1
-pulse;1;c1
-admission;1;c1
-devil;1;c1
-transit;1;c1
-corruption;1;c1
-footage;1;c1
-separation;1;c1
-radar;1;c1
-withdrawal;1;c1
-gravity;1;c1
+starter;1;other
+clarinet;1;other
+pajamas;1;other
+eyebrow;1;other
+gorilla;1;other
+pansy;1;other
+font;1;other
+fireplace;1;other
+bachelor;1;other
+crap;1;other
 buddy;1;c1
-proposition;1;c1
-plea;1;c1
 ray;1;c1
-enforcement;1;c1
-diagnosis;1;c1
-bulk;1;c1
-loyalty;1;c1
-maintenance;1;c1
-barrel;1;c1
-republic;1;c1
-blade;1;c1
-conviction;1;c1
-ballot;1;c1
-enthusiasm;1;b2
-commitment;1;b2
-expansion;1;b2
-courage;1;b2
-circumstance;1;b2
-division;1;b2
-bride;1;b1
-gate;1;a2
-fee;1;a2
-area;1;a1
-fact;1;a1
-stubborn;1;other
-nearest;1;other
-static;1;other
-biggest;1;other
-superstitious;1;other
-pathetic;1;other
-catastrophic;1;other
-unbiased;1;other
-blaring;1;other
-droll;1;other
-incorruptible;1;other
-oldest;1;other
-fewer;1;other
-speedy;1;other
-communal;1;other
-honorable;1;other
-fuzzy;1;other
-feeling;1;other
-immovable;1;other
-unstoppable;1;other
-null;1;other
-knowledgeable;1;other
-indecent;1;other
-psychotic;1;other
-watchful;1;other
-wheezing;1;other
-legitimate;1;c1
-protective;1;c1
-tactical;1;c1
-tribal;1;c1
-credible;1;c1
-noble;1;c1
-civilian;1;c1
-straightforward;1;c1
-vulnerable;1;c1
-broad;1;b2
-former;1;b2
-brick;1;b2
-nervous;1;a2
-opposite;1;a1
-glass;1;a1
-common;1;a1
+transcript;1;c1
+idiot;1;c1
+bass;1;c1
+stomach;1;a2
+dish;1;a1
+creepy;1;other
+favorite;1;other
+upright;1;other
+unbelievable;1;other
+eccentric;1;other
+tart;1;other
+bizarre;1;c1
+ordinary;1;a2
