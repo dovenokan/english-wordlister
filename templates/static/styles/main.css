@@ -99,3 +99,7 @@ b .bcount2{
     border-radius: 4px;
     text-transform: capitalize;
 }
+
+select {
+    text-transform: capitalize;
+}

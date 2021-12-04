@@ -250,19 +250,19 @@ def wordlister(coType="-",co="-"):
             "oxC":len(c1count),
         },
         "percentage": {
-            "typical%": round((len(wordlist)-len(undefcount)) / len(wordlist) * 100,2),
-            "oxford%": round((len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) / (len(wordlist)-len(undefcount)) * 100,2),
-            "oxA%": round((len(a1count)+len(a2count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,2),
-            "oxB%": round((len(b1count)+len(b2count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,2),
-            "oxC%": round((len(c1count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,2)
+            "typical": round((len(wordlist)-len(undefcount)) / len(wordlist) * 100,2),
+            "oxford": round((len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) / (len(wordlist)-len(undefcount)) * 100,2),
+            "oxA": round((len(a1count)+len(a2count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,2),
+            "oxB": round((len(b1count)+len(b2count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,2),
+            "oxC": round((len(c1count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,2)
         },
-        "wordlist":wordlist
+        "wordlist":"wordlist"
     }
     
     with open("uploads/generated.txt", "a", encoding="utf-8") as f:
         f.truncate(0)
         for w in wordlist:
-            f.write( "{};{};{}".format(w[0],w[1][0],w[1][2]) )
+            f.write( "{};{};{};{}".format(w[0],w[1][0],w[1][1],w[1][2]) )
             f.write("\n")
     shutil.copyfile('uploads/generated.txt', 'uploads/generated.csv')        
     print(stats["percentage"])

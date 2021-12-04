@@ -40,13 +40,12 @@
 
     <div class="testArea" style="display: inline-flex; grid-gap: 12px;">
         <div class="test" style="margin-top: 0;">
-            <h3 style="color:#01256b;">{{seans}}</h3>
+            <h3 style="color:#01256b;">{{"ENG"}}</h3>
             <h3 style="color:#bfc0c2;">{{end}}</h3>
-            <b><a href="/logout" style="color:#ff06c1;">logout</a></b>
-            <br>
+            <!-- <b><a href="/logout" style="color:#ff06c1;">logout</a></b> -->
             <b style="color:#b0bdff;">{{allWordsCount}} word</b>
             <br>
-            <b style="color:#b0bdff;">{{lenned}} unique</b>
+            <b style="color:#2edff7;">{{lenned}} unique</b>
             <br>
             <b style="color:orange">{{usedmemory}} mb</b>
         </div>
@@ -63,7 +62,18 @@
             <b>b1: <span class="b1x"></span></b>
             <b>b2: <span class="b2x"></span></b>
             <b>c1: <span class="c1x"></span></b>
+            <b>other: <span class="otherx"></span></b>
         </div>
+
+        {% if wordlist %}
+        <div class="oxford" style="color: #054b14; display: grid;">
+            <b>typical%: <span class="perc">{{stats.percentage["typical"]}}</span></b>
+            <b>oxford%: <span class="perc">{{stats.percentage["oxford"]}}</span></b>
+            <b>oxA%: <span class="perc">{{stats.percentage["oxA"]}}</span></b>
+            <b>oxB%: <span class="perc">{{stats.percentage["oxB"]}}</span></b>
+            <b>oxC%: <span class="perc">{{stats.percentage["oxC"]}}</span></b>
+        </div>
+        {% endif %}
     </div>
 
     <div id="container">
@@ -94,25 +104,46 @@
     </div>
 
     {% if wordlist %}
-    <div>
-        {{stats.percentage}}
+    <!-- <div class="OLDfilterJS">
+        <div class="filterArea">
+            <button class="btn btn-secondary allfilter active">All</button>
+            <button class="btn btn-secondary nounfilter">Noun</button>
+            <button class="btn btn-secondary adjfilter">Adj</button>
+            <button class="btn btn-secondary verbfilter">Verb</button>
+            <button class="btn btn-secondary phrverbfilter">PhrVerb</button>
+            <button class="btn btn-secondary undeffilter">Undefined</button>
+        </div>
+        <div class="filterArea">
+            <button class="btn btn-info alllevelfilter">All</button>
+            <button class="btn btn-info a1filter">A1</button>
+            <button class="btn btn-info a2filter">A2</button>
+            <button class="btn btn-info b1filter">B1</button>
+            <button class="btn btn-info b2filter">B2</button>
+            <button class="btn btn-info c1filter">C1</button>
+            <button class="btn btn-info otherfilter">OTHER</button>
+        </div> 
+    </div> -->
+    
+    <div class="NEWfilter">
+        <select class="btn btn-primary" onchange="filter_words()" id="oxfordfilter">
+            <option value="word">all levels</option>
+            <option value="a1">a1</option>
+            <option value="a2">a2</option>
+            <option value="b1">b1</option>
+            <option value="b2">b2</option>
+            <option value="c1">c1</option>
+            <option value="other">other</option>
+        </select>
+
+        <select class="btn btn-primary" onchange="filter_words()" id="typefilter">
+            <option value="word">all types</option>
+            <option value="noun">noun</option>
+            <option value="adj">adj</option>
+            <option value="verb">verb</option>
+            <option value="phrverb">phrverb</option>
+            <option value="undef">undef</option>
+        </select>
     </div>
-    <div class="filterArea">
-        <button class="btn btn-secondary allfilter active">All</button>
-        <button class="btn btn-secondary nounfilter">Noun</button>
-        <button class="btn btn-secondary adjfilter">Adj</button>
-        <button class="btn btn-secondary verbfilter">Verb</button>
-        <button class="btn btn-secondary phrverbfilter">PhrVerb</button>
-        <button class="btn btn-secondary undeffilter">Undefined</button>
-    </div>
-    <div class="filterArea">
-        <button class="btn btn-info alllevelfilter">All</button>
-        <button class="btn btn-info a1filter">A1</button>
-        <button class="btn btn-info a2filter">A2</button>
-        <button class="btn btn-info b1filter">B1</button>
-        <button class="btn btn-info b2filter">B2</button>
-        <button class="btn btn-info c1filter">C1</button>
-    </div>     
     {% endif %}
 
     <div class="wordsec" id="lesen">
@@ -120,17 +151,5 @@
         <p class="word {{element[1][1]}} {{element[1][2]}}"> {{ element[0] }}  <b class="bcount"> {{ element[1][0] }}</b> </p>
         {% endfor %}
     </div>
-
-<script>
-// var ps = document.querySelectorAll('.word')
-// for (const p in ps) {
-//     const x = ps[p]
-//     x.addEventListener('click', function pron(e) {
-//         // var audio = new Audio('https://cdn.yourdictionary.com/audio/en/'+x.outerText.trim()+'.mp3');
-//         var audio = new Audio('https://d1qx7pbj0dvboc.cloudfront.net/'+x.outerText.trim()+'.mp3');
-//         audio.play();
-//     })
-// }
-</script>
 </body>
 </html>
