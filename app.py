@@ -91,5 +91,15 @@ def download(filename):
     uploads = os.path.join("", app.config['UPLOAD_FOLDER'])
     return send_from_directory(directory=uploads, filename=filename)
 ################################################################################################
+@app.route('/stats')
+def readStats():
+    client = pymongo.MongoClient("mongodb+srv://eUCEE8DPZYKR6zcY:eUCEE8DPZYKR6zcY@cluster0.ttarq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+    db = client["oxfdb"]
+    col = db["data"]
+    data = []
+    for d in col.find():
+        data.append( list(d.items()) )
+    return render_template("stats.html",data=data)
+################################################################################################
 if __name__ == '__main__':
     app.run(host='127.0.0.1',debug=True,port=9191)
