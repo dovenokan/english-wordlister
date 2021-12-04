@@ -9,8 +9,18 @@ Verbs: ???
 Irregular Verbs: https://github.com/mre/engldict/blob/master/irregular-verbs-de.csv
 Phrasal Verbs: https://www.usingenglish.com/reference/phrasal-verbs/list.html
 
+# Count of Typicals
+nouns:  6801
+verbs:  3249
+adjectives:  4844
+phrasalverbs:  2441
+
+# Count of Oxfords
+a1:  924
+a2:  866
+b1:  803
+b2:  1428
+c1:  1314
+total:  5335
 
 # ('psychiatric', [1, 'adj', 'c1'])
-
-
-# {'a1': 7, 'a2': 12, 'b1': 8, 'b2': 20, 'c1': 30, 'other': 310, 'verb': 67, 'noun': 67, 'adj': 17, 'phrverb': 61, 'undef': 175, 'total': 387, 'typical': 212, 'oxford': 77, 'oxA': 19, 'oxB': 28, 'oxC': 30, 'percentage': {'Typical%': 54.78, 'oxford%': 36.32, 'oxA%': 24.68, 'oxB%': 36.36, 'oxC%': 38.96}}

@@ -76,7 +76,7 @@ whatiknow2 = ['abandon', 'ability', 'able', 'about', 'above', 'absolute', 'absol
 'volunteer', 'vote', 'wage', 'wait', 'waiter', 'wake', 'walk', 'wall', 'wander', 'want', 'war', 'warm', 'warn', 'wash', 'waste', 'watch', 'water', 'wave', 'way', 'we', 'weak', 'weakness', 'wealth', 'wealthy', 'weapon', 'wear', 'weather', 'web', 'website', 'wed', 'wednesday', 'week', 'weekend', 'weekly', 'weigh', 'weight', 'weird', 'welcome', 'welfare', 'well', 'west', 'western', 'wet', 'what', 'whatever', 'wheat', 'wheel', 'when', 'whenever', 'where', 'whereas', 'wherever', 'whether', 'which', 'while', 'whisper', 'white', 'who', 'whoever', 'whole', 'whom', 'whose', 'why', 'wide', 'widely', 'widespread', 'wife', 'wild', 'wildlife', 'will', 'will modal', 'win', 'wind', 'window', 'wine', 'wing', 'winner', 'winter', 'wire', 'wisdom', 'wise', 'wish', 'with', 'withdraw', 'within', 'without', 'witness', 'woman', 'wonder', 'wonderful', 'woo', 'wooden', 'wool', 'word', 'work', 'worker', 'workforce', 'workplace', 'workshop', 'world', 'worldwide', 'worm', 'worry', 'worse', 'worst', 'worth', 'would', 'wow', 'wrap', 'wrist', 'write', 'writer', 'wrong', 'yard', 'yeah', 'year', 'yellow', 'yes', 'yesterday', 'yet', 'you', 'young', 'your', 'yours', 'yourself', 'youth', 'zero', 'zone']
 
 
-typical_words = nouns+verbs+adjectives+phrasalverbs
+# typical_words = nouns+verbs+adjectives+phrasalverbs
 
 
 """
@@ -91,3 +91,8 @@ with open('ppp.txt','w',encoding='utf-8') as f:
     f.write(str(set(ov)))     
 
 """
+
+# print("nouns: ",len(nouns))
+# print("verbs: ",len(verbs))
+# print("adjectives: ",len(adjectives))
+# print("phrasalverbs: ",len(phrasalverbs))
