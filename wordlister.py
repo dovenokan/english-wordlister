@@ -12,13 +12,13 @@ a2countq = []
 b1countq = []
 b2countq = []
 c1countq = []
-undefcountq = []
+othercountq = []
 
 verbcountq = []
 adjcountq = []
 nouncountq = []
 phrverbcountq = []
-othercountq = []
+undefcountq = []
 
 def clearTenses(word):
     
@@ -214,13 +214,13 @@ def wordlister(coType="-",co="-"):
     b1count = list(set(b1countq))
     b2count = list(set(b2countq))
     c1count = list(set(c1countq))
-    undefcount = list(set(undefcountq))
+    othercount = list(set(othercountq))
 
     verbcount = list(set(verbcountq))
     adjcount = list(set(adjcountq))
     nouncount = list(set(nouncountq))
     phrverbcount = list(set(phrverbcountq))
-    othercount = list(set(othercountq))
+    undefcount = list(set(undefcountq))
 
     stats = {
         "ts":datetime.timestamp(datetime.now()),
