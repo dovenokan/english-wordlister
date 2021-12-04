@@ -80,7 +80,7 @@
         <header class="tabs-nav">
             <a class="textarea btn active" href="#textarea"><i class="gg-file-document"></i></a>
             <a class="uploadfile btn" href="#uploadfile"><i class="gg-file-add"></i></a>
-            <a class="getTxt btn" target="_blank" href="{{ url_for('download', filename="generated.txt") }}">GET TXT</a>
+            <a class="getTxt btn" target="_blank" href="{{ url_for('download', filename="generated.txt") }}"><i class="gg-format-text"></i></a>
         </header>
         <section class="tabs-content">
             <div id="textarea">
@@ -104,27 +104,7 @@
     </div>
 
     {% if wordlist %}
-    <!-- <div class="OLDfilterJS">
-        <div class="filterArea">
-            <button class="btn btn-secondary allfilter active">All</button>
-            <button class="btn btn-secondary nounfilter">Noun</button>
-            <button class="btn btn-secondary adjfilter">Adj</button>
-            <button class="btn btn-secondary verbfilter">Verb</button>
-            <button class="btn btn-secondary phrverbfilter">PhrVerb</button>
-            <button class="btn btn-secondary undeffilter">Undefined</button>
-        </div>
-        <div class="filterArea">
-            <button class="btn btn-info alllevelfilter">All</button>
-            <button class="btn btn-info a1filter">A1</button>
-            <button class="btn btn-info a2filter">A2</button>
-            <button class="btn btn-info b1filter">B1</button>
-            <button class="btn btn-info b2filter">B2</button>
-            <button class="btn btn-info c1filter">C1</button>
-            <button class="btn btn-info otherfilter">OTHER</button>
-        </div> 
-    </div> -->
-    
-    <div class="NEWfilter">
+    <div class="filterArea">
         <select class="btn btn-primary" onchange="filter_words()" id="oxfordfilter">
             <option value="word">all levels</option>
             <option value="a1">a1</option>
