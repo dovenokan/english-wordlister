@@ -53,6 +53,7 @@ def wordlisterarea():
     session["username"] = "Count"
     form = ArticleForm(request.form)
     if request.method=="POST":
+        time_started = time.time()
         file = 0
         try:
             file = request.files['file']
@@ -71,7 +72,7 @@ def wordlisterarea():
                 MongoSave(
                     {mongo_title:stats}
                 ) 
-            return render_template("index.html",lenned=len(wordlist),wordlist=wordlist,stats=stats,allWordsCount=allWordsCount,form=form,seans=session["username"])
+            return render_template("index.html",timer=(time.time()-time_started),lenned=len(wordlist),wordlist=wordlist,stats=stats,allWordsCount=allWordsCount,form=form,seans=session["username"])
         else:
             text = form.text.data
             mongo_title = form.mongo_title.data.lower()
@@ -83,8 +84,8 @@ def wordlisterarea():
                 MongoSave(
                     {mongo_title:stats}
                 )  
-            return render_template("index.html",lenned=len(wordlist),wordlist=wordlist,stats=stats,form=form,seans=session["username"])
-    return render_template("index.html",form=form,seans=session["username"])
+            return render_template("index.html",timer=(time.time()-time_started),lenned=len(wordlist),wordlist=wordlist,stats=stats,form=form,seans=session["username"])
+    return render_template("index.html",form=form,timer=0,seans=session["username"])
 ################################################################################################
 @app.route('/uploads/<path:filename>', methods=['GET', 'POST'])
 def download(filename):

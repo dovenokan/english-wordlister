@@ -9,14 +9,26 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <style>
+    html{
+      zoom: 70%;
+    }
+    body{
+      background: #131316;
+    }
     .data-tr:nth-child(odd){
-        background-color: #06131e !important;
+      background-color: #bfffea !important;
+    }
+    .data-tr:nth-child(even){
+      background-color: #88ff7a !important;
     }
     td{
         text-align: center;
     }
+    .focused{
+      background-color: #2125525e!important;
+    }
 </style>
-<body class="bg-black">
+<body>
     
     <div class="rounded-t-xl overflow-hidden bg-gradient-to-r from-blue-50 to-teal-100 p-10">
         <table class="table-auto">
@@ -41,11 +53,11 @@
               <th class="px-2 py-2 text-blue-600">C1</th>
               <th class="px-2 py-2 text-blue-600">Other</th>
 
-              <th class="px-2 py-2 text-blue-600">Typical%</th>
-              <th class="px-2 py-2 text-blue-600">Oxford%</th>
-              <th class="px-2 py-2 text-blue-600">A%</th>
-              <th class="px-2 py-2 text-blue-600">B%</th>
-              <th class="px-2 py-2 text-blue-600">C%</th>
+              <th class="focused px-2 py-2 text-blue-600">Typical%</th>
+              <th class="focused px-2 py-2 text-blue-600">Oxford%</th>
+              <th class="focused px-2 py-2 text-blue-600">A%</th>
+              <th class="focused px-2 py-2 text-blue-600">B%</th>
+              <th class="focused px-2 py-2 text-blue-600">C%</th>
             </tr>
           </thead>
           <tbody>
