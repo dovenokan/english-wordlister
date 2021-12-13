@@ -72,6 +72,7 @@
             <b>oxA%: <span class="perc">{{stats.percentage["oxA"]}}</span></b>
             <b>oxB%: <span class="perc">{{stats.percentage["oxB"]}}</span></b>
             <b>oxC%: <span class="perc">{{stats.percentage["oxC"]}}</span></b>
+            <b>Iknow%: <span class="perc">{{whatiknowrate}}</span></b>
         </div>
         {% endif %}
     </div>
@@ -82,6 +83,9 @@
             <a class="uploadfile btn" href="#uploadfile"><i class="gg-file-add"></i></a>
             <a class="getTxt btn" target="_blank" href="{{ url_for('download', filename="generated.txt") }}"><i class="gg-format-text"></i></a>
             <a class="getTxt btn" target="_blank" href="https://cloud.mongodb.com/v2/60f1939f39fabf56159bb5f2#metrics/replicaSet/61a61cdecf95db044154e080/explorer/oxfdb/data/find"><i class="gg-database"></i></a>
+            <a class="getTxt btn" target="_blank" href="/stats"><i class="gg-stark"></i></a>
+            <a class="getTxt btn" target="_blank" href="https://subtitletools.com/convert-text-files-to-utf8-online"><i class="gg-captions"></i></a>
+            <a class="getTxt btn" target="_blank" href="https://www.filesmerge.com/tr/merge-text-files"><i class="gg-arrows-merge-alt-h"></i></a>
         </header>
         <section class="tabs-content">
             <div id="textarea">

@@ -66,24 +66,20 @@ def wordlisterarea():
             wordlist = job[0]
             stats = job[1]
             allWordsCount = job[2]
+            whatiknowrate = job[3]
             mongo_title = form.mongo_title.data.lower()
             
             if len(mongo_title) > 3:
+                stats["timer"] = round(time.time()-time_started, 2)
                 MongoSave(
                     {mongo_title:stats}
                 ) 
-            return render_template("index.html",timer=(time.time()-time_started),lenned=len(wordlist),wordlist=wordlist,stats=stats,allWordsCount=allWordsCount,form=form,seans=session["username"])
+            return render_template("index.html",timer=(time.time()-time_started),whatiknowrate=whatiknowrate,lenned=len(wordlist),wordlist=wordlist,stats=stats,allWordsCount=allWordsCount,form=form,seans=session["username"])
         else:
             text = form.text.data
-            mongo_title = form.mongo_title.data.lower()
             job = wordlister(co=text)
             wordlist = job[0]
             stats = job[1]
-
-            if len(mongo_title) > 3:
-                MongoSave(
-                    {mongo_title:stats}
-                )  
             return render_template("index.html",timer=(time.time()-time_started),lenned=len(wordlist),wordlist=wordlist,stats=stats,form=form,seans=session["username"])
     return render_template("index.html",form=form,timer=0,seans=session["username"])
 ################################################################################################

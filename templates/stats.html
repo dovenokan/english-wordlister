@@ -16,78 +16,83 @@
       background: #131316;
     }
     .data-tr:nth-child(odd){
-      background-color: #bfffea !important;
+      background-color: #39bbff !important;
     }
     .data-tr:nth-child(even){
-      background-color: #88ff7a !important;
+      background-color: #6267ff !important;
     }
     td{
         text-align: center;
     }
-    .focused{
-      background-color: #2125525e!important;
+    th{
+      background-color: transparent!important!;
+      color: whitesmoke!important;
     }
 </style>
 <body>
     
-    <div class="rounded-t-xl overflow-hidden bg-gradient-to-r from-blue-50 to-teal-100 p-10">
+    <div class="rounded-t-xl overflow-hidden bg-gradient-to-r from-white-50 to-teal-100 p-10">
         <table class="table-auto">
           <thead>
             <tr>
-              <th class="px-2 py-2 text-blue-600">Title</th>
-              <th class="px-2 py-2 text-blue-600">Date</th>
-              <th class="px-2 py-2 text-blue-600">Total</th>
-              <th class="px-2 py-2 text-blue-600">Unique</th>
-              <th class="px-2 py-2 text-blue-600">Typical</th>
-              <th class="px-2 py-2 text-blue-600">Verb</th>
-              <th class="px-2 py-2 text-blue-600">Noun</th>
-              <th class="px-2 py-2 text-blue-600">Adjective</th>
-              <th class="px-2 py-2 text-blue-600">Phrasal</th>
-              <th class="px-2 py-2 text-blue-600">Undef</th>
+              <th class="px-2 py-2 bg-blux-300 text-white-100">Title</th>
+              <th class="px-2 py-2 bg-blux-300 text-white-100">Date</th>
+              <th class="px-2 py-2 bg-blux-300 text-white-100">Timer</th>
+              <th class="px-2 py-2 bg-blux-400 text-white-100">Total</th>
+              <th class="px-2 py-2 bg-blux-400 text-white-100">Unique</th>
+              <th class="px-2 py-2 bg-blux-500 text-white-100">Typical</th>
+              <th class="px-2 py-2 bg-blux-500 text-white-100">Verb</th>
+              <th class="px-2 py-2 bg-blux-500 text-white-100">Noun</th>
+              <th class="px-2 py-2 bg-blux-500 text-white-100">Adjective</th>
+              <th class="px-2 py-2 bg-blux-500 text-white-100">Phrasal</th>
+              <th class="px-2 py-2 bg-blux-500 text-white-100">Undef</th>
 
-              <th class="px-2 py-2 text-blue-600">Oxford</th>
-              <th class="px-2 py-2 text-blue-600">A1</th>
-              <th class="px-2 py-2 text-blue-600">A2</th>
-              <th class="px-2 py-2 text-blue-600">B1</th>
-              <th class="px-2 py-2 text-blue-600">B2</th>
-              <th class="px-2 py-2 text-blue-600">C1</th>
-              <th class="px-2 py-2 text-blue-600">Other</th>
+              <th class="px-2 py-2 bg-blux-600 text-white-100">Oxford</th>
+              <th class="px-2 py-2 bg-blux-600 text-white-100">A1</th>
+              <th class="px-2 py-2 bg-blux-600 text-white-100">A2</th>
+              <th class="px-2 py-2 bg-blux-600 text-white-100">B1</th>
+              <th class="px-2 py-2 bg-blux-600 text-white-100">B2</th>
+              <th class="px-2 py-2 bg-blux-600 text-white-100">C1</th>
+              <th class="px-2 py-2 bg-blux-600 text-white-100">Other</th>
 
-              <th class="focused px-2 py-2 text-blue-600">Typical%</th>
-              <th class="focused px-2 py-2 text-blue-600">Oxford%</th>
-              <th class="focused px-2 py-2 text-blue-600">A%</th>
-              <th class="focused px-2 py-2 text-blue-600">B%</th>
-              <th class="focused px-2 py-2 text-blue-600">C%</th>
+              <th class="px-2 py-2 bg-blux-700 text-white-100">Typical%</th>
+              <th class="px-2 py-2 bg-blux-700 text-white-100">Oxford_T%</th>
+              <th class="px-2 py-2 bg-blux-700 text-white-100">Oxford%</th>
+              <th class="px-2 py-2 bg-blux-700 text-white-100">A%</th>
+              <th class="px-2 py-2 bg-blux-700 text-white-100">B%</th>
+              <th class="px-2 py-2 bg-blux-700 text-white-100">C%</th>
             </tr>
           </thead>
           <tbody>
             {% for d in data %}
             <tr class="data-tr">
-                <td class="border border-blue-500 px-2 py-2 text-blue-600 font-medium">{{d[1][0]}}</td>
-                <td class="border border-blue-500 px-2 py-2 text-blue-600 font-medium">{{d[1][1].date}}</td>
-                <td class="border border-blue-500 px-2 py-2 text-blue-600 font-medium">{{d[1][1].count.total}}</td>
-                <td class="border border-blue-500 px-2 py-2 text-blue-600 font-medium">{{d[1][1].count.unique}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][0]}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].date}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].timer}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].count.total}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].count.unique}}</td>
 
-                <td class="border border-blue-500 px-2 py-2 text-blue-600 font-medium">{{d[1][1].count.typical}}</td>
-                <td class="border border-blue-500 px-2 py-2 text-blue-600 font-medium">{{d[1][1].type.verb}}</td>
-                <td class="border border-blue-500 px-2 py-2 text-blue-600 font-medium">{{d[1][1].type.noun}}</td>
-                <td class="border border-blue-500 px-2 py-2 text-blue-600 font-medium">{{d[1][1].type.adj}}</td>
-                <td class="border border-blue-500 px-2 py-2 text-blue-600 font-medium">{{d[1][1].type.phrverb}}</td>
-                <td class="border border-blue-500 px-2 py-2 text-blue-600 font-medium">{{d[1][1].type.undef}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].count.typical}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].type.verb}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].type.noun}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].type.adj}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].type.phrverb}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].type.undef}}</td>
 
-                <td class="border border-blue-500 px-2 py-2 text-blue-600 font-medium">{{d[1][1].count.oxAll}}</td>
-                <td class="border border-blue-500 px-2 py-2 text-blue-600 font-medium">{{d[1][1].oxford.a1}}</td>
-                <td class="border border-blue-500 px-2 py-2 text-blue-600 font-medium">{{d[1][1].oxford.a2}}</td>
-                <td class="border border-blue-500 px-2 py-2 text-blue-600 font-medium">{{d[1][1].oxford.b1}}</td>
-                <td class="border border-blue-500 px-2 py-2 text-blue-600 font-medium">{{d[1][1].oxford.b2}}</td>
-                <td class="border border-blue-500 px-2 py-2 text-blue-600 font-medium">{{d[1][1].oxford.c1}}</td>
-                <td class="border border-blue-500 px-2 py-2 text-blue-600 font-medium">{{d[1][1].oxford.other}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].count.oxAll}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].oxford.a1}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].oxford.a2}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].oxford.b1}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].oxford.b2}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].oxford.c1}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].oxford.other}}</td>
 
-                <td class="border border-blue-500 px-2 py-2 text-blue-600 font-medium">{{d[1][1].percentage.typical}}</td>
-                <td class="border border-blue-500 px-2 py-2 text-blue-600 font-medium">{{d[1][1].percentage.oxford}}</td>
-                <td class="border border-blue-500 px-2 py-2 text-blue-600 font-medium">{{d[1][1].percentage.oxA}}</td>
-                <td class="border border-blue-500 px-2 py-2 text-blue-600 font-medium">{{d[1][1].percentage.oxB}}</td>
-                <td class="border border-blue-500 px-2 py-2 text-blue-600 font-medium">{{d[1][1].percentage.oxC}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].percentage.typical}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].percentage.oxford_T}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].percentage.oxford}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].percentage.oxA}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].percentage.oxB}}</td>
+                <td class="px-2 py-2 text-white-600 font-medium">{{d[1][1].percentage.oxC}}</td>
             </tr>
             {% endfor %}
           </tbody>

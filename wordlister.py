@@ -201,8 +201,11 @@ def wordlister(coType="-",co="-"):
             words[words.index(w)] = word
 
     phrasalVerb(words)
-    settedwords = list({ st for st in words if not len(st) == 0 and len(st) > 2 and st.replace(" ","").isalpha() and st not in stopwords and st not in whatiknow})
+    settedwords = list({ st for st in words if not len(st) == 0 and len(st) > 2 and st.replace(" ","").isalpha() and st not in stopwords})
     allWordsCount = len(words)
+
+    ### whatiknow :d
+    iknowthat = [wh for wh in whatiknow if wh in settedwords]
 
     for w in settedwords:
         dc[w] = [words.count(w), wordType(w), oxford(w)] 
@@ -251,7 +254,8 @@ def wordlister(coType="-",co="-"):
         },
         "percentage": {
             "typical": round((len(wordlist)-len(undefcount)) / len(wordlist) * 100,2),
-            "oxford": round((len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) / (len(wordlist)-len(undefcount)) * 100,2),
+            "oxford_T": round((len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) / len(wordlist) * 100,2),
+            "oxford": round((len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) / (len(verbcount)+len(nouncount)+len(adjcount)+len(phrverbcount)) * 100,2),
             "oxA": round((len(a1count)+len(a2count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,2),
             "oxB": round((len(b1count)+len(b2count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,2),
             "oxC": round((len(c1count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,2)
@@ -266,4 +270,5 @@ def wordlister(coType="-",co="-"):
             f.write("\n")
     shutil.copyfile('uploads/generated.txt', 'uploads/generated.csv')        
     print(stats["percentage"])
-    return wordlist, stats, allWordsCount
+    iknowrate = round((len(iknowthat)) / (len(verbcount)+len(nouncount)+len(adjcount)+len(phrverbcount)) * 100,2)
+    return wordlist, stats, allWordsCount, iknowrate
