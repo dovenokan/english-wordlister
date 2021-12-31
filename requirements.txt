@@ -4,4 +4,3 @@ pymongo
 wtforms
 werkzeug
 passlib
-sqlite3
