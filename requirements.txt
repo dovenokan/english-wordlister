@@ -1,0 +1,7 @@
+Flask
+gunicorn
+pymongo
+wtforms
+werkzeug
+passlib
+sqlite3
