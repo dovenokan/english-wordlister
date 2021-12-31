@@ -7,22 +7,27 @@
     <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}">
     <title>Stats</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Dangrek&display=swap" rel="stylesheet">
 </head>
 <style>
     html{
       zoom: 70%;
     }
     body{
-      background: #131316;
+      background: #000000;
+      font-family: 'Dangrek', cursive;
     }
     .data-tr:nth-child(odd){
       background-color: white !important;
     }
     .data-tr:nth-child(even){
-      background-color: #dbe1ff !important !important;
+      background-color: #dbe1ff !important;
     }
     td{
         text-align: center;
+    }
+    tr.labels{
+      background-color: #624fff;
     }
     th{
       background-color: transparent!important!;
@@ -34,7 +39,7 @@
     <div class="rounded-t-xl overflow-hidden bg-gradient-to-r from-white-50 to-teal-100 p-10">
         <table class="table-auto">
           <thead>
-            <tr>
+            <tr class="labels">
               <th class="px-2 py-2 bg-blux-300 text-white-100">Title</th>
               <th class="px-2 py-2 bg-blux-300 text-white-100">Date</th>
               <th class="px-2 py-2 bg-blux-300 text-white-100">Timer</th>
