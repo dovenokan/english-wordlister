@@ -4,3 +4,4 @@ pymongo
 wtforms
 werkzeug
 passlib
+dnspython
