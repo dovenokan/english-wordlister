@@ -85,9 +85,9 @@ def wordlisterarea():
 ################################################################################################
 @app.route('/uploads/<path:filename>', methods=['GET', 'POST'])
 def download(filename):
-    # uploads = os.path.join("", app.config['UPLOAD_FOLDER'])
-    # return send_from_directory(directory=app.config['UPLOAD_FOLDER'], filename=filename)
-    return send_from_directory(directory=app.config['UPLOAD_FOLDER'], path=filename)
+    uploads = os.path.join("", app.config['UPLOAD_FOLDER'])
+    return send_from_directory(directory=app.config['UPLOAD_FOLDER'], filename=filename)
+    # return send_from_directory(directory=app.config['UPLOAD_FOLDER'], path=filename)
 ################################################################################################
 @app.route('/stats')
 def readStats():
