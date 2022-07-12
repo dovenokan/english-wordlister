@@ -21,7 +21,6 @@ phrverbcountq = []
 undefcountq = []
 
 def clearTenses(word):
-    
     # Irregular Verbs Kısmı 
     for ir in irregularverbs:
         if ir["v3"] == word or ir["v2"] == word:
@@ -194,7 +193,6 @@ def wordlister(coType="-",co="-"):
     wo = [f for s in sentencify(content) for f in wordify(s)]
     words = [regExpert(w) for w in wo]
 
-    dc = dict()
     for w in words:
         if w.isalpha():
             word = clearTenses(w)
@@ -204,13 +202,18 @@ def wordlister(coType="-",co="-"):
     settedwords = list({ st for st in words if not len(st) == 0 and len(st) > 2 and st.replace(" ","").isalpha() and st not in stopwords})
     allWordsCount = len(words)
 
-    ### whatiknow :d
-    iknowthat = [wh for wh in whatiknow if wh in settedwords]
-
+    warray = []
     for w in settedwords:
-        dc[w] = [words.count(w), wordType(w), oxford(w)] 
-
-    wordlist = sorted(dc.items(), key=lambda kv: kv[1], reverse=True) # 0 False letter 1 True count
+        # dc[w] = [words.count(w), wordType(w), oxford(w)] 
+        warray.append({
+            "word":w,
+            "count":words.count(w),
+            "type":wordType(w),
+            "oxford":oxford(w),
+        })
+    print(warray)
+    # wordlist = sorted(dc.items(), key=lambda kv: kv[1], reverse=True) # 0 False letter 1 True count
+    wordlist = warray
 
     a1count = list(set(a1countq))
     a2count = list(set(a2countq))
@@ -225,6 +228,9 @@ def wordlister(coType="-",co="-"):
     phrverbcount = list(set(phrverbcountq))
     undefcount = list(set(undefcountq))
 
+    return wordlist
+
+    # ARIZA -> STATS
     stats = {
         "ts":datetime.timestamp(datetime.now()),
         "date":datetime.now(),
@@ -263,12 +269,11 @@ def wordlister(coType="-",co="-"):
         "wordlist":"wordlist"
     }
     
+    # ARIZA -> CSV GENERATOR
     with open("uploads/generated.txt", "a", encoding="utf-8") as f:
         f.truncate(0)
         for w in wordlist:
             f.write( "{};{};{};{}".format(w[0],w[1][0],w[1][1],w[1][2]) )
             f.write("\n")
     shutil.copyfile('uploads/generated.txt', 'uploads/generated.csv')        
-    print(stats["percentage"])
-    iknowrate = round((len(iknowthat)) / (len(verbcount)+len(nouncount)+len(adjcount)+len(phrverbcount)) * 100,2)
-    return wordlist, stats, allWordsCount, iknowrate
+    
