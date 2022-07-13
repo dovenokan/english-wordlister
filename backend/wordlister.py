@@ -211,9 +211,9 @@ def wordlister(coType="-",co="-"):
             "type":wordType(w),
             "oxford":oxford(w),
         })
-    print(warray)
     # wordlist = sorted(dc.items(), key=lambda kv: kv[1], reverse=True) # 0 False letter 1 True count
     wordlist = warray
+    return wordlist
 
     a1count = list(set(a1countq))
     a2count = list(set(a2countq))
@@ -227,8 +227,6 @@ def wordlister(coType="-",co="-"):
     nouncount = list(set(nouncountq))
     phrverbcount = list(set(phrverbcountq))
     undefcount = list(set(undefcountq))
-
-    return wordlist
 
     # ARIZA -> STATS
     stats = {

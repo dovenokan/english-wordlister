@@ -2,7 +2,9 @@
 ################################################################################################
 import functools
 import pymongo
-from flask import Flask,send_from_directory,render_template,flash,redirect,url_for,session,logging,request
+import json
+from flask_cors import CORS, cross_origin
+from flask import Flask, jsonify, send_from_directory,render_template,flash,redirect,url_for,session,logging,request
 from wtforms import Form,StringField,TextAreaField,PasswordField,validators
 from functools import wraps
 from wordlister import *
@@ -13,6 +15,8 @@ from passlib.hash import sha256_crypt
 import sqlite3 as sql
 ################################################################################################
 app = Flask(__name__,static_folder="templates/static")
+# CORS(app, resources={r"*": {"origins": "*"}})
+################################################################################################
 app.secret_key = "secret key" 
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024 
 path = os.getcwd()
@@ -38,12 +42,19 @@ class ArticleForm(Form):
 def index():
     return render_template("index.html")
 ################################################################################################
-@app.route("/",methods = ["POST"])
-def wordlisterarea():
+@app.route("/api",methods = ["GET","POST"])
+@cross_origin(allow_headers=['Content-Type'])
+def api():
     form = ArticleForm(request.form)
     text = form.text.data
     data = wordlister(co=text)
-    return {"info":len(data),"data": data}
+    # response = str({"res": {"info":len(data), "data": data}})
+    response = json.dumps({"info":len(data), "wordlist": data})
+    return response
+################################################################################################
+@app.route("/test",methods = ["GET","POST"])
+def tester():
+    return str({"test":2022})
 ################################################################################################
 @app.route('/uploads/<path:filename>', methods=['GET', 'POST'])
 def download(filename):
@@ -52,4 +63,4 @@ def download(filename):
     # return send_from_directory(directory=app.config['UPLOAD_FOLDER'], path=filename)
 ################################################################################################
 if __name__ == '__main__':
-    app.run(host='127.0.0.1',debug=True,port=1453)
+    app.run(host='127.0.0.1',debug=True,port=3434)
