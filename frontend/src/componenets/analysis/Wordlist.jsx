@@ -5,14 +5,14 @@ function Wordlist() {
     const {data} = useSelector((state) => state.wordData)
 
     return (
-        <div className="wordlist">
-            {
-                data.wordlist.map((item) => {
+        <div className="wordlist mx-auto w-8/12">
+            {   data.wordlist ? 
+                data.wordlist.map((item,key) => {
                     return(
-                        <p className="text-blue-500">{item.word}</p>
+                        <p key={key} className={`text-blue-500 word ${item.type} ${item.oxford}`}> {item.word} <b>{item.count}</b></p>
                     )}
-                        
-                ) 
+               ) :
+               null
             }
         </div>
     )

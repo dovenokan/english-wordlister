@@ -8,11 +8,11 @@ export const inputSlice = createSlice({
     },
     reducers: {
         toggleText: (state, action) => {
-            state.textInputStatus = action.payload
+            state.textInputStatus = !state.textInputStatus
             state.fileInputStatus = false
         },
         toggleFile: (state, action) => {
-            state.fileInputStatus = action.payload
+            state.fileInputStatus = !state.fileInputStatus
             state.textInputStatus = false
         },
     }

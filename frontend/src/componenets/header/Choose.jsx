@@ -1,6 +1,6 @@
-import { toggleText, toggleFile } from '../../redux/reducers/inputReducer';
 import { options } from '../../middleware/api'
 import { updateData, updateWordlistStatus, updateWordlistLoading } from '../../redux/reducers/dataReducer';
+import { toggleText, toggleFile } from '../../redux/reducers/inputReducer';
 import { useSelector,useDispatch } from "react-redux";
 
 function Choose() {
@@ -11,7 +11,7 @@ function Choose() {
     const formData = new FormData();
     formData.append('text', cargo);
     options.body = formData
-    
+
     const Process = () => {
       dispatch(updateWordlistLoading(true))
       fetch("http://127.0.0.1:3434/api", options
@@ -23,7 +23,6 @@ function Choose() {
       setTimeout(() => {
         dispatch(updateWordlistStatus(true))
         dispatch(updateWordlistLoading(false))
-        console.log(data)
       }, 2000);
     }
 
@@ -33,12 +32,12 @@ function Choose() {
             <div className="w-full h-full text-center">
                 <div className="flex h-full flex-col justify-between">
                     <div className="flex items-center justify-between gap-4 w-full ">
-                        <button onClick={() => dispatch(toggleText(true))} type="button" className="py-2 px-4 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg ">
+                        <button onClick={() => dispatch(toggleText())} type="button" className="py-2 px-4 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg ">
                             Text
                             <br />
                             <i className="fa fa-book"></i>
                         </button>
-                        <button onClick={() => dispatch(toggleFile(true))} type="button" className="py-2 px-4 bg-yellow-300 hover:bg-yellow-200 focus:ring-yellow-200 focus:ring-offset-yellow-200 text-black w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg ">
+                        <button onClick={() => dispatch(toggleFile())} type="button" className="py-2 px-4 bg-yellow-300 hover:bg-yellow-200 focus:ring-yellow-200 focus:ring-offset-yellow-200 text-black w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg ">
                             File
                             <br />
                             <i className="fa fa-file"></i>

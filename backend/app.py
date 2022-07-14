@@ -15,7 +15,7 @@ from passlib.hash import sha256_crypt
 import sqlite3 as sql
 ################################################################################################
 app = Flask(__name__,static_folder="templates/static")
-# CORS(app, resources={r"*": {"origins": "*"}})
+CORS(app, resources={r"*": {"origins": "*"}})
 ################################################################################################
 app.secret_key = "secret key" 
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024 
@@ -34,9 +34,6 @@ def allowed_file(filename):
 class ArticleForm(Form):
     text = TextAreaField("")
     mongo_title = TextAreaField("")
-    username = StringField("Kullanıcı Adı")
-    email = StringField("Mail Adresi")
-    password = PasswordField("Şifre")
 ################################################################################################
 @app.route("/")
 def index():
@@ -45,22 +42,22 @@ def index():
 @app.route("/api",methods = ["GET","POST"])
 @cross_origin(allow_headers=['Content-Type'])
 def api():
+    TIME_START = time.time()
     form = ArticleForm(request.form)
     text = form.text.data
-    data = wordlister(co=text)
-    # response = str({"res": {"info":len(data), "data": data}})
-    response = json.dumps({"info":len(data), "wordlist": data})
+    data = wordlister(content=text)
+    TIME_END = time.time() - TIME_START
+    info = {
+        "time": TIME_END,
+        "count": len(data)
+    }
+    response = json.dumps({"info":info, "wordlist":data})
     return response
-################################################################################################
-@app.route("/test",methods = ["GET","POST"])
-def tester():
-    return str({"test":2022})
 ################################################################################################
 @app.route('/uploads/<path:filename>', methods=['GET', 'POST'])
 def download(filename):
     uploads = os.path.join("", app.config['UPLOAD_FOLDER'])
     return send_from_directory(directory=app.config['UPLOAD_FOLDER'], filename=filename)
-    # return send_from_directory(directory=app.config['UPLOAD_FOLDER'], path=filename)
 ################################################################################################
 if __name__ == '__main__':
     app.run(host='127.0.0.1',debug=True,port=3434)

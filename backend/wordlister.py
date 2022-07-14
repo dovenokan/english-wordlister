@@ -21,7 +21,6 @@ phrverbcountq = []
 undefcountq = []
 
 def clearTenses(word):
-    # Irregular Verbs Kısmı 
     for ir in irregularverbs:
         if ir["v3"] == word or ir["v2"] == word:
             return ir["v1"]
@@ -183,36 +182,29 @@ def alphabet(word):
             return False
     return True
 
-def wordlister(coType="-",co="-"):
+def wordlister(coType=None,content=None):
     if coType == "file":
         with open('uploads/srt.txt', 'r', encoding='utf-8') as file:
             content = file.read().replace("\n", " ")
-    else:
-        content = co
-
-    wo = [f for s in sentencify(content) for f in wordify(s)]
-    words = [regExpert(w) for w in wo]
-
+    raw_words = [f for s in sentencify(content) for f in wordify(s)]
+    words = [regExpert(w) for w in raw_words]
     for w in words:
         if w.isalpha():
             word = clearTenses(w)
             words[words.index(w)] = word
-
     phrasalVerb(words)
     settedwords = list({ st for st in words if not len(st) == 0 and len(st) > 2 and st.replace(" ","").isalpha() and st not in stopwords})
     allWordsCount = len(words)
-
-    warray = []
+    wordlist = []
     for w in settedwords:
-        # dc[w] = [words.count(w), wordType(w), oxford(w)] 
-        warray.append({
-            "word":w,
-            "count":words.count(w),
-            "type":wordType(w),
-            "oxford":oxford(w),
-        })
-    # wordlist = sorted(dc.items(), key=lambda kv: kv[1], reverse=True) # 0 False letter 1 True count
-    wordlist = warray
+        wType = wordType(w)
+        if wType != "undef":
+            wordlist.append({
+                "word":w,
+                "count":words.count(w),
+                "type":wType,
+                "oxford":oxford(w),
+            })
     return wordlist
 
     a1count = list(set(a1countq))

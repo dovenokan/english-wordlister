@@ -12,7 +12,7 @@ function Analysis() {
     )
   } else {
     return (
-      <div className="analysis">
+      <div className="analysis mb-8">
         <Wordlist />
       </div>
     )
