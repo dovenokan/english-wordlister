@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 :root{
-  --bg-color: #f0f0ff;
+  --bg-color: #efefef;
 }
 
 body {
@@ -19,6 +19,7 @@ body {
 
 textarea {
   overflow: scroll;
+  overflow-x: hidden;
   padding: 5px;
   color: black;
   background: #ffffff;

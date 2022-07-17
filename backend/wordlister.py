@@ -1,24 +1,10 @@
 # -*- coding: UTF-8 -*-
-import string
 from datasets import *
 from oxfords import *
 import time
 import re
 import shutil
 from datetime import datetime
-
-a1countq = []
-a2countq = []
-b1countq = []
-b2countq = []
-c1countq = []
-othercountq = []
-
-verbcountq = []
-adjcountq = []
-nouncountq = []
-phrverbcountq = []
-undefcountq = []
 
 def clearTenses(word):
     for ir in irregularverbs:
@@ -90,39 +76,28 @@ def isCapitalized(word):
 
 def wordType(word):
     if word in verbs:
-        verbcountq.append(word)
         return "verb"
     elif word in adjectives:
-        adjcountq.append(word)
         return "adj"
     elif word in nouns:
-        nouncountq.append(word)
         return "noun"
     elif word in phrasalverbs:
-        phrverbcountq.append(word)
         return "phrverb"
     else:
-        undefcountq.append(word)
         return "undef"
 
 def oxford(word):
     if word in a1:
-        a1countq.append(word)
         return "a1"
     elif word in a2:
-        a2countq.append(word)
         return "a2"
     elif word in b1:
-        b1countq.append(word)
         return "b1"
     elif word in b2:
-        b2countq.append(word)
         return "b2"
     elif word in c1:
-        c1countq.append(word)
         return "c1"
     else:
-        othercountq.append(word)
         return "other"   
 
 def regStrip(word):
@@ -205,20 +180,7 @@ def wordlister(coType=None,content=None):
                 "type":wType,
                 "oxford":oxford(w),
             })
-    return wordlist
-
-    a1count = list(set(a1countq))
-    a2count = list(set(a2countq))
-    b1count = list(set(b1countq))
-    b2count = list(set(b2countq))
-    c1count = list(set(c1countq))
-    othercount = list(set(othercountq))
-
-    verbcount = list(set(verbcountq))
-    adjcount = list(set(adjcountq))
-    nouncount = list(set(nouncountq))
-    phrverbcount = list(set(phrverbcountq))
-    undefcount = list(set(undefcountq))
+    return {"wordlist": wordlist}
 
     # ARIZA -> STATS
     stats = {

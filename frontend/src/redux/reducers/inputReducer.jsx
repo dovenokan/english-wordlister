@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit"
 export const inputSlice = createSlice({
     name: "input",
     initialState: {
-        textInputStatus: false,
+        textInputStatus: true,
         fileInputStatus: false,
     },
     reducers: {

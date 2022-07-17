@@ -11,7 +11,6 @@ from wordlister import *
 import time
 from werkzeug.utils import secure_filename
 import os
-from passlib.hash import sha256_crypt
 import sqlite3 as sql
 ################################################################################################
 app = Flask(__name__,static_folder="templates/static")
@@ -35,6 +34,9 @@ class ArticleForm(Form):
     text = TextAreaField("")
     mongo_title = TextAreaField("")
 ################################################################################################
+def Infere(data):
+    return "stats"
+################################################################################################
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -51,7 +53,7 @@ def api():
         "time": TIME_END,
         "count": len(data)
     }
-    response = json.dumps({"info":info, "wordlist":data})
+    response = json.dumps({"info":info, "wordlist":data["wordlist"]})
     return response
 ################################################################################################
 @app.route('/uploads/<path:filename>', methods=['GET', 'POST'])
@@ -60,4 +62,4 @@ def download(filename):
     return send_from_directory(directory=app.config['UPLOAD_FOLDER'], filename=filename)
 ################################################################################################
 if __name__ == '__main__':
-    app.run(host='127.0.0.1',debug=True,port=3434)
+    app.run(host='127.0.0.1',debug=True,port=4242)
