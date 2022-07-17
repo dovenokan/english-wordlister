@@ -5,3 +5,4 @@ wtforms
 werkzeug
 passlib
 dnspython
+flask_cors

@@ -12,9 +12,9 @@ function Choose() {
     formData.append('text', cargo);
     options.body = formData
 
-    const Process = () => {
+    const Generate = () => {
       dispatch(updateWordlistLoading(true))
-      fetch("http://127.0.0.1:3434/api", options
+      fetch(`${import.meta.env.VITE_BACKEND_URL}/api`, options
       ).then(
         res => res.text()
       ).then(
@@ -42,7 +42,7 @@ function Choose() {
                             <br />
                             <i className="fa fa-file"></i>
                         </button>
-                        <button onClick={() => Process()} type="button" className="py-2 px-4 bg-green-300 hover:bg-green-200 focus:ring-green-200 focus:ring-offset-green-200 text-black w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg ">
+                        <button onClick={() => Generate()} type="button" className="py-2 px-4 bg-green-300 hover:bg-green-200 focus:ring-green-200 focus:ring-offset-green-200 text-black w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg ">
                             Go!
                             <br />
                             <i className="fa fa-play"></i>
