@@ -171,6 +171,7 @@ def wordlister(coType=None,content=None):
     settedwords = list({ st for st in words if not len(st) == 0 and len(st) > 2 and st.replace(" ","").isalpha() and st not in stopwords})
     allWordsCount = len(words)
     wordlist = []
+
     for w in settedwords:
         wType = wordType(w)
         if wType != "undef":

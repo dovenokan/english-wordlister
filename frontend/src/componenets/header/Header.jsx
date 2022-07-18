@@ -5,7 +5,7 @@ import Choose from './Choose'
 function Header() {
   return (
     <div className="header">
-        <Title />
+        {/* <Title /> */}
         <Choose />
     </div>
   )
