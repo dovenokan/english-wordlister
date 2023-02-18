@@ -62,7 +62,7 @@ def Infere(data):
                 "verb": (typical_count["verb"]/data_len)*100,
                 "noun": (typical_count["noun"]/data_len)*100,
                 "adjective": (typical_count["adj"]/data_len)*100,
-                "phrasal_verb": (typical_count["phrverb"]/data_len)*100,
+                # "phrasal_verb": (typical_count["phrverb"]/data_len)*100,
             }
         }
     }
