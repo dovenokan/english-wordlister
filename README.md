@@ -1,4 +1,3 @@
-
 # English Wordlister
 
 Classifying words of the given text into **types & oxford levels**.
@@ -10,13 +9,13 @@ Types
  - Adjective
  - Adverb
  - Undefined
- - 
 Oxford Levels
  - A1
  - A2
  - B1
  - B2
  - C1
+ - Other
 
 
 ## Technologies
