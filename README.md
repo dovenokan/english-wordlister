@@ -6,8 +6,8 @@ Classifying words of the given text into **types & oxford levels**.
 Types
  - Noun
  - Verb
+ - Phrasal Verb
  - Adjective
- - Adverb
  - Undefined
  
 Oxford Levels
