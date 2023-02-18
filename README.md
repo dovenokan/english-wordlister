@@ -9,6 +9,7 @@ Types
  - Adjective
  - Adverb
  - Undefined
+ 
 Oxford Levels
  - A1
  - A2
