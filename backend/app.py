@@ -15,7 +15,7 @@ import os
 import sqlite3 as sql
 ################################################################################################
 app = Flask(__name__,static_folder="templates/static")
-CORS(app, resources={r"*": {"origins": "*"}})
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
 ################################################################################################
 app.secret_key = "secret key" 
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024 
