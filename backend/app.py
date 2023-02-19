@@ -15,7 +15,7 @@ import os
 import sqlite3 as sql
 ################################################################################################
 app = Flask(__name__,static_folder="templates/static")
-# cors = CORS(app, resources={r"/*": {"origins": "*"}})
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
 ################################################################################################
 app.secret_key = "secret key" 
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024 
@@ -73,7 +73,7 @@ def index():
     return render_template("index.html")
 ################################################################################################
 @app.route("/api",methods = ["GET","POST"])
-# @cross_origin(allow_headers=['Content-Type'])
+@cross_origin(allow_headers=['Content-Type'])
 def api():
     TIME_START = time.time()
     form = ArticleForm(request.form)
