@@ -194,7 +194,6 @@ def wordlister(coType=None,content=None):
             words[words.index(w)] = word
     phrasalVerb(words)
     settedwords = list({ st for st in words if not len(st) == 0 and len(st) > 2 and st.replace(" ","").isalpha() and st not in stopwords})
-    allWordsCount = len(words)
     wordlist = []
 
     for w in settedwords:
@@ -225,21 +224,20 @@ def wordlister(coType=None,content=None):
             "undef": undefcount,
         },
         "count": {
-            "total": allWordsCount,
-            "unique": len(wordlist),
+            "raw": len(words),
+            "total": len(wordlist),
             "typical": sum([wc for wc in [verbcount, nouncount, adjcount, phrverbcount]]),
-            "oxAll": sum([ox for ox in [a1count, a2count, b1count, b2count, c1count]]),
-            "oxA": sum([ox for ox in [a1count, a2count]]),
-            "oxB": sum([ox for ox in [b1count, b2count]]),
-            "oxC": c1count,
+            "oxford": sum([ox for ox in [a1count, a2count, b1count, b2count, c1count]]),
+            "oxford_A": sum([ox for ox in [a1count, a2count]]),
+            "oxford_B": sum([ox for ox in [b1count, b2count]]),
+            "oxford_C": c1count,
         },
         "percentage": {
             "typical": round((len(wordlist) - undefcount) / len(wordlist) * 100, 2) if len(wordlist) > 0 else 0,
-            "oxford_T": round((sum([ox for ox in [a1count, a2count, b1count, b2count, c1count]])) / len(wordlist) * 100, 2) if len(wordlist) > 0 else 0,
             "oxford": round((sum([ox for ox in [a1count, a2count, b1count, b2count, c1count]])) / max(sum([wc for wc in [verbcount, nouncount, adjcount, phrverbcount]]), 1) * 100, 2),
-            "oxA": round((sum([ox for ox in [a1count, a2count]])) / max(sum([ox for ox in [a1count, a2count, b1count, b2count, c1count]]), 1) * 100, 2),
-            "oxB": round((sum([ox for ox in [b1count, b2count]])) / max(sum([ox for ox in [a1count, a2count, b1count, b2count, c1count]]), 1) * 100, 2),
-            "oxC": round((c1count) / max(sum([ox for ox in [a1count, a2count, b1count, b2count, c1count]]), 1) * 100, 2),
+            "oxford_A": round((sum([ox for ox in [a1count, a2count]])) / max(sum([ox for ox in [a1count, a2count, b1count, b2count, c1count]]), 1) * 100, 2),
+            "oxford_B": round((sum([ox for ox in [b1count, b2count]])) / max(sum([ox for ox in [a1count, a2count, b1count, b2count, c1count]]), 1) * 100, 2),
+            "oxford_C": round((c1count) / max(sum([ox for ox in [a1count, a2count, b1count, b2count, c1count]]), 1) * 100, 2),
         },
         "wordlist": "wordlist"
     }
