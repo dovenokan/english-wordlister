@@ -6,6 +6,18 @@ import re
 import shutil
 from datetime import datetime
 
+a1count = 0
+a2count = 0
+b1count = 0
+b2count = 0
+c1count = 0
+othercount = 0
+verbcount = 0
+nouncount = 0
+adjcount = 0
+phrverbcount = 0
+undefcount = 0
+
 def clearTenses(word):
     for ir in irregularverbs:
         if ir["v3"] == word or ir["v2"] == word:
@@ -75,29 +87,42 @@ def isCapitalized(word):
         return False
 
 def wordType(word):
+    global verbcount,nouncount,adjcount,phrverbcount,undefcount
     if word in verbs:
+        verbcount+=1
         return "verb"
     elif word in adjectives:
+        adjcount+=1
         return "adj"
     elif word in nouns:
+        nouncount+=1
         return "noun"
     elif word in phrasalverbs:
+        phrverbcount+=1
         return "phrverb"
     else:
+        undefcount+=1
         return "undef"
 
 def oxford(word):
+    global a1count, a2count, b1count, b2count, c1count, othercount
     if word in a1:
+        a1count+=1
         return "a1"
     elif word in a2:
+        a2count+=1
         return "a2"
     elif word in b1:
+        b1count+=1
         return "b1"
     elif word in b2:
+        b2count+=1
         return "b2"
     elif word in c1:
+        c1count+=1
         return "c1"
     else:
+        othercount+=1
         return "other"   
 
 def regStrip(word):
@@ -132,7 +157,7 @@ def wordify(sentence):
 
 def phrasalVerb(lst):
     phrpre = []
-    for n in range(len(lst)):
+    for n in range(len(lst)-1):  # added -1 to avoid index out of range error
         try:
             phrtwo = ''.join("{} {}".format(lst[n],lst[n+1]))
             phrpre.append(phrtwo)
@@ -181,47 +206,45 @@ def wordlister(coType=None,content=None):
                 "type":wType,
                 "oxford":oxford(w),
             })
-    return {"wordlist": wordlist}
-
-    # ARIZA -> STATS
     stats = {
-        "ts":datetime.timestamp(datetime.now()),
-        "date":datetime.now(),
-        "oxford":{
-            "a1":len(a1count),
-            "a2":len(a2count),
-            "b1":len(b1count),
-            "b2":len(b2count),
-            "c1":len(c1count),
-            "other":len(othercount),
+        "ts": datetime.timestamp(datetime.now()),
+        "date": datetime.now(),
+        "oxford": {
+            "a1": a1count,
+            "a2": a2count,
+            "b1": b1count,
+            "b2": b2count,
+            "c1": c1count,
+            "other": othercount,
         },
-        "type":{
-            "verb":len(verbcount),
-            "noun":len(nouncount),
-            "adj":len(adjcount),
-            "phrverb":len(phrverbcount),
-            "undef":len(undefcount),
+        "type": {
+            "verb": verbcount,
+            "noun": nouncount,
+            "adj": adjcount,
+            "phrverb": phrverbcount,
+            "undef": undefcount,
         },
-        "count":{
-            "total":allWordsCount,
-            "unique":len(wordlist),
-            "typical":len(wordlist)-len(undefcount),
-            "oxAll":len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count),
-            "oxA":len(a1count)+len(a2count),
-            "oxB":len(b1count)+len(b2count),
-            "oxC":len(c1count),
+        "count": {
+            "total": allWordsCount,
+            "unique": len(wordlist),
+            "typical": sum([wc for wc in [verbcount, nouncount, adjcount, phrverbcount]]),
+            "oxAll": sum([ox for ox in [a1count, a2count, b1count, b2count, c1count]]),
+            "oxA": sum([ox for ox in [a1count, a2count]]),
+            "oxB": sum([ox for ox in [b1count, b2count]]),
+            "oxC": c1count,
         },
         "percentage": {
-            "typical": round((len(wordlist)-len(undefcount)) / len(wordlist) * 100,2),
-            "oxford_T": round((len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) / len(wordlist) * 100,2),
-            "oxford": round((len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) / (len(verbcount)+len(nouncount)+len(adjcount)+len(phrverbcount)) * 100,2),
-            "oxA": round((len(a1count)+len(a2count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,2),
-            "oxB": round((len(b1count)+len(b2count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,2),
-            "oxC": round((len(c1count)) / (len(a1count)+len(a2count)+len(b1count)+len(b2count)+len(c1count)) * 100,2)
+            "typical": round((len(wordlist) - undefcount) / len(wordlist) * 100, 2) if len(wordlist) > 0 else 0,
+            "oxford_T": round((sum([ox for ox in [a1count, a2count, b1count, b2count, c1count]])) / len(wordlist) * 100, 2) if len(wordlist) > 0 else 0,
+            "oxford": round((sum([ox for ox in [a1count, a2count, b1count, b2count, c1count]])) / max(sum([wc for wc in [verbcount, nouncount, adjcount, phrverbcount]]), 1) * 100, 2),
+            "oxA": round((sum([ox for ox in [a1count, a2count]])) / max(sum([ox for ox in [a1count, a2count, b1count, b2count, c1count]]), 1) * 100, 2),
+            "oxB": round((sum([ox for ox in [b1count, b2count]])) / max(sum([ox for ox in [a1count, a2count, b1count, b2count, c1count]]), 1) * 100, 2),
+            "oxC": round((c1count) / max(sum([ox for ox in [a1count, a2count, b1count, b2count, c1count]]), 1) * 100, 2),
         },
-        "wordlist":"wordlist"
+        "wordlist": "wordlist"
     }
-    
+    return {"wordlist": wordlist, "stats":stats}
+
     # ARIZA -> CSV GENERATOR
     with open("uploads/generated.txt", "a", encoding="utf-8") as f:
         f.truncate(0)
