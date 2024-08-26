@@ -183,6 +183,7 @@ def alphabet(word):
     return True
 
 def wordlister(coType=None,content=None):
+    start_time = time.time()
     if coType == "file":
         with open('uploads/srt.txt', 'r', encoding='utf-8') as file:
             content = file.read().replace("\n", " ")
@@ -241,7 +242,9 @@ def wordlister(coType=None,content=None):
         },
         "wordlist": "wordlist"
     }
-    return {"wordlist": wordlist, "stats":stats}
+
+    elapsed_time = time.time() - start_time
+    print(f"Processing completed in {elapsed_time:.2f} seconds.")
 
     # ARIZA -> CSV GENERATOR
     with open("uploads/generated.txt", "a", encoding="utf-8") as f:
@@ -251,3 +254,6 @@ def wordlister(coType=None,content=None):
             f.write("\n")
     shutil.copyfile('uploads/generated.txt', 'uploads/generated.csv')        
     
+    return {"wordlist": wordlist, "stats":stats}
+
+wordlister(coType="file")
