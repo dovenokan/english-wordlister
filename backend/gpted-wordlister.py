@@ -117,12 +117,13 @@ def wordlister(coType=None, content=None):
     phrasal_verbs(words)
     unique_words = {word for word in words if len(word) > 2 and word.isalpha() and word not in stopwords}
 
-    wordlist = [{
+    wordlist_1 = [{
         "word": word,
         "count": words.count(word),
         "type": word_type(word),
         "oxford": oxford_level(word)
     } for word in unique_words if word_type(word) != "undef"]
+    wordlist = sorted(wordlist_1, key=lambda x: x['count'], reverse=True)
 
     total_words = len(wordlist)
     typical_count = sum(counters[t] for t in ['verb', 'noun', 'adj', 'phrverb'])
@@ -151,9 +152,31 @@ def wordlister(coType=None, content=None):
         "wordlist": "wordlist"
     }
 
+
     # End the timer and calculate the elapsed time
     elapsed_time = time.time() - start_time
     print(f"Processing completed in {elapsed_time:.2f} seconds.")
+
+
+    with open("uploads/stats.csv", "w", newline='', encoding="utf-8") as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow(["Metric", "Value"])
+        
+        # Flatten and write oxford and type dictionaries
+        for key, value in stats['oxford'].items():
+            writer.writerow([f"oxford_{key}", value])
+        for key, value in stats['type'].items():
+            writer.writerow([f"type_{key}", value])
+
+        # Write counts
+        for key, value in stats['count'].items():
+            writer.writerow([f"count_{key}", value])
+
+        # Write percentages
+        for key, value in stats['percentage'].items():
+            writer.writerow([f"percentage_{key}", value])
+
+
 
     # Write wordlist to a CSV file
     with open("uploads/generated.csv", "w", newline='', encoding="utf-8") as csvfile:
