@@ -1,10 +1,17 @@
 import Wordlist from './Wordlist'
 import Loading from '../misc/Loading'
 import { useSelector } from "react-redux";
+import { useState } from "react";
+import Sorter from '../common/Sorter';
 
 function Analysis() {
 
   const { wordlist_loading } = useSelector((state) => state.wordData);
+  const [sortOption, setSortOption] = useState('count');
+
+  const handleSortChange = (newSortOption) => {
+      setSortOption(newSortOption);
+  };
 
   if (wordlist_loading) {
     return (
@@ -13,7 +20,7 @@ function Analysis() {
   } else {
     return (
       <div className="analysis mb-8">
-        <Wordlist />
+        <Wordlist sortOption={sortOption} />
       </div>
     )
   }

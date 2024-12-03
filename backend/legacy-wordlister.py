@@ -1,8 +1,4 @@
-# -*- coding: UTF-8<|start_header|><|start_header|>assistant<|end_header|>
-
-# -*- coding: UTF-8<|start_header|><|start_header|>assistant<|end_header|>
-
-# -*- coding: UTF-8 */
+# -*- coding: UTF-8 -*-
 from datasets import *
 from oxfords import *
 import time
@@ -254,7 +250,7 @@ def wordlister(coType=None,content=None):
     with open("uploads/generated.txt", "a", encoding="utf-8") as f:
         f.truncate(0)
         for w in wordlist:
-            f.write(f"{w['word']};{w['count']};{w['type']};{w['oxford']}")
+            f.write( "{};{};{};{}".format(w[0],w[1][0],w[1][1],w[1][2]) )
             f.write("\n")
     shutil.copyfile('uploads/generated.txt', 'uploads/generated.csv')        
     

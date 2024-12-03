@@ -1,50 +1,47 @@
 import { updateCargo } from '../../redux/reducers/dataReducer';
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from 'react';
 
 function Text({show}) {
+    const dispatch = useDispatch();
+    const { cargo } = useSelector((state) => state.wordData);
 
-    const dispatch = useDispatch()
-    const { cargo } = useSelector((state) => state.wordData)
+    // Clear results when input is empty
+    useEffect(() => {
+        if (!cargo.trim()) {
+            dispatch(updateCargo(''));
+        }
+    }, [cargo, dispatch]);
+
+    // Debounce input to prevent excessive updates
+    const handleInputChange = (e) => {
+        const value = e.target.value;
+        dispatch(updateCargo(value));
+    };
 
     if (show) {
         return (
-            <div className="text">
-                <div className="flex justify-center">
-                    <div className="mb-3 xl:w-96">
-                        <textarea
-                        value={cargo}
-                        onChange={(e) => dispatch(updateCargo(e.target.value))}
-                        className="
-                            form-control
-                            block
-                            w-full
-                            px-3
-                            py-1.5
-                            text-base
-                            font-normal
-                            text-gray-700
-                            bg-white bg-clip-padding
-                            border border-solid border-gray-300
-                            rounded
-                            transition
-                            ease-in-out
-                            m-0
-                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-                        "
-                        id="exampleFormControlTextarea1"
-                        cols="60"
-                        rows="10"
-                        placeholder="Your input"
-                        ></textarea>
-                    </div>
+            <div className="text-input-wrapper">
+                <textarea
+                    value={cargo}
+                    onChange={handleInputChange}
+                    className="text-input"
+                    placeholder="Enter text to analyze..."
+                    spellCheck="false"
+                />
+                <div className="text-controls">
+                    <button 
+                        className="clear-btn"
+                        onClick={() => dispatch(updateCargo(''))}
+                        disabled={!cargo}
+                    >
+                        <i className="fa fa-times"></i>
+                    </button>
                 </div>
             </div>
         )
-    } else {
-        return (
-            null
-        )
     }
+    return null;
 }
 
 export default Text

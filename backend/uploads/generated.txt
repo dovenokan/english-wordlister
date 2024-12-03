@@ -1,0 +1,16 @@
+subscribe;1;verb;other
+project;2;verb;a1
+literary;1;adj;b2
+information;1;noun;a1
+donation;1;noun;b2
+archive;1;verb;c1
+email;1;noun;a1
+foundation;1;noun;b2
+hear about;1;phrverb;other
+produce;1;verb;a2
+make;1;verb;a1
+new;2;adj;a1
+website;1;noun;a1
+include;2;verb;a1
+help;1;verb;a1
+newsletter;1;noun;c1

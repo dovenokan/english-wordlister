@@ -3,15 +3,16 @@ import '../styles/App.css'
 import Analysis from './analysis/Analysis'
 import Header from './header/Header'
 import Input from './input/Input'
+import Stats from './stats/Stats'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <Header />
-      <Input />
-      <Analysis />
+      <div className="main-container">
+        <Input />
+        <Stats />
+        <Analysis />
+      </div>
     </div>
   )
 }

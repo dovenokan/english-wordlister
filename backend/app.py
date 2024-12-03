@@ -1,4 +1,4 @@
-# -*- coding: UTF-8 -*-
+# -*- coding: UTF-8 ***!
 ################################################################################################
 import functools
 import pymongo
@@ -21,9 +21,15 @@ app.secret_key = "secret key"
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024 
 path = os.getcwd()
 UPLOAD_FOLDER = os.path.join(path, 'uploads')
+INPUT_FOLDER = os.path.join(UPLOAD_FOLDER, 'input')
+OUTPUT_FOLDER = os.path.join(UPLOAD_FOLDER, 'output')
 ################################################################################################
 if not os.path.isdir(UPLOAD_FOLDER):
     os.mkdir(UPLOAD_FOLDER)
+if not os.path.isdir(INPUT_FOLDER):
+    os.mkdir(INPUT_FOLDER)
+if not os.path.isdir(OUTPUT_FOLDER):
+    os.mkdir(OUTPUT_FOLDER)
 ################################################################################################
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 ################################################################################################
