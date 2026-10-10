@@ -1,263 +1,231 @@
-# -*- coding: UTF-8<|start_header|><|start_header|>assistant<|end_header|>
+# -*- coding: UTF-8 -*-
+"""Local word analysis engine.
 
-# -*- coding: UTF-8<|start_header|><|start_header|>assistant<|end_header|>
+Pipeline: tokenise -> clean -> lemmatise -> merge phrasal verbs -> classify.
 
-# -*- coding: UTF-8 */
-from datasets import *
-from oxfords import *
-import time
+All state lives inside each call, so results never leak between requests, and
+every lookup goes through a set or dict instead of a linear list scan.
+"""
 import re
-import shutil
-from datetime import datetime
+import time
+from collections import Counter
 
-a1count = 0
-a2count = 0
-b1count = 0
-b2count = 0
-c1count = 0
-othercount = 0
-verbcount = 0
-nouncount = 0
-adjcount = 0
-phrverbcount = 0
-undefcount = 0
+from datasets import (
+    adjectives,
+    irregularverbs,
+    nouns,
+    phrasalverbs,
+    puncs,
+    stopwords,
+    suffix,
+    verbs,
+)
+from oxfords import a1, a2, b1, b2, c1
 
-def clearTenses(word):
-    for ir in irregularverbs:
-        if ir["v3"] == word or ir["v2"] == word:
-            return ir["v1"]
+ABBREVIATIONS = frozenset({"Mr.", "Mrs."})
+PUNCS = frozenset(puncs)
+VERBS = frozenset(verbs)
+NOUNS = frozenset(nouns)
+STOPWORDS = frozenset(stopwords)
+PHRASAL = frozenset(phrasalverbs)
+SUFFIXES = tuple(suffix)
 
-    for end in suffix:
-        if word.endswith(end):
-            wstr = word[:-len(end)]
+# Priority mirrors the original if/elif chains: the earlier-checked category wins,
+# so later assignments below are applied in reverse priority order.
+TYPE_OF = {}
+for _word in phrasalverbs:
+    TYPE_OF[_word] = "phrverb"
+for _word in nouns:
+    TYPE_OF[_word] = "noun"
+for _word in adjectives:
+    TYPE_OF[_word] = "adj"
+for _word in verbs:
+    TYPE_OF[_word] = "verb"
 
-            if end == "ies" and (wstr+"y" in nouns or wstr+"y" in verbs):
-                word = wstr+"y"
-                return word
+LEVEL_OF = {}
+for _levels, _name in ((c1, "c1"), (b2, "b2"), (b1, "b1"), (a2, "a2"), (a1, "a1")):
+    for _word in _levels:
+        LEVEL_OF[_word] = _name
 
-            elif end == "es" and (wstr in nouns or wstr in verbs):
-                word = wstr
-                return word
+# Irregular forms map to their base verb; the first matching entry wins.
+IRREGULAR = {}
+for _entry in irregularverbs:
+    IRREGULAR.setdefault(_entry["v2"], _entry["v1"])
+    IRREGULAR.setdefault(_entry["v3"], _entry["v1"])
 
-            elif end == "es" and (wstr+"e" in nouns or wstr+"e" in verbs):
-                word = wstr+"e"
-                return word
+BRACKETS = re.compile(r"\[.*?\]")
+PUNCT = re.compile("[%s]" % re.escape(puncs))
+DIGIT_WORD = re.compile(r"\w*\d\w*")
 
-            elif end == "s" and (wstr in nouns or wstr in verbs):
-                word = wstr
-                return word
+LEVELS = ("a1", "a2", "b1", "b2", "c1", "other")
+TYPES = ("verb", "noun", "adj", "phrverb")
 
-            elif end == "ied" and wstr+"y" in verbs:
-                word = wstr+"y"
-                return word
 
-            elif end == "ed" and wstr in verbs:
-                word = wstr
-                return word
-
-            elif end == "ed" and word[:word.index("ed")-1] in verbs:
-                word = word[:word.index("ed")-1]
-                return word
-
-            elif end == "d" and wstr in verbs:
-                word = wstr
-                return word
-
-            elif end == "ing" and wstr in verbs:
-                word = wstr
-                return word
-
-            elif end == "ing" and wstr+"e" in verbs:
-                word = wstr+"e"
-                return word
-
-            elif end == "ing" and word[:word.index("ing")-1] in verbs:
-                word = word[:word.index("ing")-1]
-                return word
-            
-            else:
-                for end in ["d","s"]:
-                    if word.rstrip(end) in verbs or word.rstrip(end) in nouns:
-                        word = word.rstrip(end)
-                        return word
-                return word
+def strip_edges(word):
+    """Drop a leading punctuation character, then cut the word at the next one."""
+    if word and word[0] in PUNCS:
+        word = word.replace(word[0], "")
+    for i, ch in enumerate(word):
+        if ch in PUNCS:
+            return word[:i]
     return word
 
-def isCapitalized(word):
-    capitals = list('ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ')
-    if word[0] in capitals:
-        return True
-    else:
-        return False
 
-def wordType(word):
-    global verbcount,nouncount,adjcount,phrverbcount,undefcount
-    if word in verbs:
-        verbcount+=1
-        return "verb"
-    elif word in adjectives:
-        adjcount+=1
-        return "adj"
-    elif word in nouns:
-        nouncount+=1
-        return "noun"
-    elif word in phrasalverbs:
-        phrverbcount+=1
-        return "phrverb"
-    else:
-        undefcount+=1
-        return "undef"
+def clean(raw):
+    text = raw.lower()
+    text = strip_edges(text)
+    text = BRACKETS.sub("", text)
+    text = PUNCT.sub("", text)
+    return DIGIT_WORD.sub("", text)
 
-def oxford(word):
-    global a1count, a2count, b1count, b2count, c1count, othercount
-    if word in a1:
-        a1count+=1
-        return "a1"
-    elif word in a2:
-        a2count+=1
-        return "a2"
-    elif word in b1:
-        b1count+=1
-        return "b1"
-    elif word in b2:
-        b2count+=1
-        return "b2"
-    elif word in c1:
-        c1count+=1
-        return "c1"
-    else:
-        othercount+=1
-        return "other"   
 
-def regStrip(word):
-    if word[0] in puncs:
-        word = word.replace(word[0],"")
-    n=len(word)
-    for p in word:
-        if p in puncs:
-            n = word.index(p)
-            return word[:n]
-    return word[:n]
+def _strip_suffix(word, end):
+    stem = word[:-len(end)]
+    if end == "ies" and (stem + "y" in NOUNS or stem + "y" in VERBS):
+        return stem + "y"
+    if end == "es" and (stem in NOUNS or stem in VERBS):
+        return stem
+    if end == "es" and (stem + "e" in NOUNS or stem + "e" in VERBS):
+        return stem + "e"
+    if end == "s" and (stem in NOUNS or stem in VERBS):
+        return stem
+    if end == "ied" and stem + "y" in VERBS:
+        return stem + "y"
+    if end == "ed" and stem in VERBS:
+        return stem
+    if end == "ed" and word[:word.index("ed") - 1] in VERBS:
+        return word[:word.index("ed") - 1]
+    if end == "d" and stem in VERBS:
+        return stem
+    if end == "ing" and stem in VERBS:
+        return stem
+    if end == "ing" and stem + "e" in VERBS:
+        return stem + "e"
+    if end == "ing" and word[:word.index("ing") - 1] in VERBS:
+        return word[:word.index("ing") - 1]
+    for alt in ("d", "s"):
+        if word.rstrip(alt) in VERBS or word.rstrip(alt) in NOUNS:
+            return word.rstrip(alt)
+    return word
 
-def regExpert(text):
-    text = text.lower()
-    text = regStrip(text)
-    text = re.sub('\[.*?\]', '', text)
-    text = re.sub('[%s]' % re.escape(puncs), '', text)
-    text = re.sub('\w*\d\w*', '', text)
-    return text
 
-def sentencify(paragraph):
-    abbr = ["Mr.","Mrs."] # it will be moved to datasets
-    spil = paragraph.split()
-    for s in spil:
-        if s[-1]=="." and s not in abbr:
-            spil[spil.index(s)] = s.replace(".","-.-")
-    sified = ' '.join(spil)
-    return sified.split("-.-")
+def lemma(word):
+    if word in IRREGULAR:
+        return IRREGULAR[word]
+    for end in SUFFIXES:
+        if word.endswith(end):
+            return _strip_suffix(word, end)
+    return word
 
-def wordify(sentence):
-    return sentence.replace("\n","").split()
 
-def phrasalVerb(lst):
-    phrpre = []
-    for n in range(len(lst)-1):  # added -1 to avoid index out of range error
-        try:
-            phrtwo = ''.join("{} {}".format(lst[n],lst[n+1]))
-            phrpre.append(phrtwo)
-        except:
-            pass
-    for p in phrpre:
-        spl = p.split()
-        if p in phrasalverbs:
-            lst.append(p)
-            try:
-                del lst[lst.index(spl[0])]
-                del lst[lst.index(spl[1])]
-            except:
-                pass
+def tokenise(text):
+    """Split on whitespace; a sentence-final period splits the chunk at every dot.
+
+    Abbreviations such as "Mr." keep their period. Empty pieces are dropped.
+    """
+    tokens = []
+    for chunk in text.split():
+        if chunk.endswith(".") and chunk not in ABBREVIATIONS:
+            tokens.extend(part for part in chunk.split(".") if part)
         else:
-            pass
+            tokens.append(chunk)
+    return tokens
 
-def alphabet(word):
-    q = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz'
-    for letter in word:
-        if letter not in q:
-            return False
-    return True
 
-def wordlister(coType=None,content=None):
-    start_time = time.time()
-    if coType == "file":
-        with open('uploads/srt.txt', 'r', encoding='utf-8') as file:
-            content = file.read().replace("\n", " ")
-    raw_words = [f for s in sentencify(content) for f in wordify(s)]
-    words = [regExpert(w) for w in raw_words]
-    for w in words:
-        if w.isalpha():
-            word = clearTenses(w)
-            words[words.index(w)] = word
-    phrasalVerb(words)
-    settedwords = list({ st for st in words if not len(st) == 0 and len(st) > 2 and st.replace(" ","").isalpha() and st not in stopwords})
+def normalise(raw):
+    cleaned = clean(raw)
+    return lemma(cleaned) if cleaned.isalpha() else cleaned
+
+
+def merge_phrasal_verbs(words):
+    """Count tokens and fold two-word phrasal verbs into single entries.
+
+    Each matched phrase removes one occurrence of each of its parts, the same
+    as the original list-based version, but on a Counter so it stays linear.
+    """
+    counts = Counter(words)
+    for left, right in zip(words, words[1:]):
+        phrase = f"{left} {right}"
+        if phrase not in PHRASAL:
+            continue
+        counts[phrase] += 1
+        first, second = phrase.split()[:2]
+        if counts[first] > 0:
+            counts[first] -= 1
+            if counts[second] > 0:
+                counts[second] -= 1
+    return counts
+
+
+def _pct(part, whole, digits=2):
+    return round(part / whole * 100, digits) if whole else 0
+
+
+def analyse(text):
+    """Analyse plain text and return the word list plus summary statistics."""
+    started = time.perf_counter()
+
+    memo = {}
+    words = []
+    for raw in tokenise(text):
+        value = memo.get(raw)
+        if value is None:
+            value = memo[raw] = normalise(raw)
+        words.append(value)
+
+    counts = merge_phrasal_verbs(words)
+    raw_total = sum(counts.values())
+
     wordlist = []
+    undefined = 0
+    level_counts = Counter({level: 0 for level in LEVELS})
+    type_counts = Counter({kind: 0 for kind in TYPES})
 
-    for w in settedwords:
-        wType = wordType(w)
-        if wType != "undef":
-            wordlist.append({
-                "word":w,
-                "count":words.count(w),
-                "type":wType,
-                "oxford":oxford(w),
-            })
+    for word, count in counts.items():
+        if count <= 0 or len(word) <= 2 or word in STOPWORDS:
+            continue
+        if not word.replace(" ", "").isalpha():
+            continue
+        kind = TYPE_OF.get(word)
+        if kind is None:
+            undefined += 1
+            continue
+        level = LEVEL_OF.get(word, "other")
+        type_counts[kind] += 1
+        level_counts[level] += 1
+        wordlist.append({"word": word, "count": count, "type": kind, "oxford": level})
+
+    wordlist.sort(key=lambda entry: (-entry["count"], entry["word"]))
+
+    defined = len(wordlist)
+    leveled = defined - level_counts["other"]
+    level_a = level_counts["a1"] + level_counts["a2"]
+    level_b = level_counts["b1"] + level_counts["b2"]
+    level_c = level_counts["c1"]
+
     stats = {
-        "ts": datetime.timestamp(datetime.now()),
-        "date": datetime.now(),
-        "oxford": {
-            "a1": a1count,
-            "a2": a2count,
-            "b1": b1count,
-            "b2": b2count,
-            "c1": c1count,
-            "other": othercount,
-        },
-        "type": {
-            "verb": verbcount,
-            "noun": nouncount,
-            "adj": adjcount,
-            "phrverb": phrverbcount,
-            "undef": undefcount,
-        },
+        "oxford": dict(level_counts),
+        "type": {**dict(type_counts), "undef": undefined},
         "count": {
-            "raw": len(words),
-            "total": len(wordlist),
-            "typical": sum([wc for wc in [verbcount, nouncount, adjcount, phrverbcount]]),
-            "oxford": sum([ox for ox in [a1count, a2count, b1count, b2count, c1count]]),
-            "oxford_A": sum([ox for ox in [a1count, a2count]]),
-            "oxford_B": sum([ox for ox in [b1count, b2count]]),
-            "oxford_C": c1count,
+            "raw": raw_total,
+            "total": defined,
+            "typical": defined,
+            "oxford": leveled,
+            "oxford_A": level_a,
+            "oxford_B": level_b,
+            "oxford_C": level_c,
         },
         "percentage": {
-            "typical": round((len(wordlist) - undefcount) / len(wordlist) * 100, 2) if len(wordlist) > 0 else 0,
-            "oxford": round((sum([ox for ox in [a1count, a2count, b1count, b2count, c1count]])) / max(sum([wc for wc in [verbcount, nouncount, adjcount, phrverbcount]]), 1) * 100, 2),
-            "oxford_A": round((sum([ox for ox in [a1count, a2count]])) / max(sum([ox for ox in [a1count, a2count, b1count, b2count, c1count]]), 1) * 100, 2),
-            "oxford_B": round((sum([ox for ox in [b1count, b2count]])) / max(sum([ox for ox in [a1count, a2count, b1count, b2count, c1count]]), 1) * 100, 2),
-            "oxford_C": round((c1count) / max(sum([ox for ox in [a1count, a2count, b1count, b2count, c1count]]), 1) * 100, 2),
+            "typical": _pct(defined, defined + undefined),
+            "oxford": _pct(leveled, defined),
+            "oxford_A": _pct(level_a, leveled),
+            "oxford_B": _pct(level_b, leveled),
+            "oxford_C": _pct(level_c, leveled),
         },
-        "wordlist": "wordlist"
     }
 
-    elapsed_time = time.time() - start_time
-    print(f"Processing completed in {elapsed_time:.2f} seconds.")
-
-    # ARIZA -> CSV GENERATOR
-    with open("uploads/generated.txt", "a", encoding="utf-8") as f:
-        f.truncate(0)
-        for w in wordlist:
-            f.write(f"{w['word']};{w['count']};{w['type']};{w['oxford']}")
-            f.write("\n")
-    shutil.copyfile('uploads/generated.txt', 'uploads/generated.csv')        
-    
-    return {"wordlist": wordlist, "stats":stats}
-
-wordlister(coType="file")
+    return {
+        "wordlist": wordlist,
+        "stats": stats,
+        "elapsed": time.perf_counter() - started,
+    }
