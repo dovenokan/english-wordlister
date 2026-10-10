@@ -1,8 +1,1 @@
-Flask
-gunicorn
-pymongo
-wtforms
-werkzeug
-passlib
-dnspython
-flask_cors
+flask
